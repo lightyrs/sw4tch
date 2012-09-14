@@ -247,11 +247,8 @@ DEPENDENCIES
   ruby_parser
   sass-rails (~> 3.2.3)
   seed_dump
-<<<<<<< HEAD
-  sqlite3
-=======
   sidekiq
+  sqlite3
   thin
->>>>>>> Foreman, procfile, omniauth-github
   uglifier (>= 1.0.3)
   wirble
