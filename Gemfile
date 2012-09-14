@@ -6,7 +6,15 @@ gem 'rails', '3.2.8'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
+gem 'pg'
 gem 'ohm'
+gem 'thin'
+gem 'foreman'
+gem 'heroku'
+gem 'sidekiq'
+gem 'colored'
+gem 'omniauth'
+gem 'omniauth-github'
 
 group :development do
   gem 'logging-rails', require: 'logging/rails'
