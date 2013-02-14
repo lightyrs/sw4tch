@@ -1,0 +1,11 @@
+.user.well
+  .pull-left.avatar
+    %p= link_to image_tag(@identity.avatar, alt: current_user.name), @identity.profile_url
+  .pull-left.names
+    %h4.name= current_user.name
+    %h5.username= @identity.username
+    .stats.thumbnail
+      %span.badge 17
+      %span sw4tches
+  %p.bio= @identity.bio
+

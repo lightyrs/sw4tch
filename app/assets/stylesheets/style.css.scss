@@ -1,0 +1,123 @@
+footer {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.swatch * {
+  @include transition(all .4s ease-out);
+  @include transition-delay(.2s);
+}
+
+.swatch {
+  cursor: pointer;
+  float: left;
+  position: relative;
+  width: 208px;
+  height: 168px;
+  padding: 30px 15px;
+  margin-right: 36px;
+  margin-left: 36px;
+
+  &:hover .border:nth-child(2) {
+    @include transform(scale(.95) rotate(-1.2deg) translate(-2px, 3px));
+  }
+
+  &:hover .border:nth-child(1) {
+    @include transform(scale(.94) rotate(-3.2deg) translate(-2px, 1px));
+  }
+
+  &:hover .shadow {
+    @include transform(scale(1.1) translate(1px, -8px) skew(1deg, -1deg));
+    -webkit-filter: blur(8px);
+  }
+
+  .border:nth-child(2) {
+    margin-top: 4px;
+    @include transform(scale(.98));
+  }
+
+  .border:nth-child(1) {
+    margin-top: 8px;
+    @include transform(scale(.96));
+  }
+
+  .border {
+    position: absolute;
+    width: 190px;
+    height: 140px;
+    background: white;
+    padding: 8px;
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 10px;
+    z-index: 5;
+    box-shadow: 0 2px 1px -1px rgba(0, 0, 0, .2);
+  }
+
+  .overlay:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    z-index: 2;
+    margin: 8px;
+    border-radius: 5px;
+    box-shadow:
+      0    0   1px  1px rgba(0, 0, 0, .15)     inset,
+      0    1px 2px -1px rgba(100, 100, 100, 1) inset;
+  }
+
+  img {
+    border-radius: 6px;
+    box-shadow: 0 0 0 8px #fefefe;
+  }
+
+  .shadow {
+    position: absolute;
+    background: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      color-stop(1, rgba(50,50,50, 0)),
+      color-stop(.14, rgba(240,240,255, .8))
+    );
+    -webkit-filter: blur(1px);
+    margin-left: 6px;
+    width: 198px;
+    height: 140px;
+    top: 100px;
+    z-index: 1;
+  }
+}
+
+
+.user {
+
+  h4, h5 {
+    margin: 0;
+  }
+
+  h5 {
+    font-weight: normal;
+  }
+
+  p {
+
+    &.bio {
+      clear: both;
+      margin-bottom: 0;
+    }
+  }
+
+  .pull-left {
+
+    &.avatar {
+      margin-right: 15px;
+    }
+  }
+
+  .stats {
+    margin-top: 10px;
+  }
+}
