@@ -12,7 +12,11 @@ class ApplicationController < ActionController::Base
     !!current_user
   end
 
-  helper_method :current_user, :signed_in?
+  def current_identity
+    @current_identity ||= current_user.identities.where(provider: 'github').first
+  end
+
+  helper_method :current_user, :signed_in?, :current_identity
 
   def current_user=(user)
     @current_user = user
