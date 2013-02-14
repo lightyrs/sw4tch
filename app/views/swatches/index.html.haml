@@ -1,13 +1,3 @@
-#swatches
-  = render 'swatch'
-  = render 'swatch'
-  = render 'swatch'
-  = render 'swatch'
-  = render 'swatch'
-  = render 'swatch'
-  = render 'swatch'
-  = render 'swatch'
-  = render 'swatch'
-  = render 'swatch'
-  = render 'swatch'
-  = render 'swatch'
+%ul#swatches
+  - 17.times do
+    %li.swatch= render 'swatch'

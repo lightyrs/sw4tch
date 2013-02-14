@@ -1,0 +1,2 @@
+$ ->
+  $('#swatches').shapeshift(enableDrag: false)

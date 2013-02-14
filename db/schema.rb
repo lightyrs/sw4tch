@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120914044020) do
+ActiveRecord::Schema.define(:version => 20130214081342) do
 
   create_table "identities", :force => true do |t|
     t.string   "uid"
@@ -32,6 +32,18 @@ ActiveRecord::Schema.define(:version => 20120914044020) do
 
   add_index "identities", ["uid", "provider"], :name => "index_identities_on_uid_and_provider", :unique => true
   add_index "identities", ["user_id"], :name => "index_identities_on_user_id"
+
+  create_table "swatches", :force => true do |t|
+    t.string   "name"
+    t.integer  "user_id"
+    t.text     "description"
+    t.text     "markup"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "swatches", ["user_id", "name"], :name => "index_swatches_on_user_id_and_name", :unique => true
+  add_index "swatches", ["user_id"], :name => "index_swatches_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "name"

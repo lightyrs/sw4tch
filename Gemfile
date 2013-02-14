@@ -4,7 +4,6 @@ gem 'rails', '3.2.11'
 
 gem 'sqlite3'
 gem 'pg'
-gem 'ohm'
 gem 'thin'
 gem 'foreman'
 gem 'heroku'
