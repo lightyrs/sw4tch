@@ -11,6 +11,7 @@ gem 'sidekiq'
 gem 'colored'
 gem 'omniauth'
 gem 'omniauth-github'
+gem 'simple_form'
 
 group :development do
   gem 'logging-rails', require: 'logging/rails'
