@@ -1,3 +1,2 @@
-%ul#swatches
-  - 17.times do
-    %li.swatch= render 'swatch'
+%ul
+  = render collection: @swatches, partial: 'swatches/swatch'

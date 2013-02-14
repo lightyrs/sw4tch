@@ -18,7 +18,18 @@ footer {
     border: 1px solid #ccc;
     list-style: none;
     text-align: center;
-    @include border-radius(256px)
+    @include border-radius(256px);
+
+    .specimen {
+      width: 150px;
+      height: 130px;
+      border: 1px dashed #ccc;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      margin: -65px auto 0;
+    }
   }
 
   &.show {
