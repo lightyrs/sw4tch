@@ -1,0 +1,6 @@
+= simple_form_for @swatch do |f|
+  %legend= "sw4tch.#{controller.action_name}"
+  = f.input  :name
+  = f.input  :description
+  = f.input  :markup
+  = f.button :submit

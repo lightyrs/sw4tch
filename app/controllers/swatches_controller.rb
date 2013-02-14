@@ -43,6 +43,6 @@ class SwatchesController < ApplicationController
   private
 
   def assign_swatch
-    @swatch = current_user.swatches.find_by_name(params[:id])
+    @swatch = current_user.swatches.find_by_id(params[:id])
   end
 end

@@ -8,9 +8,9 @@
   %body
     .container-fluid
       .row-fluid
-        .span3
+        #sidebar.span3
           %h1 sw4tch
           = render 'users/user' if current_user
-        .span9
+        #content.span9
           = yield
     %footer

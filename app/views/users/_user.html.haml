@@ -4,8 +4,7 @@
   .pull-left.names
     %h4.name= current_user.name
     %h5.username= current_identity.username
-    .stats.thumbnail
-      %span.badge 17
-      %span sw4tches
+    .stats
+      %span.badge= pluralize(current_user.swatches.count, 'swatch').gsub('a', '4')
   %p.bio= current_identity.bio
 

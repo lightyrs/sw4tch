@@ -3,17 +3,31 @@ footer {
   padding-bottom: 30px;
 }
 
+#content {
+  margin-top: 20px;
+  position: relative;
+}
+
 #swatches {
   position: relative;
-  margin-top: 20px;
 
-  > .swatch {
+  .swatch {
     position: absolute;
     width: 256px;
     height: 256px;
     border: 1px solid #ccc;
     list-style: none;
+    text-align: center;
     @include border-radius(256px)
+  }
+
+  &.show {
+    margin-top: 20px;
+
+    .swatch {
+      width: 256px;
+      height: 256px;
+    }
   }
 }
 
