@@ -32,6 +32,7 @@ footer {
     }
   }
 
+  &.new,
   &.show {
     margin-top: 20px;
 
@@ -70,5 +71,35 @@ footer {
   .stats {
     margin-top: 10px;
     margin-bottom: 10px;
+  }
+}
+
+form {
+
+  input,
+  textarea,
+  #editor {
+    width: 97%;
+    max-width: 800px;
+    min-width: 300px;
+  }
+
+  textarea {
+    height: 120px;
+  }
+
+  #editor {
+    width: 100%;
+    position: relative;
+    height: 140px;
+  }
+
+  .form-actions {
+    text-align: center;
+    width: auto;
+
+    button {
+      margin: 0 auto;
+    }
   }
 }

@@ -12,6 +12,7 @@ gem 'colored'
 gem 'omniauth'
 gem 'omniauth-github'
 gem 'simple_form'
+gem 'ace-rails-ap'
 
 group :development do
   gem 'logging-rails', require: 'logging/rails'
@@ -27,6 +28,8 @@ group :development do
   gem 'itslog'
   gem 'ruby_parser'
   gem 'hpricot'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 group :assets do

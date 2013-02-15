@@ -1,10 +1,12 @@
-.user.well
-  .pull-left.avatar
-    %p= link_to image_tag(current_identity.avatar, alt: current_user.name), current_identity.profile_url
-  .pull-left.names
-    %h4.name= current_user.name
-    %h5.username= current_identity.username
-    .stats
-      %span.badge= pluralize(current_user.swatches.count, 'swatch').gsub('a', '4')
-  %p.bio= current_identity.bio
-
+-  if current_user
+  .user.well
+    .pull-left.avatar
+      %p= link_to image_tag(current_identity.avatar, alt: current_user.name), current_identity.profile_url
+    .pull-left.names
+      %h4.name= current_user.name
+      %h5.username= current_identity.username
+      .stats
+        %span.badge= pluralize(current_user.swatches.count, 'swatch').gsub('a', '4')
+    %p.bio= current_identity.bio
+- else
+  = link_to 'Sign In with GitHub', sign_in_path('github'), class: 'btn btn-primary'
