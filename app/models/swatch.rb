@@ -4,10 +4,11 @@ class Swatch < ActiveRecord::Base
 
   attr_accessible :name, :description, :markup
 
-  class << self
+  validates :markup, presence: true
 
-    def sanitize_markup(markup)
-      markup
-    end
+  before_validation :sanitize_markup
+
+  def sanitize_markup
+    self.markup = ActionController::Base.helpers.sanitize_css(markup)
   end
 end

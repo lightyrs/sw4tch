@@ -3,7 +3,7 @@
     .pull-left.avatar
       %p= link_to image_tag(current_identity.avatar, alt: current_user.name), current_identity.profile_url
     .pull-left.names
-      %h4.name= current_user.name
+      %h4.name= link_to current_user.name, dashboard_path
       %h5.username= current_identity.username
       .stats
         %span.badge= pluralize(current_user.swatches.count, 'swatch').gsub('a', '4')
