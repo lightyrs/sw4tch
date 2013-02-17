@@ -1,0 +1,26 @@
+.control-group
+  = f.label  :markup
+  .controls
+    #editor
+    = f.input  :markup, as: :hidden
+
+:coffeescript
+
+  $ ->
+
+    editor = ace.edit('editor')
+    session = editor.getSession()
+
+    $markup = $('#swatch_markup')
+
+    editor.setTheme('ace/theme/chrome')
+    session.setMode('ace/mode/css')
+    session.setTabSize(2)
+    session.setUseSoftTabs(true)
+
+    session.setValue($markup.val())
+
+    $('form').submit (e) ->
+      $markup.val(editor.getValue())
+      e
+

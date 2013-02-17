@@ -1,7 +1,7 @@
-#swatches.show
-  .swatch
+- if swatch.persisted?
+  %a.swatch{href: swatch_path(swatch)}
     %div.specimen{style: "#{swatch.markup}"}
 
-.meta
-  %h4.name= swatch.name
-  %p.description= swatch.description
+- else
+  .swatch
+    %div.specimen

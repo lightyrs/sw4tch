@@ -1,2 +1,12 @@
-#swatches.show
-  = render @swatch
+.row-fluid
+  .span12
+    .span6
+      %h2= @swatch.name
+      = simple_form_for @swatch do |f|
+        = render 'editor', f: f
+
+    .span6
+      #swatches.show
+        = render @swatch
+      = render 'actions'
+

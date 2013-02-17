@@ -9,8 +9,10 @@
     .container-fluid
       .row-fluid
         #sidebar.span3
-          %h1 sw4tch
+          %h1#sw4tch= link_to 'sw4tch', root_path
           = render 'users/user'
+          - if current_user
+            = link_to 'New sw4tch', new_swatch_path, class: 'btn btn-block btn-primary btn-large'
         #content.span9
           = yield
     %footer

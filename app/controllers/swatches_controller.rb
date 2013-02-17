@@ -1,6 +1,6 @@
 class SwatchesController < ApplicationController
 
-  before_filter :assign_swatch, only: [ :show, :edit, :update, :delete ]
+  before_filter :assign_swatch, only: [ :show, :edit, :update, :destroy ]
 
   def index
     @swatches = Swatch.all
@@ -32,9 +32,9 @@ class SwatchesController < ApplicationController
     end
   end
 
-  def delete
+  def destroy
     if @swatch && @swatch.destroy
-      redirect_to :index, notice: 'The swatch was deleted.'
+      redirect_to root_path, notice: 'The swatch was deleted.'
     else
       render 'edit', alert: 'There was an error deleting the swatch.'
     end

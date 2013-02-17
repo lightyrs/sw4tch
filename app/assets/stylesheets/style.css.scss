@@ -1,3 +1,11 @@
+h1#sw4tch {
+
+  a {
+    text-decoration: none;
+    color: #333;
+  }
+}
+
 footer {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -13,32 +21,68 @@ footer {
 
   .swatch {
     position: absolute;
-    width: 256px;
-    height: 256px;
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
     list-style: none;
     text-align: center;
+    width: 256px;
+    height: 256px;
     @include border-radius(256px);
 
+    &:hover {
+      border-color: #0088cc;
+    }
+
+    &.large {
+      width: 384px;
+      height: 384px;
+      @include border-radius(384px);
+    }
+
+    .meta {
+
+      p {
+
+        &.description {
+          display: none;
+        }
+      }
+    }
+
     .specimen {
-      width: 150px;
-      height: 130px;
+      width: 50%;
+      height: 50%;
       border: 1px dashed #ccc;
       position: absolute;
       top: 50%;
       left: 0;
       right: 0;
-      margin: -65px auto 0;
+      margin: -25% auto 0;
     }
   }
 
   &.new,
+  &.edit {
+    margin-top: 280px;
+  }
+
   &.show {
     margin-top: 20px;
+  }
+
+  &.new,
+  &.show {
 
     .swatch {
-      width: 256px;
-      height: 256px;
+
+      .meta {
+
+        p {
+
+          &.description {
+            display: inline;
+          }
+        }
+      }
     }
   }
 }
@@ -85,13 +129,14 @@ form {
   }
 
   textarea {
-    height: 120px;
+    height: 100px;
   }
 
   #editor {
     width: 100%;
     position: relative;
-    height: 140px;
+    min-height: 280px;
+    font-size: 16px;
   }
 
   .form-actions {

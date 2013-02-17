@@ -1,29 +1,7 @@
-.row-fluid
-  .span12
-    .span6
-      = simple_form_for @swatch do |f|
-        %legend= "sw4tch.#{controller.action_name}"
-        = f.input  :name
-        = f.input  :description
-        .control-group
-          = f.label  :markup
-          .controls
-            #editor
-            = f.input  :markup, as: :hidden
-        .form-actions
-          = f.button :submit, class: 'btn btn-primary'
-
-      :coffeescript
-        $ ->
-          editor = ace.edit('editor')
-          editor.setTheme('ace/theme/merbivore_soft')
-          editor.getSession().setMode('ace/mode/css')
-          $('form').submit (e) ->
-            $('#swatch_markup').val(editor.getValue())
-            e
-
-    .span6
-      #swatches.new
-        .swatch
-          .specimen
-
+= simple_form_for @swatch do |f|
+  %legend= "sw4tch.#{controller.action_name}"
+  = f.input  :name
+  = f.input  :description
+  = render 'editor', f: f
+  .form-actions
+    = f.button :submit, class: 'btn btn-primary'
