@@ -40,7 +40,7 @@ end
 
 gem 'barista'
 gem 'haml-rails'
-gem 'sass-rails',   '~> 3.2.3'
-gem 'bootstrap-sass'
+gem 'sass-rails', '~> 3.2'
+gem 'bootstrap-sass', '~> 2.3.0.0'
 gem 'bourbon'
 gem 'jquery-rails'

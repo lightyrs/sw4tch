@@ -132,6 +132,14 @@ form {
     height: 100px;
   }
 
+  .control-group {
+
+    &.hidden {
+      display: block;
+      visibility: visible;
+    }
+  }
+
   #editor {
     width: 100%;
     position: relative;
@@ -145,6 +153,17 @@ form {
 
     button {
       margin: 0 auto;
+    }
+  }
+
+  .alert {
+
+    h4 {
+      margin: 5px 0 10px;
+    }
+
+    ul {
+      margin: 0 0 5px 25px;
     }
   }
 }

@@ -14,10 +14,11 @@ class SwatchesController < ApplicationController
   end
 
   def create
-    if @swatch = current_user.swatches.create(params[:swatch])
-      redirect_to @swatch, notice: 'The swatch was created.'
+    @swatch = current_user.swatches.build(params[:swatch])
+    if @swatch.save
+      redirect_to swatch_path(@swatch), notice: 'The swatch was created.'
     else
-      render 'new', alert: 'There was an error creating the swatch.'
+      render :new
     end
   end
 
@@ -25,10 +26,10 @@ class SwatchesController < ApplicationController
   end
 
   def update
-    if @swatch && @swatch.update_attributes(params[:swatch])
-      redirect_to @swatch, notice: 'The swatch was updated.'
+    if @swatch.update_attributes(params[:swatch])
+      redirect_to swatch_path(@swatch), notice: 'The swatch was updated.'
     else
-      render 'edit', alert: 'There was an error updating the swatch.'
+      render :edit
     end
   end
 
@@ -36,7 +37,7 @@ class SwatchesController < ApplicationController
     if @swatch && @swatch.destroy
       redirect_to root_path, notice: 'The swatch was deleted.'
     else
-      render 'edit', alert: 'There was an error deleting the swatch.'
+      render :edit, error: 'There was an error deleting the swatch.'
     end
   end
 

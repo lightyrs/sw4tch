@@ -1,0 +1,6 @@
+- [:notice, :error, :alert].each do |level|
+  - unless flash[level].blank?
+    %div{class: "alert alert-#{level}"}
+      %button.close{type: 'button', 'data-dismiss' => 'alert'} ×
+      = content_tag :strong, level.capitalize
+      = content_tag :span, flash[level]
