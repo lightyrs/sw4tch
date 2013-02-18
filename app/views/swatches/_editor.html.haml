@@ -1,8 +1,6 @@
 .control-group
-  = f.label :markup
-  .controls
-    = f.input :markup, as: :hidden
-    #editor
+  = f.input :markup, as: :text
+  #editor
 
 :coffeescript
 
@@ -13,9 +11,11 @@
 
     $markup = $('#swatch_markup')
 
+    editor.setBehavioursEnabled(false)
     editor.setTheme('ace/theme/chrome')
     session.setMode('ace/mode/css')
     session.setTabSize(2)
+    session.setUseWorker(false)
 
     session.setValue($markup.val())
 

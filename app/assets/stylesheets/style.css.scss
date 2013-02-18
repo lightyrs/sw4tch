@@ -132,12 +132,9 @@ form {
     height: 100px;
   }
 
-  .control-group {
-
-    &.hidden {
-      display: block;
-      visibility: visible;
-    }
+  #swatch_markup {
+    visibility: hidden;
+    position: absolute;
   }
 
   #editor {
@@ -165,5 +162,12 @@ form {
     ul {
       margin: 0 0 5px 25px;
     }
+  }
+}
+
+.swatches-show {
+
+  #editor {
+    min-height: 400px;
   }
 }

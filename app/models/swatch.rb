@@ -11,7 +11,7 @@ class Swatch < ActiveRecord::Base
   after_initialize :assign_markup
 
   def default_markup
-    ".swatch .specimen {\r  \r}\r\r.swatch .specimen::before {\r  \r}\r\r.swatch .specimen {\r  \r}"
+    ".swatch .specimen {\r\n\t\r\n}\r\n\r\n.swatch .specimen::before {\r\n\t\r\n}\r\n\r\n.swatch .specimen::after {\r\n\t\r\n}\r\n\r\n"
   end
 
   private
