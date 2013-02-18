@@ -2,11 +2,6 @@
 
   - if swatch.persisted?
 
-    :scss
-      #swatches .swatch-#{swatch.id} {
-        #{swatch.markup[:scss]}
-      }
-
     .swatch-wrapper{class: "swatch-#{swatch.id}"}
       %a.swatch{href: swatch_path(swatch)}
         %div.specimen
