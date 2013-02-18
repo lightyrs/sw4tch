@@ -8,7 +8,17 @@ class Swatch < ActiveRecord::Base
   validates :markup, presence: true
   validate  :clean_markup
 
+  after_initialize :assign_markup
+
+  def default_markup
+    ".swatch .specimen {\r\r}"
+  end
+
   private
+
+  def assign_markup
+    self.markup = default_markup unless markup.present?
+  end
 
   def sanitize_markup
     ActionController::Base.helpers.sanitize_css(markup)
