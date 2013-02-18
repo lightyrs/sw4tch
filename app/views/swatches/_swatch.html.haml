@@ -1,15 +1,17 @@
-- if swatch.persisted?
+%iframe.swatch-frame
 
-  :scss
-    #swatches .swatch-#{swatch.id} {
-      #{swatch.markup}
-    }
+  - if swatch.persisted?
 
-  .swatch-wrapper{class: "swatch-#{swatch.id}"}
-    %a.swatch{href: swatch_path(swatch)}
-      %div.specimen
+    :scss
+      #swatches .swatch-#{swatch.id} {
+        #{swatch.markup}
+      }
 
-- else
-  .swatch-wrapper
-    .swatch
-      %div.specimen
+    .swatch-wrapper{class: "swatch-#{swatch.id}"}
+      %a.swatch{href: swatch_path(swatch)}
+        %div.specimen
+
+  - else
+    .swatch-wrapper
+      .swatch
+        %div.specimen

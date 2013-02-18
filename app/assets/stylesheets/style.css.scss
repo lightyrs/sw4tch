@@ -19,6 +19,10 @@ footer {
 #swatches {
   position: relative;
 
+  iframe {
+    border: 0 none;
+  }
+
   .swatch-wrapper {
     overflow: hidden !important;
     position: absolute;

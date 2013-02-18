@@ -19,10 +19,18 @@
 
     session.setValue($markup.val())
 
+    iframe = $('iframe.swatch-frame')[0]
+    iframeDoc = iframe.contentDocument || iframe.contentWindow.document
+    iframeDoc.body.setAttribute('tabindex', 0);
+
+    previewHTML = () ->
+      "<h3>hey</h3>"
+
     session.on 'change', (e) ->
       if e.data.text == ';'
         console.log(e)
         console.log(session.getValue())
+        iframeDoc.body.innerHTML = previewHTML()
 
     $('form').submit (e) ->
       $markup.val(session.getValue())
