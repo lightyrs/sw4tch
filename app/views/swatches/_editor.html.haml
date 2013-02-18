@@ -16,10 +16,11 @@
     editor.setTheme('ace/theme/chrome')
     session.setMode('ace/mode/css')
     session.setTabSize(2)
-    session.setUseSoftTabs(true)
 
     session.setValue($markup.val())
 
     $('form').submit (e) ->
-      $markup.val(editor.getValue())
+      $markup.val(session.getValue())
       e
+
+    editor.moveCursorToPosition(row: 1, column: 2)
