@@ -19,6 +19,11 @@
 
     session.setValue($markup.val())
 
+    session.on 'change', (e) ->
+      if e.data.text == ';'
+        console.log(e)
+        console.log(session.getValue())
+
     $('form').submit (e) ->
       $markup.val(session.getValue())
       e
