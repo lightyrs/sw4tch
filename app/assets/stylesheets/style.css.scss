@@ -19,18 +19,28 @@ footer {
 #swatches {
   position: relative;
 
-  .swatch {
+  .swatch-wrapper {
+    overflow: hidden !important;
     position: absolute;
-    border: 1px solid #ddd;
-    list-style: none;
-    text-align: center;
     width: 256px;
     height: 256px;
+    text-align: center;
+    border: 1px solid #ccc;
     @include border-radius(256px);
 
     &:hover {
       border-color: #0088cc;
     }
+  }
+
+  .swatch {
+    display: block;
+    overflow: hidden !important;
+    list-style: none;
+    text-align: center;
+    width: 256px;
+    height: 256px;
+    @include border-radius(256px);
 
     &.large {
       width: 384px;
