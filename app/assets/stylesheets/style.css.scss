@@ -35,7 +35,6 @@ footer {
 
   .swatch {
     display: block;
-    overflow: hidden !important;
     list-style: none;
     text-align: center;
     width: 256px;
@@ -66,6 +65,7 @@ footer {
       top: 50%;
       left: 0;
       right: 0;
+      overflow: visible;
       margin: -25% auto 0;
     }
   }
