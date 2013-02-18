@@ -1,6 +1,7 @@
 //= require ./vendor/jquery-1.8.3.min
 //= require bootstrap-transition
 //= require bootstrap-alert
+//= require bootstrap-tab
 //= require ./vendor/jquery.shapeshift
 //= require ace/ace
 //= require ace/theme-merbivore_soft

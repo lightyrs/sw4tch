@@ -11,7 +11,11 @@ class Swatch < ActiveRecord::Base
   after_initialize :assign_markup
 
   def default_markup
-    ".swatch {\r\n\t\r\n}\r\n\r\n.swatch .specimen {\r\n\t\r\n}\r\n\r\n.swatch .specimen::before {}\r\n\r\n.swatch .specimen::after {}"
+    {}.tap do |h|
+      h[:css] = default_css
+      h[:scss] = default_scss
+      h[:stylus] = default_stylus
+    end
   end
 
   private
@@ -28,5 +32,17 @@ class Swatch < ActiveRecord::Base
     return true if markup.blank?
     return true unless sanitize_markup.blank?
     errors.add(:markup, "must be valid CSS")
+  end
+
+  def default_css
+    ".swatch {\r\n\t\r\n}\r\n\r\n.swatch .specimen {\r\n\t\r\n}\r\n\r\n.swatch .specimen::before {}\r\n\r\n.swatch .specimen::after {}"
+  end
+
+  def default_scss
+    ".swatch {\r\n\r\n\t.specimen {\r\n\r\n\t\t&:before {}\r\n\r\n\t\t&:after {}\r\n\t}\r\n}"
+  end
+
+  def default_stylus
+    ".swatch\r\n\t.specimen\r\n\t&::before\r\n&::after\r\n"
   end
 end

@@ -1,6 +1,11 @@
-.control-group
-  = f.input :markup, as: :text
-  #editor
+.editor-wrapper
+  %ul.nav.nav-tabs
+    %li.active= link_to 'CSS', '#', 'data-toggle' => 'tab'
+    %li= link_to 'SCSS', '#', 'data-toggle' => 'tab'
+    %li= link_to 'Stylus', '#', 'data-toggle' => 'tab'
+  .control-group
+    = f.input :markup, as: :text, label: false, input_html: { value: f.object.markup[:css] }
+    #editor
 
 :coffeescript
 
