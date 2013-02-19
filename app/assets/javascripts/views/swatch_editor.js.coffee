@@ -4,6 +4,10 @@ class Sw4tch.Views.SwatchEditor extends Backbone.View
 
   template: JST['swatch_preview']
 
+  freshestSyntax: null
+
+  freshestMarkup: null
+
   initialize: ->
     @initializeAce()
     @initializeEvents()
@@ -16,6 +20,7 @@ class Sw4tch.Views.SwatchEditor extends Backbone.View
 
   initializeEvents: ->
     @onSessionChange()
+    @onTabShow()
     @onTabShown()
 
   initializePreview: ->
@@ -24,11 +29,14 @@ class Sw4tch.Views.SwatchEditor extends Backbone.View
 
   onSessionChange: ->
     @session().on 'change', (e) =>
+      @updateActiveInput()
       @renderPreview() if @renderWasTriggered(e)
-      @updateInputs()
 
-  updateInputs: ->
-    @activeInput().val @sessionMarkup
+  updateActiveInput: ->
+    @updateInputWith @activeInput(), @sessionMarkup()
+
+  updateInputWith: (input, markup) ->
+    input.val markup
 
   renderWasTriggered: (e) ->
     if @isCSS() then return true
@@ -36,12 +44,17 @@ class Sw4tch.Views.SwatchEditor extends Backbone.View
     if @isStylus() and e.data.text is '\n' then return true
     false
 
+  onTabShow: ->
+    @$('a[data-toggle="tab"]').on 'show', (e) =>
+      @freshestSyntax = @activeSyntax()
+      @freshestMarkup = @activeInput().val()
+
   onTabShown: ->
     @$('a[data-toggle="tab"]').on 'shown', (e) =>
       @toggleSyntax(e)
+      @compileMarkup(@freshestSyntax, @activeSyntax(), @freshestMarkup)
 
   toggleSyntax: (e) ->
-    @inputToSession()
     @setSessionMode @activeSyntax()
 
   editor: ->
@@ -96,13 +109,22 @@ class Sw4tch.Views.SwatchEditor extends Backbone.View
   previewTemplate: (css = null) ->
     @template(customCSS: css)
 
-  renderPreview: (css = null) ->
+  previewCSS: ->
+    @cssInput().val()
+
+  renderPreview: (data = null) ->
     if @isCSS()
-      @previewBody().innerHTML = @previewTemplate @sessionMarkup()
-    else if css
-      @previewBody().innerHTML = @previewTemplate css
+      @renderMarkup()
+    else if data
+      @renderData(data)
     else
       @compileMarkup()
+
+  renderMarkup: ->
+    @previewBody().innerHTML = @previewTemplate @sessionMarkup()
+
+  renderData: (data) ->
+    @previewBody().innerHTML = @previewTemplate data
 
   initAceOptions: ->
     @editor().setBehavioursEnabled false
@@ -124,16 +146,19 @@ class Sw4tch.Views.SwatchEditor extends Backbone.View
   sessionMarkup: =>
     @session().getValue()
 
-  compileMarkup: ->
+  compileMarkup: (from = @activeSyntax(), to = 'css', markup = @sessionMarkup()) ->
     $.ajax
-      url: "/markup/compile/#{@activeSyntax()}/css"
-      data: markup: @sessionMarkup()
+      url: "/markup/compile/#{from}/#{to}"
+      data: markup: "#{markup}"
       type: 'post'
-      success: @onCompileSuccess
+      success: (data) =>
+        @onCompileSuccess(data, to)
       error: @onCompileFailure
 
-  onCompileSuccess: (data) =>
-    @renderPreview data
+  onCompileSuccess: (data, to) =>
+    @updateInputWith(@$("#swatch_#{to}"), data)
+    @inputToSession()
+    @renderPreview @previewCSS()
 
   onCompileFailure: ->
     console.log 'failure'

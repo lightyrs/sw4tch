@@ -5,7 +5,7 @@ class MarkupController < ApplicationController
   before_filter :assign_vars, only: [ :compile ]
 
   def compile
-    if %w(scss stylus).include? @from and %w(css).include? @to
+    if %w(css scss stylus).include? @from and %w(css scss stylus).include? @to
       render json: Swatch.class_eval("new(#{@from}: %Q(#{@markup})).#{@from}_to_#{@to}").to_json
     else
       head :not_acceptable
