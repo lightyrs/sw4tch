@@ -37,7 +37,9 @@ ActiveRecord::Schema.define(:version => 20130214081342) do
     t.string   "name"
     t.integer  "user_id"
     t.text     "description"
-    t.text     "markup"
+    t.text     "css"
+    t.text     "scss"
+    t.text     "stylus"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end

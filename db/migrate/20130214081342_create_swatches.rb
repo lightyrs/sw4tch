@@ -6,7 +6,9 @@ class CreateSwatches < ActiveRecord::Migration
       t.string     :name
       t.integer    :user_id
       t.text       :description
-      t.text       :markup
+      t.text       :css
+      t.text       :scss
+      t.text       :stylus
 
       t.timestamps
     end
