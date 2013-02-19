@@ -1,0 +1,50 @@
+:scss
+  body {
+    margin: 0;
+  }
+
+  .swatch-wrapper {
+    overflow: hidden !important;
+    position: absolute;
+    width: 256px;
+    height: 256px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 256px;
+   -webkit-border-radius: 256px;
+   -moz-border-radius: 256px;
+
+    &:hover {
+      border-color: #0088cc;
+    }
+  }
+
+  .swatch {
+    display: block;
+    list-style: none;
+    text-align: center;
+    width: 256px;
+    height: 256px;
+    border-radius: 256px;
+   -webkit-border-radius: 256px;
+   -moz-border-radius: 256px;
+
+    .specimen {
+      width: 50%;
+      height: 50%;
+      border: 1px dashed #ccc;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      overflow: visible;
+      margin: -25% auto 0;
+    }
+  }
+
+:css
+  {{customCSS}}
+
+.swatch-wrapper
+  .swatch
+    .specimen

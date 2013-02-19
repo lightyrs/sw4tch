@@ -1,4 +1,8 @@
 //= require ./vendor/jquery-1.8.3.min
+//= require jquery_ujs
+//= require underscore
+//= require backbone
+//= require handlebars
 //= require bootstrap-transition
 //= require bootstrap-alert
 //= require bootstrap-tab
@@ -7,11 +11,9 @@
 //= require ace/theme-merbivore_soft
 //= require ace/mode-css
 //= require ace/mode-scss
-//= require jquery_ujs
-//= require underscore
-//= require backbone
 //= require sw4tch
-//= require_tree ../templates
+//= require_tree ./helpers
+//= require_tree ./templates
 //= require_tree ./models
 //= require_tree ./collections
 //= require_tree ./views

@@ -21,6 +21,8 @@ footer {
 
   iframe {
     border: 0 none;
+    width: 258px;
+    height: 258px;
   }
 
   .swatch-wrapper {
@@ -76,7 +78,8 @@ footer {
 
   &.new,
   &.edit {
-    margin-top: 280px;
+    margin-top: 160px;
+    text-align: center;
   }
 
   &.show {
@@ -164,7 +167,7 @@ form {
   #editor {
     width: 100%;
     position: relative;
-    min-height: 280px;
+    min-height: 322px;
     font-size: 16px;
   }
 

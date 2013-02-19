@@ -2,6 +2,8 @@ class Sw4tch.Views.SwatchEditor extends Backbone.View
 
   el: '#content'
 
+  template: JST['swatch_preview']
+
   initialize: ->
     @initializeAce()
     @initializeEvents()
@@ -26,7 +28,11 @@ class Sw4tch.Views.SwatchEditor extends Backbone.View
 
   onTabShown: ->
     @$('a[data-toggle="tab"]').on 'shown', (e) =>
-      @inputToSession()
+      @toggleSyntax(e)
+
+  toggleSyntax: (e) ->
+    @inputToSession()
+    @setSessionMode @activeSyntax()
 
   editor: ->
     ace.edit 'editor'
@@ -46,11 +52,14 @@ class Sw4tch.Views.SwatchEditor extends Backbone.View
   activeTab: ->
     @$('.nav-tabs .active a').attr 'href'
 
+  activeSyntax: ->
+    @activeTab().replace '#tab_', ''
+
   activeInput: ->
-    switch @activeTab()
-      when '#tab_css' then @cssInput()
-      when '#tab_scss' then @scssInput()
-      when '#tab_stylus' then @stylusInput()
+    switch @activeSyntax()
+      when 'css' then @cssInput()
+      when 'scss' then @scssInput()
+      when 'stylus' then @stylusInput()
       else null
 
   previewFrame: ->
@@ -62,16 +71,16 @@ class Sw4tch.Views.SwatchEditor extends Backbone.View
   previewBody: ->
     @previewDoc().body
 
-  previewHTML: ->
-    "<h3>previewHTML</h3>\r\n#{@sessionMarkup()}"
+  previewTemplate: ->
+    @template(customCSS: @sessionMarkup())
 
   renderPreview: ->
-    @previewBody().innerHTML = @previewHTML()
+    @previewBody().innerHTML = @previewTemplate()
 
   initAceOptions: ->
     @editor().setBehavioursEnabled false
     @editor().setTheme 'ace/theme/chrome'
-    @session().setMode 'ace/mode/css'
+    @setSessionMode('css')
     @session().setTabSize 2
     @session().setUseWorker false
 
@@ -81,6 +90,9 @@ class Sw4tch.Views.SwatchEditor extends Backbone.View
 
   inputToSession: ->
     @session().setValue @activeInput().val()
+
+  setSessionMode: (syntax) ->
+    @session().setMode "ace/mode/#{syntax}"
 
   sessionMarkup: ->
     @session().getValue()

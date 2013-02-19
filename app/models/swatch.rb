@@ -4,7 +4,7 @@ class Swatch < ActiveRecord::Base
 
   belongs_to :user
 
-  attr_accessible :name, :description, :markup
+  attr_accessible :name, :description, :css, :scss, :stylus
 
   validates :name, presence: true
   validates :css, presence: true
