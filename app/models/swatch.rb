@@ -5,33 +5,46 @@ class Swatch < ActiveRecord::Base
   attr_accessible :name, :description, :markup
 
   validates :name, presence: true
-  validates :markup, presence: true
+  validates :css, presence: true
+  validates :scss, presence: true
+  validates :stylus, presence: true
+
   validate  :clean_markup
 
-  after_initialize :assign_markup
+  after_initialize  :assign_markup
+  before_validation :set_markup
 
-  def default_markup
-    {}.tap do |h|
-      h[:css] = default_css
-      h[:scss] = default_scss
-      h[:stylus] = default_stylus
-    end
-  end
 
   private
 
   def assign_markup
-    self.markup = default_markup unless markup.present?
+    %w(css scss stylus).each do |attr|
+      instance_eval "self.#{attr} ||= default_#{attr}"
+    end
   end
 
-  def sanitize_markup
-    ActionController::Base.helpers.sanitize_css(markup)
+  def set_markup
+
   end
 
-  def clean_markup
-    return true if markup.blank?
-    return true unless sanitize_markup.blank?
-    errors.add(:markup, "must be valid CSS")
+  def compile_string(from, to)
+
+  end
+
+  def css_to_scss
+    Sass::Engine.new(css, syntax: :scss).render
+  end
+
+  def scss_to_css
+    Sass::Engine.new(scss, syntax: :css).render
+  end
+
+  def css_to_stylus
+    Stylus.convert(css)
+  end
+
+  def stylus_to_css
+    Stylus.compile(stylus)
   end
 
   def default_css
