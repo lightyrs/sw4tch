@@ -13,6 +13,9 @@ gem 'omniauth'
 gem 'omniauth-github'
 gem 'simple_form'
 gem 'ace-rails-ap'
+gem 'stylus'
+gem 'execjs'
+gem 'therubyracer'
 
 group :development do
   gem 'logging-rails', require: 'logging/rails'
@@ -39,10 +42,8 @@ group :assets do
   gem 'underscore-rails'
 end
 
-gem 'barista'
 gem 'haml-rails'
 gem 'sass-rails', '~> 3.2'
-gem 'stylus'
 gem 'bootstrap-sass', '~> 2.3.0.0'
 gem 'bourbon'
 gem 'jquery-rails'
