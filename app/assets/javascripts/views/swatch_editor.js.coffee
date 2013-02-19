@@ -24,7 +24,14 @@ class Sw4tch.Views.SwatchEditor extends Backbone.View
 
   onSessionChange: ->
     @session().on 'change', (e) =>
-      @renderPreview() if e.data.text == ';'
+      @renderPreview() if @renderWasTriggered(e)
+
+  renderWasTriggered: (e) ->
+    syntax = @activeSyntax()
+    if syntax is 'css' then return true
+    if syntax is 'scss' and e.data.text is ';' then return true
+    if syntax is 'stylus' and e.data.text is '\n' then return true
+    false
 
   onTabShown: ->
     @$('a[data-toggle="tab"]').on 'shown', (e) =>
@@ -62,6 +69,9 @@ class Sw4tch.Views.SwatchEditor extends Backbone.View
       when 'stylus' then @stylusInput()
       else null
 
+  needsCompile: ->
+    _.include ['scss', 'stylus'], @activeSyntax()
+
   previewFrame: ->
     @$('iframe.swatch-frame')[0]
 
@@ -96,3 +106,13 @@ class Sw4tch.Views.SwatchEditor extends Backbone.View
 
   sessionMarkup: ->
     @session().getValue()
+
+  compileSessionMarkup: ->
+    $.ajax
+      url: "/markup/compile/#{@activeSyntax()}/css"
+      data: markup: @sessionMarkup()
+      type: 'post'
+      success: () ->
+        console.log('success')
+      error: () ->
+        console.log('error')

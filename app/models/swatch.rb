@@ -31,16 +31,16 @@ class Swatch < ActiveRecord::Base
     Stylus.convert(_css||css)
   end
 
-  def scss_to_css
-    Sass::Engine.new(scss, syntax: :scss).to_css
+  def scss_to_css(_scss=nil)
+    Sass::Engine.new(_scss||scss, syntax: :scss).to_css
   end
 
   def scss_to_stylus
     css_to_stylus scss_to_css
   end
 
-  def stylus_to_css
-    Stylus.compile(stylus)
+  def stylus_to_css(_stylus=nil)
+    Stylus.compile(_stylus||stylus)
   end
 
   def stylus_to_scss
