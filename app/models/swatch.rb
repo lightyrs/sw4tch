@@ -25,20 +25,20 @@ class Swatch < ActiveRecord::Base
 
   end
 
-  def compile_string(from, to)
-
+  def convert_string(from, to)
+    instance_eval("#{from}_to_#{to}")
   end
 
   def css_to_scss
     ::Sass::CSS.new(css).render(:scss)
   end
 
-  def scss_to_css
-    Sass::Engine.new(scss, syntax: :scss).to_css
-  end
-
   def css_to_stylus
     Stylus.convert(css)
+  end
+
+  def scss_to_css
+    Sass::Engine.new(scss, syntax: :scss).to_css
   end
 
   def stylus_to_css
