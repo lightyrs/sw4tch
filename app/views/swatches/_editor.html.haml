@@ -1,8 +1,11 @@
 .editor-wrapper
   %ul.nav.nav-tabs
-    %li.active= link_to 'CSS', '#', 'data-toggle' => 'tab'
-    %li= link_to 'SCSS', '#', 'data-toggle' => 'tab'
-    %li= link_to 'Stylus', '#', 'data-toggle' => 'tab'
+    %li.active= link_to 'CSS', '#tab_css', 'data-toggle' => 'tab'
+    %li= link_to 'SCSS', '#tab_scss', 'data-toggle' => 'tab'
+    %li= link_to 'Stylus', '#tab_stylus', 'data-toggle' => 'tab'
   .control-group
-     = f.input :markup, as: :text, label: false
+    .tab-content
+      #tab_css.tab-pane.active= f.input :css, as: :text, label: false
+      #tab_scss.tab-pane= f.input :scss, as: :text, label: false
+      #tab_stylus.tab-pane= f.input :stylus, as: :text, label: false
     #editor

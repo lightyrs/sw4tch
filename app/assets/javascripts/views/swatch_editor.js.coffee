@@ -14,6 +14,7 @@ class Sw4tch.Views.SwatchEditor extends Backbone.View
 
   initializeEvents: ->
     @onSessionChange()
+    @onTabShown()
 
   initializePreview: ->
     @previewBody().setAttribute 'tabindex', 0
@@ -23,14 +24,34 @@ class Sw4tch.Views.SwatchEditor extends Backbone.View
     @session().on 'change', (e) =>
       @renderPreview() if e.data.text == ';'
 
+  onTabShown: ->
+    @$('a[data-toggle="tab"]').on 'shown', (e) =>
+      @inputToSession()
+
   editor: ->
     ace.edit 'editor'
 
   session: ->
     @editor().getSession()
 
-  formInput: ->
-    @$('#swatch_markup')
+  cssInput: ->
+    @$('#swatch_css')
+
+  scssInput: ->
+    @$('#swatch_scss')
+
+  stylusInput: ->
+    @$('#swatch_stylus')
+
+  activeTab: ->
+    @$('.nav-tabs .active a').attr 'href'
+
+  activeInput: ->
+    switch @activeTab()
+      when '#tab_css' then @cssInput()
+      when '#tab_scss' then @scssInput()
+      when '#tab_stylus' then @stylusInput()
+      else null
 
   previewFrame: ->
     @$('iframe.swatch-frame')[0]
@@ -55,8 +76,11 @@ class Sw4tch.Views.SwatchEditor extends Backbone.View
     @session().setUseWorker false
 
   initAceContent: ->
-    @session().setValue @formInput().val()
+    @inputToSession()
     @editor().moveCursorToPosition(row: 1, column: 2)
+
+  inputToSession: ->
+    @session().setValue @activeInput().val()
 
   sessionMarkup: ->
     @session().getValue()
