@@ -32,6 +32,16 @@ class Sw4tch.Views.SwatchEditor extends Backbone.View
       @updateActiveInput()
       @renderPreview() if @renderWasTriggered(e)
 
+  onTabShow: ->
+    @$('a[data-toggle="tab"]').on 'show', (e) =>
+      @freshestSyntax = @activeSyntax()
+      @freshestMarkup = @activeInput().val()
+
+  onTabShown: ->
+    @$('a[data-toggle="tab"]').on 'shown', (e) =>
+      @toggleSyntax(e)
+      @compileMarkup(@freshestSyntax, @activeSyntax(), @freshestMarkup)
+
   updateActiveInput: ->
     @updateInputWith @activeInput(), @sessionMarkup()
 
@@ -43,16 +53,6 @@ class Sw4tch.Views.SwatchEditor extends Backbone.View
     if @isSCSS() and e.data.text is ';' then return true
     if @isStylus() and e.data.text is '\n' then return true
     false
-
-  onTabShow: ->
-    @$('a[data-toggle="tab"]').on 'show', (e) =>
-      @freshestSyntax = @activeSyntax()
-      @freshestMarkup = @activeInput().val()
-
-  onTabShown: ->
-    @$('a[data-toggle="tab"]').on 'shown', (e) =>
-      @toggleSyntax(e)
-      @compileMarkup(@freshestSyntax, @activeSyntax(), @freshestMarkup)
 
   toggleSyntax: (e) ->
     @setSessionMode @activeSyntax()
