@@ -8,7 +8,6 @@
 //= require ace/mode-css
 //= require ace/mode-scss
 //= require jquery_ujs
-//= require ./script
 //= require underscore
 //= require backbone
 //= require sw4tch
