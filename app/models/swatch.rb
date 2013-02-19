@@ -1,3 +1,5 @@
+require 'sass/css'
+
 class Swatch < ActiveRecord::Base
 
   belongs_to :user
@@ -28,7 +30,7 @@ class Swatch < ActiveRecord::Base
   end
 
   def css_to_scss
-    Sass::Engine.new(css, syntax: :scss).to_tree.to_scss
+    ::Sass::CSS.new(css).render(:scss)
   end
 
   def scss_to_css
@@ -43,38 +45,57 @@ class Swatch < ActiveRecord::Base
     Stylus.compile(stylus)
   end
 
-  # def default_css
-  #   ".swatch {\r\n\tcolor: red;\r\n}\r\n\r\n.swatch .specimen {\r\n\t\r\n}\r\n\r\n.swatch .specimen::before {}\r\n\r\n.swatch .specimen::after {}"
-  # end
-
-  # def default_scss
-  #   ".swatch {\r\n\r\n\t.specimen {\r\n\r\n\t\t&:before {}\r\n\r\n\t\t&:after {}\r\n\t}\r\n}"
-  # end
-
   def default_css
     <<-eos.strip_heredoc
+      .swatch {
+        display: block;
+      }
 
+      .swatch .specimen {
+        display: block;
+      }
+
+      .swatch .specimen::before {
+        content: '';
+      }
+
+      .swatch .specimen::after {
+        content: '';
+      }
     eos
   end
 
   def default_scss
     <<-eos.strip_heredoc
+      .swatch {
 
+        .specimen {
+          display: block;
+
+          &::before {
+            content: '';
+          }
+
+          &::after {
+            content: '';
+          }
+        }
+      }
     eos
   end
 
   def default_stylus
     <<-eos.strip_heredoc
-    .swatch
+      .swatch
 
-      .specimen
-        display block
+        .specimen
+          display block
 
-        &:before
-          content: ''
+          &:before
+            content: ''
 
-        &:after
-          content: ''
+          &:after
+            content: ''
     eos
   end
 end
