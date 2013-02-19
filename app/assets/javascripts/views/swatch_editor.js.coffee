@@ -25,12 +25,15 @@ class Sw4tch.Views.SwatchEditor extends Backbone.View
   onSessionChange: ->
     @session().on 'change', (e) =>
       @renderPreview() if @renderWasTriggered(e)
+      @updateInputs()
+
+  updateInputs: ->
+    @activeInput().val @sessionMarkup
 
   renderWasTriggered: (e) ->
-    syntax = @activeSyntax()
-    if syntax is 'css' then return true
-    if syntax is 'scss' and e.data.text is ';' then return true
-    if syntax is 'stylus' and e.data.text is '\n' then return true
+    if @isCSS() then return true
+    if @isSCSS() and e.data.text is ';' then return true
+    if @isStylus() and e.data.text is '\n' then return true
     false
 
   onTabShown: ->
@@ -69,6 +72,15 @@ class Sw4tch.Views.SwatchEditor extends Backbone.View
       when 'stylus' then @stylusInput()
       else null
 
+  isCSS: ->
+    @activeSyntax() is 'css'
+
+  isSCSS: ->
+    @activeSyntax() is 'scss'
+
+  isStylus: ->
+    @activeSyntax() is 'stylus'
+
   needsCompile: ->
     _.include ['scss', 'stylus'], @activeSyntax()
 
@@ -81,11 +93,16 @@ class Sw4tch.Views.SwatchEditor extends Backbone.View
   previewBody: ->
     @previewDoc().body
 
-  previewTemplate: ->
-    @template(customCSS: @sessionMarkup())
+  previewTemplate: (css = null) ->
+    @template(customCSS: css)
 
-  renderPreview: ->
-    @previewBody().innerHTML = @previewTemplate()
+  renderPreview: (css = null) ->
+    if @isCSS()
+      @previewBody().innerHTML = @previewTemplate @sessionMarkup()
+    else if css
+      @previewBody().innerHTML = @previewTemplate css
+    else
+      @compileMarkup()
 
   initAceOptions: ->
     @editor().setBehavioursEnabled false
@@ -104,15 +121,19 @@ class Sw4tch.Views.SwatchEditor extends Backbone.View
   setSessionMode: (syntax) ->
     @session().setMode "ace/mode/#{syntax}"
 
-  sessionMarkup: ->
+  sessionMarkup: =>
     @session().getValue()
 
-  compileSessionMarkup: ->
+  compileMarkup: ->
     $.ajax
       url: "/markup/compile/#{@activeSyntax()}/css"
       data: markup: @sessionMarkup()
       type: 'post'
-      success: () ->
-        console.log('success')
-      error: () ->
-        console.log('error')
+      success: @onCompileSuccess
+      error: @onCompileFailure
+
+  onCompileSuccess: (data) =>
+    @renderPreview data
+
+  onCompileFailure: ->
+    console.log 'failure'
