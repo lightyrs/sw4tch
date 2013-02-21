@@ -28,7 +28,7 @@ class Sw4tch.Views.SwatchesEditor extends Backbone.View
     @renderPreview()
 
   onSessionChange: ->
-    @session().on 'change', (e) =>
+    @textarea().on 'keyup', (e) =>
       @updateActiveInput()
       @renderPreview() if @renderWasTriggered(e)
 
@@ -50,8 +50,8 @@ class Sw4tch.Views.SwatchesEditor extends Backbone.View
 
   renderWasTriggered: (e) ->
     if @isCSS() then return true
-    if @isSCSS() and e.data.text is ';' then return true
-    if @isStylus() and e.data.text is '\n' then return true
+    if @isSCSS() and e.keyCode is 186 then return true
+    if @isStylus() and e.keyCode is 13 then return true
     false
 
   toggleSyntax: (e) ->
@@ -62,6 +62,9 @@ class Sw4tch.Views.SwatchesEditor extends Backbone.View
 
   session: ->
     @editor().getSession()
+
+  textarea: ->
+    @$('.ace_text-input')
 
   cssInput: ->
     @$('#swatch_css')
@@ -135,7 +138,6 @@ class Sw4tch.Views.SwatchesEditor extends Backbone.View
 
   initAceContent: ->
     @inputToSession()
-    @editor().moveCursorToPosition(row: 1, column: 2)
 
   inputToSession: ->
     @session().setValue @activeInput().val()
@@ -147,6 +149,7 @@ class Sw4tch.Views.SwatchesEditor extends Backbone.View
     @session().getValue()
 
   compileMarkup: (from = @activeSyntax(), to = 'css', markup = @sessionMarkup()) ->
+    console.log(markup)
     $.ajax
       url: "/markup/compile/#{from}/#{to}"
       data: markup: "#{markup}"

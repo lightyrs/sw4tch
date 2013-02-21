@@ -40,6 +40,8 @@ class Swatch < ActiveRecord::Base
   end
 
   def stylus_to_css(_stylus=nil)
+    puts _stylus.inspect
+    puts stylus.inspect
     Stylus.compile(_stylus||stylus)
   end
 
