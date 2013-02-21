@@ -28,13 +28,13 @@
     .specimen {
       width: 50%;
       height: 50%;
-      border: 1px dashed #ccc;
       position: absolute;
       top: 50%;
       left: 0;
       right: 0;
       overflow: visible;
       margin: -25% auto 0;
+      border: 1px dashed #ccc;
     }
   }
 

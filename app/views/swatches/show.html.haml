@@ -1,6 +1,6 @@
 .row-fluid
   .span12
-    .span6
+    .span7
       .page-header
         %h2= @swatch.name
         %p.byline
@@ -8,7 +8,7 @@
       = simple_form_for @swatch do |f|
         = render 'editor', f: f
 
-    .span6
+    .span5
       #swatches.show
         = render @swatch
       = render 'actions'

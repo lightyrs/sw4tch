@@ -6,7 +6,6 @@ window.Sw4tch =
   initialize: ->
     new Sw4tch.Routers.App
     Backbone.history.start pushState: true
-    $('#swatches').shapeshift enableDrag: false
     console.log('Sw4tch.initialize')
 
 $(document).ready ->

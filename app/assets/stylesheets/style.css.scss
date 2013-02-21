@@ -18,6 +18,7 @@ footer {
 
 #swatches {
   position: relative;
+  text-align: center;
 
   .swatch-container {
     border: 0 none;
@@ -56,7 +57,7 @@ footer {
       text-decoration: none;
       line-height: 32px;
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      @include transition(all 0.1s ease-in);
+      @include transition(all 0.1s ease-out);
 
       &:hover {
         background: rgba(0, 0, 0, 0.6);
@@ -69,53 +70,6 @@ footer {
         text-align: center !important;
         padding: 0 20px !important;
       }
-    }
-  }
-
-  .swatch-wrapper {
-    border: 0 none;
-    overflow: hidden !important;
-    position: absolute;
-    width: 256px;
-    height: 256px;
-    text-align: center;
-    @include border-radius(256px);
-  }
-
-  .swatch {
-    display: block;
-    list-style: none;
-    text-align: center;
-    width: 256px;
-    height: 256px;
-    @include border-radius(256px);
-
-    &.large {
-      width: 384px;
-      height: 384px;
-      @include border-radius(384px);
-    }
-
-    .meta {
-
-      p {
-
-        &.description {
-          display: none;
-        }
-      }
-    }
-
-    .specimen {
-      width: 50%;
-      height: 50%;
-      border: 1px dashed #ccc;
-      position: absolute;
-      top: 50%;
-      left: 0;
-      right: 0;
-      overflow: visible;
-      margin: -25% auto 0;
     }
   }
 }
@@ -208,9 +162,22 @@ form {
   }
 }
 
-.swatches-show {
+.swatches-show,
+.swatches-new,
+.swatches-create,
+.swatches-update,
+.swatches-destroy,
+.swatches-edit {
 
   #editor {
-    min-height: 400px;
+    min-height: 300px;
+  }
+
+  #swatches {
+
+    .swatch-container {
+      margin: 20px auto;
+      position: relative;
+    }
   }
 }

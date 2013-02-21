@@ -11,6 +11,8 @@ class Sw4tch.Routers.App extends Backbone.Router
 
   index: ->
     new Sw4tch.Views.SwatchesIndex()
+    if $('body').hasClass 'swatches-create' or $('body').hasClass 'swatches-update'
+      new Sw4tch.Views.SwatchesEditor()
 
   new: ->
     new Sw4tch.Views.SwatchesEditor()

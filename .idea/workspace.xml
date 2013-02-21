@@ -2,27 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c053dec-bfb3-448f-83ce-9721eed9a57a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/swatches/_swatch.html.haml" afterPath="$PROJECT_DIR$/app/views/swatches/_swatch.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/routers/app_router.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/routers/app_router.js.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/swatches/edit.html.haml" afterPath="$PROJECT_DIR$/app/views/swatches/edit.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/swatches/new.html.haml" afterPath="$PROJECT_DIR$/app/views/swatches/new.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/swatches/show.html.haml" afterPath="$PROJECT_DIR$/app/views/swatches/show.html.haml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/style.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/style.css.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/sw4tch.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/sw4tch.js.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/templates/swatch_preview.hamlbars" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/swatch_preview.hamlbars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/swatches_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/swatches_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/views/swatches/swatches_index.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/views/swatches/swatches_index.js.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="sw4tch.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="0c053dec-bfb3-448f-83ce-9721eed9a57a" time="1361429740285" ignored="false" />
-    <file path="/app_router.js.coffee" changelist="0c053dec-bfb3-448f-83ce-9721eed9a57a" time="1361461589584" ignored="false" />
+    <file path="/app_router.js.coffee" changelist="0c053dec-bfb3-448f-83ce-9721eed9a57a" time="1361476983909" ignored="false" />
     <file path="/swatches_editor.js.coffee" changelist="0c053dec-bfb3-448f-83ce-9721eed9a57a" time="1361469866334" ignored="false" />
-    <file path="/swatches_index.js.coffee" changelist="0c053dec-bfb3-448f-83ce-9721eed9a57a" time="1361470069122" ignored="false" />
+    <file path="/swatches_index.js.coffee" changelist="0c053dec-bfb3-448f-83ce-9721eed9a57a" time="1361475566856" ignored="false" />
     <file path="/_swatch.html.haml" changelist="0c053dec-bfb3-448f-83ce-9721eed9a57a" time="1361472800842" ignored="false" />
     <file path="/swatch_preview.js.hamlbars" changelist="0c053dec-bfb3-448f-83ce-9721eed9a57a" time="1361465840764" ignored="false" />
-    <file path="/style.css.scss" changelist="0c053dec-bfb3-448f-83ce-9721eed9a57a" time="1361473063886" ignored="false" />
+    <file path="/style.css.scss" changelist="0c053dec-bfb3-448f-83ce-9721eed9a57a" time="1361475986651" ignored="false" />
     <file path="/link_helper.js.coffee" changelist="0c053dec-bfb3-448f-83ce-9721eed9a57a" time="1361465599128" ignored="false" />
     <file path="/show.html.haml" changelist="0c053dec-bfb3-448f-83ce-9721eed9a57a" time="1361462423972" ignored="false" />
     <file path="/application.rb" changelist="0c053dec-bfb3-448f-83ce-9721eed9a57a" time="1361454712549" ignored="false" />
     <file path="/user.rb" changelist="0c053dec-bfb3-448f-83ce-9721eed9a57a" time="1361461498920" ignored="false" />
-    <file path="/a.dummy" changelist="0c053dec-bfb3-448f-83ce-9721eed9a57a" time="1361473033752" ignored="false" />
+    <file path="/a.dummy" changelist="0c053dec-bfb3-448f-83ce-9721eed9a57a" time="1361474173405" ignored="false" />
     <file path="/Gemfile" changelist="0c053dec-bfb3-448f-83ce-9721eed9a57a" time="1361467966601" ignored="false" />
-    <file path="/swatch_preview.hamlbars" changelist="0c053dec-bfb3-448f-83ce-9721eed9a57a" time="1361470645365" ignored="false" />
+    <file path="/swatch_preview.hamlbars" changelist="0c053dec-bfb3-448f-83ce-9721eed9a57a" time="1361473871606" ignored="false" />
     <file path="$PROJECT_DIR$/log/development.log" changelist="0c053dec-bfb3-448f-83ce-9721eed9a57a" time="1361470883526" ignored="false" />
+    <file path="/swatches_controller.rb" changelist="0c053dec-bfb3-448f-83ce-9721eed9a57a" time="1361477242404" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,46 +52,10 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="swatches_index.js.coffee" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/swatches/swatches_index.js.coffee">
+      <file leaf-file-name="swatches_controller.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/swatches_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="39" selection-start="335" selection-end="335" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="swatches_editor.js.coffee" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/swatches/swatches_editor.js.coffee">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="24" selection-start="244" selection-end="244" vertical-scroll-proportion="-3.6">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="swatch_preview.hamlbars" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/swatch_preview.hamlbars">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="29" selection-start="578" selection-end="578" vertical-scroll-proportion="-9.666667">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css.scss" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/style.css.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="119" column="3" selection-start="2201" selection-end="2201" vertical-scroll-proportion="0.4722222">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_swatch.html.haml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/swatches/_swatch.html.haml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="43" selection-start="241" selection-end="241" vertical-scroll-proportion="-3.3333333">
+            <state line="5" column="56" selection-start="193" selection-end="193" vertical-scroll-proportion="0.21176471">
               <folding />
             </state>
           </provider>
@@ -107,21 +79,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/models/swatch.rb" />
-        <option value="$PROJECT_DIR$/app/models/user.rb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/routers/app_router.js.coffee" />
-        <option value="$PROJECT_DIR$/app/views/swatches/show.html.haml" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/helpers/link_helper.js.coffee" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/templates/swatch_preview.js.hamlbars" />
         <option value="$PROJECT_DIR$/config/application.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/config/environments/development.rb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/views/swatches/swatches_editor.js.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/views/swatches/swatches_index.js.coffee" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/templates/swatch_preview.hamlbars" />
         <option value="$PROJECT_DIR$/app/views/swatches/_swatch.html.haml" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/templates/swatch_preview.hamlbars" />
+        <option value="$PROJECT_DIR$/app/views/swatches/edit.html.haml" />
+        <option value="$PROJECT_DIR$/app/views/swatches/show.html.haml" />
+        <option value="$PROJECT_DIR$/app/views/swatches/new.html.haml" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/views/swatches/swatches_editor.js.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/sw4tch.js.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/views/swatches/swatches_index.js.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/routers/app_router.js.coffee" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/style.css.scss" />
+        <option value="$PROJECT_DIR$/app/controllers/swatches_controller.rb" />
       </list>
     </option>
   </component>
@@ -800,7 +773,7 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988167" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988167" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988167" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988167" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32988167" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.67011833" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24621212" sideWeight="0.67011833" order="0" side_tool="false" content_ui="combo" />
@@ -873,51 +846,9 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/helpers/comparison_helper.js.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.584">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/application.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="32" selection-start="2999" selection-end="2999" vertical-scroll-proportion="0.6710963">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="13" selection-start="925" selection-end="925" vertical-scroll-proportion="0.71503955">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="20" selection-start="199" selection-end="199" vertical-scroll-proportion="0.4477612">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20120914044020_create_identities.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20120914044011_create_users.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/swatches/show.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="53" selection-start="148" selection-end="148" vertical-scroll-proportion="0.29834256">
           <folding />
         </state>
       </provider>
@@ -950,37 +881,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/swatches/swatches_editor.js.coffee">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/routers/app_router.js.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="24" selection-start="244" selection-end="244" vertical-scroll-proportion="-3.6">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/swatches/swatches_index.js.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="39" selection-start="335" selection-end="335" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/swatch_preview.hamlbars">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="29" selection-start="578" selection-end="578" vertical-scroll-proportion="-9.666667">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/swatches/_swatch.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="43" selection-start="241" selection-end="241" vertical-scroll-proportion="-3.3333333">
+        <state line="13" column="14" selection-start="295" selection-end="299" vertical-scroll-proportion="0.55617976">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/style.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="119" column="3" selection-start="2201" selection-end="2201" vertical-scroll-proportion="0.4722222">
+        <state line="172" column="17" selection-start="2544" selection-end="2544" vertical-scroll-proportion="0.5225464">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/swatch_preview.hamlbars">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="14" selection-start="29" selection-end="29" vertical-scroll-proportion="0.096">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/sw4tch.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="160" selection-end="160" vertical-scroll-proportion="0.35820895">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/swatches/swatches_editor.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="24" selection-start="244" selection-end="244" vertical-scroll-proportion="0.14323607">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/swatches/swatches_index.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="69" selection-start="271" selection-end="271" vertical-scroll-proportion="0.25411764">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/swatches/new.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="10" selection-start="65" selection-end="65" vertical-scroll-proportion="0.22613065">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/swatches/show.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="10" selection-start="305" selection-end="305" vertical-scroll-proportion="0.49748743">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/swatches/edit.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="10" selection-start="65" selection-end="65" vertical-scroll-proportion="0.22613065">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/swatches/_swatch.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="43" selection-start="241" selection-end="241" vertical-scroll-proportion="0.22613065">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/swatches_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="56" selection-start="193" selection-end="193" vertical-scroll-proportion="0.21176471">
           <folding />
         </state>
       </provider>

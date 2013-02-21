@@ -8,6 +8,7 @@ class Sw4tch.Views.SwatchesIndex extends Backbone.View
 
   initialize: ->
     @initializePreview(frame) for frame in @previewFrames()
+    @$el.shapeshift(enableDrag: false) if @previewFrames().length > 1
 
   initializePreview: (frame) ->
     @frame = frame
