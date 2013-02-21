@@ -107,7 +107,7 @@ class Sw4tch.Views.SwatchesEditor extends Backbone.View
     @previewDoc().body
 
   previewTemplate: (css = null) ->
-    @template(customCSS: css)
+    @template(customCSS: css, href: @previewLink(), name: @previewName())
 
   previewCSS: ->
     @cssInput().val()
@@ -162,3 +162,9 @@ class Sw4tch.Views.SwatchesEditor extends Backbone.View
 
   onCompileFailure: ->
     console.log 'failure'
+
+  previewLink: ->
+    $(@previewFrame()).data 'href'
+
+  previewName: ->
+    $(@previewFrame()).data 'name'
