@@ -1,2 +1,2 @@
 #swatches.index
-  = render collection: current_user.swatches, partial: 'swatches/swatch'
+  = render collection: current_user.swatches.order('created_at DESC').limit(36), partial: 'swatches/swatch'
