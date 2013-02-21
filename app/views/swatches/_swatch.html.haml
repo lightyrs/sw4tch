@@ -1,3 +1,6 @@
-%iframe.swatch-frame{'data-css' => swatch.css,
-                     'data-href' => swatch.persisted? ? swatch_path(swatch) : '#',
-                     'data-name' => swatch.persisted? ? swatch.name : ''}
+.swatch-container
+  %iframe.swatch-frame{'data-css' => swatch.css}
+  - if swatch.persisted?
+    = link_to "<span>#{swatch.name}</span>".html_safe, swatch_path(swatch), class: 'swatch-link'
+  - else
+    = link_to '', '#', class: 'swatch-link'

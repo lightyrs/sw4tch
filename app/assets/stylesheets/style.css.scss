@@ -19,14 +19,57 @@ footer {
 #swatches {
   position: relative;
 
-  iframe {
+  .swatch-container {
     border: 0 none;
     width: 256px;
-    height: 256px;
+    height:  256px;
     @include border-radius(256px);
-    position: absolute;
     overflow: hidden !important;
     margin: 20px 20px 10px;
+    position: absolute;
+
+    iframe {
+      border: 0 none;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      @include border-radius(256px);
+      overflow: hidden !important;
+    }
+
+    .swatch-link {
+      @include border-radius(256px);
+      overflow: hidden !important;
+      display: table !important;
+      background: none;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      left: 0;
+      top: 0;
+      z-index: 100;
+      color: rgba(255, 255, 255, 0);
+      font-size: 32px;
+      font-weight: bold;
+      text-decoration: none;
+      line-height: 32px;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      @include transition(all 0.1s ease-in);
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.6);
+        color: rgba(255, 255, 255, 0.6);
+      }
+
+      span {
+        display: table-cell !important;
+        vertical-align: middle !important;
+        text-align: center !important;
+        padding: 0 20px !important;
+      }
+    }
   }
 
   .swatch-wrapper {
@@ -73,33 +116,6 @@ footer {
       right: 0;
       overflow: visible;
       margin: -25% auto 0;
-    }
-  }
-
-  &.new,
-  &.edit {
-    margin-top: 160px;
-    text-align: center;
-  }
-
-  &.show {
-    margin-top: 20px;
-  }
-
-  &.new,
-  &.show {
-
-    .swatch {
-
-      .meta {
-
-        p {
-
-          &.description {
-            display: inline;
-          }
-        }
-      }
     }
   }
 }

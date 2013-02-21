@@ -15,33 +15,6 @@
    -moz-border-radius: 256px !important;
   }
 
-  .swatch-link {
-    display: table !important;
-    background: none;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 100;
-    color: rgba(255, 255, 255, 0);
-    font-size: 32px;
-    font-weight: bold;
-    text-decoration: none;
-    line-height: 32px;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-
-    &:hover {
-      background: rgba(0, 0, 0, 0.6);
-      color: rgba(255, 255, 255, 0.6);
-    }
-
-    span {
-      display: table-cell !important;
-      vertical-align: middle !important;
-      text-align: center !important;
-      padding: 0 20px !important;
-    }
-  }
-
   .swatch {
     display: block;
     list-style: none;
@@ -68,7 +41,7 @@
 :css
   {{customCSS}}
 
+
 .swatch-wrapper
-  <a href={{href}} target="_parent" class="swatch-link"><span>{{name}}</span></a>
   .swatch
     .specimen
