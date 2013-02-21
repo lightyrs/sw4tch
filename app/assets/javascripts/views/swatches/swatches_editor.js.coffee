@@ -149,7 +149,6 @@ class Sw4tch.Views.SwatchesEditor extends Backbone.View
     @session().getValue()
 
   compileMarkup: (from = @activeSyntax(), to = 'css', markup = @sessionMarkup()) ->
-    console.log(markup)
     $.ajax
       url: "/markup/compile/#{from}/#{to}"
       data: markup: "#{markup}"
@@ -164,7 +163,7 @@ class Sw4tch.Views.SwatchesEditor extends Backbone.View
     @renderPreview @previewCSS()
 
   onCompileFailure: ->
-    console.log 'failure'
+    # console.log 'failure'
 
   previewLink: ->
     $(@previewFrame()).data 'href'
