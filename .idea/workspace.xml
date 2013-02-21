@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c053dec-bfb3-448f-83ce-9721eed9a57a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/home_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/home_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/show.html.haml" afterPath="$PROJECT_DIR$/app/views/users/show.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/application.rb" afterPath="$PROJECT_DIR$/config/application.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="sw4tch.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -19,7 +21,7 @@
     <file path="/application.rb" changelist="0c053dec-bfb3-448f-83ce-9721eed9a57a" time="1361477818103" ignored="false" />
     <file path="/user.rb" changelist="0c053dec-bfb3-448f-83ce-9721eed9a57a" time="1361461498920" ignored="false" />
     <file path="/a.dummy" changelist="0c053dec-bfb3-448f-83ce-9721eed9a57a" time="1361474173405" ignored="false" />
-    <file path="/Gemfile" changelist="0c053dec-bfb3-448f-83ce-9721eed9a57a" time="1361467966601" ignored="false" />
+    <file path="/Gemfile" changelist="0c053dec-bfb3-448f-83ce-9721eed9a57a" time="1361480564147" ignored="false" />
     <file path="/swatch_preview.hamlbars" changelist="0c053dec-bfb3-448f-83ce-9721eed9a57a" time="1361473871606" ignored="false" />
     <file path="$PROJECT_DIR$/log/development.log" changelist="0c053dec-bfb3-448f-83ce-9721eed9a57a" time="1361470883526" ignored="false" />
     <file path="/swatches_controller.rb" changelist="0c053dec-bfb3-448f-83ce-9721eed9a57a" time="1361477644612" ignored="false" />
@@ -47,7 +49,7 @@
       <file leaf-file-name="application.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/application.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="45" selection-start="477" selection-end="477" vertical-scroll-proportion="0.55058825">
+            <state line="12" column="25" selection-start="431" selection-end="431" vertical-scroll-proportion="0.5082353">
               <folding />
             </state>
           </provider>
@@ -71,7 +73,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/config/environments/development.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/app/views/swatches/_swatch.html.haml" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/templates/swatch_preview.hamlbars" />
@@ -84,9 +85,10 @@
         <option value="$PROJECT_DIR$/app/assets/javascripts/routers/app_router.js.coffee" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/style.css.scss" />
         <option value="$PROJECT_DIR$/app/controllers/swatches_controller.rb" />
-        <option value="$PROJECT_DIR$/config/application.rb" />
         <option value="$PROJECT_DIR$/app/controllers/home_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/users/show.html.haml" />
+        <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/config/application.rb" />
       </list>
     </option>
   </component>
@@ -896,13 +898,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/sw4tch.js.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="160" selection-end="160" vertical-scroll-proportion="0.35820895">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/swatches/swatches_editor.js.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="24" selection-start="244" selection-end="244" vertical-scroll-proportion="0.14323607">
@@ -1001,9 +996,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="50" selection-start="248" selection-end="248" vertical-scroll-proportion="0.59294116">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/config/application.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="45" selection-start="477" selection-end="477" vertical-scroll-proportion="0.55058825">
+        <state line="12" column="25" selection-start="431" selection-end="431" vertical-scroll-proportion="0.5082353">
           <folding />
         </state>
       </provider>

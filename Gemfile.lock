@@ -1,7 +1,12 @@
+GIT
+  remote: git://github.com/lightyrs/ace-rails-ap.git
+  revision: 6689be325b2f02edb1a64cacf299df7db811aa99
+  specs:
+    ace-rails-ap (2.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
-    ace-rails-ap (2.0.0)
     actionmailer (3.2.11)
       actionpack (= 3.2.11)
       mail (~> 2.4.4)
@@ -254,7 +259,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  ace-rails-ap
+  ace-rails-ap!
   awesome_print
   backbone-on-rails
   better_errors

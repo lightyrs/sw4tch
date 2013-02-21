@@ -11,7 +11,6 @@ end
 
 # TODO: Show swatch author on hover under title
 # TODO: Add share buttons
-# TODO: Upgrade ace editor to get stylus mode
 
 module Sw4tch
   class Application < Rails::Application
