@@ -1,9 +1,11 @@
-Handlebars.registerHelper "link", (text, url, target='', className='') ->
+Handlebars.registerHelper "link", (options) ->
 
-  text = Handlebars.Utils.escapeExpression(text)
-  url = Handlebars.Utils.escapeExpression(url)
-  target = Handlebars.Utils.escapeExpression(target)
-  className = Handlebars.Utils.escapeExpression(className)
+  options = options.hash
+
+  text = Handlebars.Utils.escapeExpression(options.text)
+  url = Handlebars.Utils.escapeExpression(options.url)
+  target = Handlebars.Utils.escapeExpression(options.target)
+  className = Handlebars.Utils.escapeExpression(options.className)
 
   result = "<a class=\"" + className + "\" href=\"" + url + "\" target=\"" + target + "\">" + text + "</a>"
 

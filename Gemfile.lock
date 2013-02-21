@@ -268,7 +268,7 @@ DEPENDENCIES
   font-awesome-sass-rails
   foreman
   haml-rails
-  hamlbars (~> 2.0)
+  hamlbars
   handlebars_assets
   heroku
   hirb

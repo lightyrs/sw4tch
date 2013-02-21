@@ -21,6 +21,16 @@
     height: 100%;
     position: absolute;
     z-index: 100;
+    color: rgba(255, 255, 255, 0);
+    font-size: 36px;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 256px;
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.6);
+      color: rgba(255, 255, 255, 0.6);
+    }
   }
 
   .swatch {
@@ -50,6 +60,6 @@
   {{customCSS}}
 
 .swatch-wrapper
-  {{#link '' href '_parent' 'swatch-link'}}{{/link}}
+  <a href={{href}} target="_parent" class="swatch-link">{{name}}</a>
   .swatch
     .specimen

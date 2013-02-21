@@ -26,10 +26,13 @@ class Sw4tch.Views.SwatchesIndex extends Backbone.View
     @previewDoc().body
 
   previewTemplate: ->
-    @template(customCSS: @previewMarkup(), href: @previewLink())
+    @template(customCSS: @previewMarkup(), href: @previewLink(), name: @previewName())
 
   previewMarkup: ->
     $(@frame).data 'css'
 
   previewLink: ->
     $(@frame).data 'href'
+
+  previewName: ->
+    $(@frame).data 'name'

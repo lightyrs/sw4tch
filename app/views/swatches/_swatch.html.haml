@@ -1,2 +1,3 @@
 %iframe.swatch-frame{'data-css' => swatch.css,
-                     'data-href' => swatch.persisted? ? swatch_path(swatch) : '#'}
+                     'data-href' => swatch.persisted? ? swatch_path(swatch) : '#',
+                     'data-name' => swatch.persisted? ? swatch.name : ''}
