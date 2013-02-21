@@ -1,13 +1,2 @@
-%iframe.swatch-frame
-
-  - if swatch.persisted?
-
-    .swatch-wrapper{class: "swatch-#{swatch.id}"}
-      %a.swatch{href: swatch_path(swatch)}
-        %div.specimen
-
-  - else
-
-    .swatch-wrapper
-      .swatch
-        %div.specimen
+%iframe.swatch-frame{'data-css' => swatch.css,
+                     'data-href' => swatch.persisted? ? swatch_path(swatch) : '#'}

@@ -20,23 +20,27 @@ footer {
   position: relative;
 
   iframe {
-    border: 0 none;
-    width: 258px;
-    height: 258px;
+    border: 1px solid #ddd;
+    width: 256px;
+    height: 256px;
+    @include border-radius(256px);
+    position: absolute;
+    overflow: hidden !important;
+    margin: 20px 20px 10px;
+
+    &:hover {
+      border-color: #08c;
+    }
   }
 
   .swatch-wrapper {
+    border: 0 none;
     overflow: hidden !important;
     position: absolute;
     width: 256px;
     height: 256px;
     text-align: center;
-    border: 1px solid #ccc;
     @include border-radius(256px);
-
-    &:hover {
-      border-color: #0088cc;
-    }
   }
 
   .swatch {
