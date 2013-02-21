@@ -2,8 +2,6 @@ require 'sass/css'
 
 class Swatch < ActiveRecord::Base
 
-  # TODO: Upgrade ace editor to get stylus mode
-
   belongs_to :user
 
   attr_accessible :name, :description, :css, :scss, :stylus
