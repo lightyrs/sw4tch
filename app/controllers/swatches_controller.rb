@@ -3,7 +3,7 @@ class SwatchesController < ApplicationController
   before_filter :assign_swatch, only: [ :show, :edit, :update, :destroy ]
 
   def index
-    @swatches = Swatch.all.sort_by(&:created_at).reverse
+    @swatches = Swatch.order('created_at DESC').limit(36)
   end
 
   def show

@@ -9,8 +9,7 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
-# TODO: Reload session editor code on validation error/reload
-# TODO: Show swatch title/author on hover instead of blue border
+# TODO: Show swatch author on hover under title
 # TODO: Add share buttons
 # TODO: Upgrade ace editor to get stylus mode
 
