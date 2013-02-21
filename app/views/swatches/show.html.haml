@@ -1,7 +1,10 @@
 .row-fluid
   .span12
     .span6
-      %h2= @swatch.name
+      .page-header
+        %h2= @swatch.name
+        %p.byline
+          #{@swatch.created_at} by #{link_to @swatch.user.try(:username), user_path(@swatch.user)}
       = simple_form_for @swatch do |f|
         = render 'editor', f: f
 
