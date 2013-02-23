@@ -8,6 +8,8 @@ class Sw4tch.Views.SwatchesEditor extends Backbone.View
 
   freshestMarkup: null
 
+  previewTimer: null
+
   initialize: ->
     @initializeAce()
     @initializeEvents()
@@ -29,8 +31,11 @@ class Sw4tch.Views.SwatchesEditor extends Backbone.View
 
   onSessionChange: ->
     @textarea().on 'keyup', (e) =>
-      @updateActiveInput()
-      @renderPreview() if @renderWasTriggered(e)
+      clearTimeout @previewTimer
+      @previewTimer = setTimeout =>
+        @updateActiveInput()
+        @renderPreview()
+      , 600
 
   onTabShow: ->
     @$('a[data-toggle="tab"]').on 'show', (e) =>

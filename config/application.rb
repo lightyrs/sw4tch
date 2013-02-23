@@ -9,7 +9,6 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
-# TODO: Throttle preview rendering
 # TODO: Add Compass support
 # TODO: Add GitHub gist storage
 # TODO: Add share buttons
