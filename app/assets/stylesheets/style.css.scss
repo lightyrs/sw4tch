@@ -20,36 +20,53 @@ footer {
   float: left;
   width: 100%;
 
+  .heading {
+    width: 71%;
+  }
+
   h2 {
     margin-top: 0;
   }
 }
 
-.gist-button {
+.btn-toolbar {
   text-align: right;
+  margin-top: 0;
+  width: 29%;
+  line-height: 30px;
+  float: right;
 
-  li {
-    text-align: left;
-    position: relative;
+  .gist-button {
+    text-align: right;
 
-    &.public-setting {
+    li {
+      text-align: left;
+      position: relative;
+
+      > a {
+        padding-top: 6px;
+        padding-bottom: 6px;
+      }
+
+      &.public-setting {
+
+        .btn-group {
+          display: block;
+        }
+      }
 
       .btn-group {
-        display: block;
+        display: none;
+        position: absolute;
+        right: 10px;
+        top: 5px;
       }
-    }
-
-    .btn-group {
-      display: none;
-      position: absolute;
-      right: 10px;
-      top: 2px;
     }
   }
 
   .gist-url {
     display: none;
-    margin-top: 15px;
+    margin-top: 13px;
     @include border-radius(3px);
     padding: 2px 4px;
     background-color: #f7f7f9;
@@ -57,6 +74,7 @@ footer {
     white-space: nowrap;
     font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
     font-size: 12px;
+    line-height: 16px;
 
     a {
       color: #d14;

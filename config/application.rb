@@ -9,7 +9,6 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
-# TODO: Add fork function
 # TODO: Add share buttons
 # TODO: Add Nib support
 

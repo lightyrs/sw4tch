@@ -10,21 +10,6 @@ class SwatchesController < ApplicationController
     @swatch = Swatch.find_by_id(params[:id])
   end
 
-  def gist
-    swatch = Swatch.find_by_id(params[:id])
-    gist = Gist.new(
-      user: swatch.user,
-      swatch: swatch,
-      syntax: params[:syntax],
-      is_public: params[:is_public]
-    )
-    if @gist_url = gist.publish
-      render json: @gist_url.to_json
-    else
-      head :not_acceptable
-    end
-  end
-
   def new
     @swatch = current_user.swatches.new
   end
@@ -53,7 +38,32 @@ class SwatchesController < ApplicationController
     if @swatch && @swatch.destroy
       redirect_to root_path, notice: 'The swatch was deleted.'
     else
-      render :edit, error: 'There was an error deleting the swatch.'
+      render :edit, alert: 'There was an error deleting the swatch.'
+    end
+  end
+
+  def fork
+    @swatch_to_fork = Swatch.find_by_id(params[:id])
+    @forked_swatch = @swatch_to_fork.dup.tap { |s| s.user_id = current_user.id }
+    if @forked_swatch.save
+      redirect_to swatch_path(@forked_swatch), notice: 'The swatch was forked.'
+    else
+      redirect_to swatch_path(@swatch_to_fork), alert: 'There was an error forking the swatch.'
+    end
+  end
+
+  def gist
+    swatch = Swatch.find_by_id(params[:id])
+    gist = Gist.new(
+      user: swatch.user,
+      swatch: swatch,
+      syntax: params[:syntax],
+      is_public: params[:is_public]
+    )
+    if @gist_url = gist.publish
+      render json: @gist_url.to_json
+    else
+      head :not_acceptable
     end
   end
 

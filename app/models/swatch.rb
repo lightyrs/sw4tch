@@ -8,16 +8,23 @@ class Swatch < ActiveRecord::Base
   attr_accessible :name, :description, :css, :scss, :stylus
 
   validates :name, presence: true
+  validates :name, uniqueness: { scope: :user_id }
   validates :css, presence: true
   validates :scss, presence: true
   validates :stylus, presence: true
 
   after_initialize  :assign_markup
+  before_validation :assign_latest
 
   def assign_markup
     %w(css scss stylus).each do |attr|
       instance_eval "self.#{attr} ||= default_#{attr}"
     end
+  end
+
+  def assign_latest
+    self.scss = css_to_scss
+    self.stylus = css_to_stylus
   end
 
   def convert_markup(from, to)

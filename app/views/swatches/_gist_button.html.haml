@@ -1,8 +1,7 @@
-.btn-group.pull-right.gist-button
+.btn-group.gist-button
   %a.btn.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
     %i.icon-github-text
-    &nbsp;
-    %span.text Publish Gist
+    %span.text Gist
     %span.caret
   %ul.dropdown-menu
     %li
@@ -20,5 +19,5 @@
       .btn-group
         = link_to 'Yes', '#', 'data-public' => true, class: 'btn btn-mini'
         = link_to 'No', '#', 'data-public' => false, class: 'btn btn-mini'
-  .gist-url
-    = link_to '', '#'
+.gist-url.pull-right
+  = link_to '', '#'

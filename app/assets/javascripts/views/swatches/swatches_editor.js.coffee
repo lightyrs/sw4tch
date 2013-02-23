@@ -82,7 +82,6 @@ class Sw4tch.Views.SwatchesEditor extends Backbone.View
   onGistSuccess: (data) ->
     @$('.gist-button').find('span.text').text('Publish Gist')
     @$('.gist-url').find('a').text(data).attr('href', data).end().show()
-    console.log(data)
 
   onGistFailure: ->
     # console.log('failure')
