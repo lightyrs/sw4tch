@@ -1,12 +1,13 @@
 class SwatchesController < ApplicationController
 
-  before_filter :assign_swatch, only: [ :show, :edit, :update, :destroy ]
+  before_filter :assign_user_swatch, only: [ :edit, :update, :destroy ]
 
   def index
     @swatches = Swatch.order('created_at DESC').limit(36)
   end
 
   def show
+    @swatch = Swatch.find_by_id(params[:id])
   end
 
   def new
@@ -43,7 +44,7 @@ class SwatchesController < ApplicationController
 
   private
 
-  def assign_swatch
+  def assign_user_swatch
     @swatch = current_user.swatches.find_by_id(params[:id])
   end
 end

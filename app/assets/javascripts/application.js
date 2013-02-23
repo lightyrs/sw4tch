@@ -11,6 +11,7 @@
 //= require ace/theme-merbivore_soft
 //= require ace/mode-css
 //= require ace/mode-scss
+//= require ace/mode-stylus
 //= require sw4tch
 //= require_tree ./helpers
 //= require_tree ./templates

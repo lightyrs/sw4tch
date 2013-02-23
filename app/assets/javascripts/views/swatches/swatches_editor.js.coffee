@@ -51,7 +51,7 @@ class Sw4tch.Views.SwatchesEditor extends Backbone.View
   renderWasTriggered: (e) ->
     if @isCSS() then return true
     if @isSCSS() and e.keyCode is 186 then return true
-    if @isStylus() and e.keyCode is 13 then return true
+    if @isStylus() and e.keyCode is 9 or e.keyCode is 13 then return true
     false
 
   toggleSyntax: (e) ->
@@ -130,11 +130,11 @@ class Sw4tch.Views.SwatchesEditor extends Backbone.View
     @previewBody().innerHTML = @previewTemplate data
 
   initAceOptions: ->
-    @editor().setBehavioursEnabled false
+    @editor().setBehavioursEnabled true
     @editor().setTheme 'ace/theme/chrome'
     @setSessionMode('css')
     @session().setTabSize 2
-    @session().setUseWorker false
+    @session().setUseWorker true
 
   initAceContent: ->
     @inputToSession()
