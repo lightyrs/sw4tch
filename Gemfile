@@ -16,6 +16,7 @@ gem 'ace-rails-ap', github: 'lightyrs/ace-rails-ap'
 gem 'stylus'
 gem 'execjs'
 gem 'therubyracer'
+gem 'github_api'
 
 group :development do
   gem 'logging-rails', require: 'logging/rails'

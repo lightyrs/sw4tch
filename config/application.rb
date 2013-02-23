@@ -9,9 +9,10 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
-# TODO: Add Nib support
 # TODO: Add GitHub gist storage
+# TODO: Add fork function
 # TODO: Add share buttons
+# TODO: Add Nib support
 
 module Sw4tch
   class Application < Rails::Application

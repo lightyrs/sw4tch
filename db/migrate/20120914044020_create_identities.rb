@@ -6,6 +6,7 @@ class CreateIdentities < ActiveRecord::Migration
       t.string    :username
       t.string    :provider
       t.string    :token
+      t.string    :website
       t.string    :email
       t.string    :avatar
       t.string    :profile_url

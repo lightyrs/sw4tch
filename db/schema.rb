@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(:version => 20130214081342) do
     t.string   "username"
     t.string   "provider"
     t.string   "token"
+    t.string   "website"
     t.string   "email"
     t.string   "avatar"
     t.string   "profile_url"

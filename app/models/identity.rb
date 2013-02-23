@@ -11,7 +11,6 @@ class Identity < ActiveRecord::Base
   class << self
 
     def find_or_create_with_omniauth(auth)
-      Rails.logger.debug(auth.inspect.cyan)
       if identity = Identity.find_with_omniauth(auth)
         identity.auth = auth
         identity.refresh_provider_data
@@ -28,7 +27,6 @@ class Identity < ActiveRecord::Base
 
     def create_with_omniauth(auth)
       identity = Identity.new(auth: auth, uid: auth['uid'], provider: auth['provider'])
-      Rails.logger.debug(identity.inspect.cyan)
       if identity.set_provider_data!
         identity.save
         identity
@@ -126,6 +124,8 @@ class Identity < ActiveRecord::Base
     self.email = auth['info']['email'] rescue nil
     self.bio = auth['extra']['raw_info']['bio'] rescue nil
     self.profile_url = auth['info']['urls']['GitHub'] rescue nil
+    self.website = auth['extra']['raw_info']['blog'] rescue nil
+    self.token = auth['credentials']['token'] rescue nil
   end
 
   def dropbox
