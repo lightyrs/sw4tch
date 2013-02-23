@@ -9,7 +9,7 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
-# TODO: Add Compass support
+# TODO: Add Nib support
 # TODO: Add GitHub gist storage
 # TODO: Add share buttons
 

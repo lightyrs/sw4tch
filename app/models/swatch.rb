@@ -1,4 +1,5 @@
 require 'sass/css'
+require 'compass'
 
 class Swatch < ActiveRecord::Base
 
@@ -32,7 +33,9 @@ class Swatch < ActiveRecord::Base
   end
 
   def scss_to_css(_scss=nil)
-    Sass::Engine.new(_scss||scss, syntax: :scss).to_css
+    _scss ||= scss
+    _scss = import_compass(_scss) if _scss.include? '@include'
+    Sass::Engine.new("#{_scss}", sass_options).to_css
   end
 
   def scss_to_stylus
@@ -45,6 +48,14 @@ class Swatch < ActiveRecord::Base
 
   def stylus_to_scss
     css_to_scss stylus_to_css
+  end
+
+  def sass_options
+    Compass.configuration.to_sass_engine_options.merge(syntax: :scss, line_comments: false)
+  end
+
+  def import_compass(markup)
+    "@import 'compass/css3';#{markup}"
   end
 
   def default_css
