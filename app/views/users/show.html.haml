@@ -1,2 +1,6 @@
 #swatches.index
+  - unless @user == current_user
+    .user-swatch
+      = render 'users/user', user: @user
+      = link_to '<span><i style="font-size: 216px;" class="icon-github icon-white"></i></span>'.html_safe, @user.identity.profile_url, class: 'user-link'
   = render collection: @swatches.order('created_at DESC').limit(36), partial: 'swatches/swatch'

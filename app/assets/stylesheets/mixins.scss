@@ -1,0 +1,30 @@
+@mixin circle_link {
+  @include border-radius(256px);
+  overflow: hidden !important;
+  display: table !important;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  color: rgba(255, 255, 255, 0);
+  font-size: 32px;
+  font-weight: bold;
+  text-decoration: none;
+  line-height: 32px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  @include transition(all 0.1s ease-out);
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.6);
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  span {
+    display: table-cell !important;
+    vertical-align: middle !important;
+    text-align: center !important;
+    padding: 0 20px !important;
+  }
+}

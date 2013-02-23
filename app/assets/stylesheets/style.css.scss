@@ -20,6 +20,55 @@ footer {
   position: relative;
   text-align: center;
 
+  .user-swatch {
+    border: 0 none;
+    width: 256px;
+    height:  256px;
+    @include border-radius(256px);
+    overflow: hidden !important;
+    margin: 20px 20px 10px;
+    position: absolute;
+
+    .user {
+      position: absolute;
+
+      .avatar,
+      .names {
+        float: none;
+        margin: 0;
+      }
+
+      .avatar {
+
+        img {
+          @include border-radius(100px);
+        }
+      }
+
+      .stats {
+        margin-top: 5px;
+      }
+
+      p.bio {
+        line-height: 14px;
+        font-size: 12px;
+        width: 70%;
+        margin: 0 auto;
+      }
+    }
+
+    .user-link {
+      @include background(linear-gradient(rgba(#fff, 0) 70%, rgba(#fff, 0.5) 80%, #fff));
+      @include circle_link;
+
+      span {
+        vertical-align: inherit !important;
+        text-align: left !important;
+        padding: 20px 20px !important;
+      }
+    }
+  }
+
   .swatch-container {
     border: 0 none;
     width: 256px;
@@ -41,35 +90,7 @@ footer {
     }
 
     .swatch-link {
-      @include border-radius(256px);
-      overflow: hidden !important;
-      display: table !important;
-      background: none;
-      width: 100%;
-      height: 100%;
-      position: relative;
-      left: 0;
-      top: 0;
-      z-index: 100;
-      color: rgba(255, 255, 255, 0);
-      font-size: 32px;
-      font-weight: bold;
-      text-decoration: none;
-      line-height: 32px;
-      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      @include transition(all 0.1s ease-out);
-
-      &:hover {
-        background: rgba(0, 0, 0, 0.6);
-        color: rgba(255, 255, 255, 0.6);
-      }
-
-      span {
-        display: table-cell !important;
-        vertical-align: middle !important;
-        text-align: center !important;
-        padding: 0 20px !important;
-      }
+      @include circle_link;
     }
   }
 }
@@ -137,7 +158,7 @@ form {
   #editor {
     width: 100%;
     position: relative;
-    min-height: 350px;
+    min-height: 360px;
     font-size: 16px;
   }
 
@@ -170,7 +191,7 @@ form {
 .swatches-edit {
 
   #editor {
-    min-height: 300px;
+    min-height: 360px;
   }
 
   #swatches {
