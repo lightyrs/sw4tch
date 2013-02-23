@@ -1,7 +1,7 @@
-- if current_user
-  .user.well
-    = render 'users/user', user: current_user
-    %br
-    %center= link_to 'Sign Out', logout_path, class: 'btn-block btn'
-- else
-  = link_to 'Sign In with GitHub', sign_in_path('github'), class: 'btn btn-primary'
+.session
+  - if current_user
+    .user.well
+      = render 'users/user', user: current_user
+      = link_to 'Sign Out', logout_path, class: 'btn-small btn btn-block'
+  - else
+    = link_to 'Sign In with GitHub', sign_in_path('github'), class: 'btn btn-primary'

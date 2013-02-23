@@ -163,6 +163,19 @@ footer {
   }
 }
 
+.session {
+
+  .well {
+    position: relative;
+  }
+
+  p.bio {
+    visibility: hidden;
+    height: 1px;
+    margin-bottom: -15px;
+  }
+}
+
 .user {
 
   h4, h5 {
@@ -172,8 +185,9 @@ footer {
   h4 {
 
     a {
-      width: 167px;
+      max-width: 167px;
       display: block;
+      word-wrap: break-word;
     }
   }
 
@@ -294,4 +308,8 @@ p {
     border-left: 20px solid #ddd;
     padding-left: 15px;
   }
+}
+
+.alert {
+  @include transition(all 0.5s)
 }
