@@ -10,6 +10,21 @@ class SwatchesController < ApplicationController
     @swatch = Swatch.find_by_id(params[:id])
   end
 
+  def gist
+    swatch = Swatch.find_by_id(params[:id])
+    gist = Gist.new(
+      user: swatch.user,
+      swatch: swatch,
+      syntax: params[:syntax],
+      is_public: params[:is_public]
+    )
+    if @gist_url = gist.publish
+      render json: @gist_url.to_json
+    else
+      head :not_acceptable
+    end
+  end
+
   def new
     @swatch = current_user.swatches.new
   end

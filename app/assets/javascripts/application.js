@@ -6,6 +6,8 @@
 //= require bootstrap-transition
 //= require bootstrap-alert
 //= require bootstrap-tab
+//= require bootstrap-dropdown
+//= require bootstrap-button
 //= require ./vendor/jquery.shapeshift
 //= require ace/ace
 //= require ace/theme-merbivore_soft

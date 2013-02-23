@@ -16,6 +16,56 @@ footer {
   position: relative;
 }
 
+.page-header {
+  float: left;
+  width: 100%;
+
+  h2 {
+    margin-top: 0;
+  }
+}
+
+.gist-button {
+  text-align: right;
+
+  li {
+    text-align: left;
+    position: relative;
+
+    &.public-setting {
+
+      .btn-group {
+        display: block;
+      }
+    }
+
+    .btn-group {
+      display: none;
+      position: absolute;
+      right: 10px;
+      top: 2px;
+    }
+  }
+
+  .gist-url {
+    display: none;
+    margin-top: 15px;
+    @include border-radius(3px);
+    padding: 2px 4px;
+    background-color: #f7f7f9;
+    border: 1px solid #e1e1e8;
+    white-space: nowrap;
+    font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+    font-size: 12px;
+
+    a {
+      color: #d14;
+      font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+      font-size: 12px;
+    }
+  }
+}
+
 #swatches {
   position: relative;
   text-align: center;
@@ -127,6 +177,7 @@ footer {
 }
 
 form {
+  clear: both;
 
   input,
   textarea,
@@ -207,5 +258,14 @@ form {
 
   #swatches {
     margin-bottom: 25px;
+  }
+}
+
+
+p {
+
+  &.description {
+    border-left: 20px solid #ddd;
+    padding-left: 15px;
   }
 }
