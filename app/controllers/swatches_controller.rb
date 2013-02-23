@@ -71,5 +71,7 @@ class SwatchesController < ApplicationController
 
   def assign_user_swatch
     @swatch = current_user.swatches.find_by_id(params[:id])
+  rescue NoMethodError
+    redirect_to root_path
   end
 end

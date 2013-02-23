@@ -179,6 +179,8 @@ class Sw4tch.Views.SwatchesEditor extends Backbone.View
     @setSessionMode('css')
     @session().setTabSize 2
     @session().setUseWorker false
+    @session().setUseWrapMode true
+    @session().setWrapLimitRange()
 
   initAceContent: ->
     @inputToSession()
