@@ -9,7 +9,9 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
-# TODO: Show swatch author on hover under title
+# TODO: Throttle preview rendering
+# TODO: Add Compass support
+# TODO: Add GitHub gist storage
 # TODO: Add share buttons
 
 module Sw4tch

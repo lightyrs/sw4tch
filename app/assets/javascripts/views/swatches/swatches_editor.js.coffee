@@ -40,7 +40,7 @@ class Sw4tch.Views.SwatchesEditor extends Backbone.View
   onTabShown: ->
     @$('a[data-toggle="tab"]').on 'shown', (e) =>
       @toggleSyntax(e)
-      @compileMarkup(@freshestSyntax, @activeSyntax(), @freshestMarkup)
+      @compileMarkup(@freshestSyntax, @activeSyntax(), @freshestMarkup, true)
 
   updateActiveInput: ->
     @updateInputWith @activeInput(), @sessionMarkup()
@@ -134,7 +134,7 @@ class Sw4tch.Views.SwatchesEditor extends Backbone.View
     @editor().setTheme 'ace/theme/chrome'
     @setSessionMode('css')
     @session().setTabSize 2
-    @session().setUseWorker true
+    @session().setUseWorker false
 
   initAceContent: ->
     @inputToSession()
@@ -148,18 +148,21 @@ class Sw4tch.Views.SwatchesEditor extends Backbone.View
   sessionMarkup: =>
     @session().getValue()
 
-  compileMarkup: (from = @activeSyntax(), to = 'css', markup = @sessionMarkup()) ->
+  compileMarkup: (from = @activeSyntax(),
+                  to = 'css',
+                  markup = @sessionMarkup()
+                  tabChange = false) ->
     $.ajax
       url: "/markup/compile/#{from}/#{to}"
       data: markup: "#{markup}"
       type: 'post'
       success: (data) =>
-        @onCompileSuccess(data, to)
+        @onCompileSuccess(data, to, tabChange)
       error: @onCompileFailure
 
-  onCompileSuccess: (data, to) =>
+  onCompileSuccess: (data, to, tabChange) =>
     @updateInputWith(@$("#swatch_#{to}"), data)
-    @inputToSession()
+    @inputToSession() if tabChange
     @renderPreview @previewCSS()
 
   onCompileFailure: ->
