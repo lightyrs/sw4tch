@@ -28,3 +28,13 @@
     padding: 0 20px !important;
   }
 }
+
+@mixin blue_link {
+  color: inherit;
+  @include transition(color 0.2s ease-out);
+
+  &:hover {
+    color: #04c;
+    text-decoration: none;
+  }
+}

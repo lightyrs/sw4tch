@@ -4,29 +4,6 @@
       = render 'users/user', user: current_user
       = link_to 'Sign Out', logout_path, class: 'btn-small btn btn-block'
   - else
+    = render 'home/welcome_text' if current_page?(root_path)
     = link_to 'Sign In with GitHub', sign_in_path('github'), class: 'btn btn-primary'
-  .welcome-text
-    %p.lead
-      Create swatches of simple, reusable styles with
-      = succeed ',' do
-        = link_to '<strong>CSS</strong>'.html_safe, 'https://developer.mozilla.org/en-US/docs/CSS', target: '_blank'
-      = succeed '&nbsp;<i class="ampersand">&</i>'.html_safe do
-        = link_to '<strong>SCSS</strong>'.html_safe, 'http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html', target: '_blank'
-      = succeed ', or' do
-        = link_to '<strong>Compass</strong>'.html_safe, 'http://compass-style.org/reference/compass/css3/', target: '_blank'
-      = succeed '&nbsp;<i class="ampersand">&</i>'.html_safe do
-        = link_to '<strong>Stylus</strong>'.html_safe, 'http://learnboost.github.com/stylus/docs/bifs.html', target: '_blank'
-      = succeed '.' do
-        = link_to '<strong>Nib</strong>'.html_safe, 'http://visionmedia.github.com/nib/', target: '_blank'
-    %p.lead.sub-lead <i class="icon-github"></i>&nbsp; Publish swatches as gists.
-    %p.lead.sub-lead <i class="icon-shuffle"></i>&nbsp; Fork community swatches.
-  %footer
-    .attribution
-      %p
-        %strong <a href="http://harrisnovick.com">Harris Novick</a>
-      .links
-        <a href="http://harrisnovick.com"><span class="icon-home-alt"></span></a>
-        <a href="http://github.com/lightyrs"><span class="icon-github-text"></span></a>
-        <a href="http://stackoverflow.com/users/111363/lightyrs"><span class="icon-stackoverflow"></span></a>
-        <a href="http://www.linkedin.com/in/harrisnovick/"><span class="icon-linkedin"></span></a>
-
+    = render 'shared/attribution' if current_page?(root_path)

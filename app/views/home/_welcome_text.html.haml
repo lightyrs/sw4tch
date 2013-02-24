@@ -1,0 +1,15 @@
+.welcome-text
+  %p.lead
+    Create swatches of simple, reusable styles with
+    = succeed ',' do
+      = link_to '<strong>CSS</strong>'.html_safe, 'https://developer.mozilla.org/en-US/docs/CSS', target: '_blank'
+    = succeed '&nbsp;<i class="ampersand">&</i>'.html_safe do
+      = link_to '<strong>SCSS</strong>'.html_safe, 'http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html', target: '_blank'
+    = succeed ', or' do
+      = link_to '<strong>Compass</strong>'.html_safe, 'http://compass-style.org/reference/compass/css3/', target: '_blank'
+    = succeed '&nbsp;<i class="ampersand">&</i>'.html_safe do
+      = link_to '<strong>Stylus</strong>'.html_safe, 'http://learnboost.github.com/stylus/docs/bifs.html', target: '_blank'
+    = succeed '.' do
+      = link_to '<strong>Nib</strong>'.html_safe, 'http://visionmedia.github.com/nib/', target: '_blank'
+  %p.lead.sub-lead <i class="icon-github"></i>&nbsp; Publish swatches as gists.
+  %p.lead.sub-lead <i class="icon-shuffle"></i>&nbsp; Fork community swatches.

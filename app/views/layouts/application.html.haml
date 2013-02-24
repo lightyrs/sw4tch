@@ -16,4 +16,6 @@
             = link_to 'New sw4tch', new_swatch_path, class: 'btn btn-block btn-primary btn-large'
         #content.span9
           = yield
-    %footer
+          %footer.bottom-footer
+            %hr
+            = render 'shared/attribution' if current_page?(root_path) and !signed_in?
