@@ -10,6 +10,8 @@ if defined?(Bundler)
 end
 
 # TODO: Add share buttons
+# TODO: Add tags
+# TODO: Add collections
 
 module Sw4tch
   class Application < Rails::Application
