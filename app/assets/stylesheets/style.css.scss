@@ -197,6 +197,15 @@ footer {
         line-height: 24px;
         margin-bottom: 10px;
       }
+
+      a {
+        color: inherit;
+
+        &:hover {
+          color: #08c;
+          text-decoration: none;
+        }
+      }
     }
   }
 }
