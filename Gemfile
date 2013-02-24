@@ -18,7 +18,6 @@ gem 'therubyracer'
 gem 'github_api'
 
 group :development do
-  gem 'sqlite3'
   gem 'logging-rails', require: 'logging/rails'
   gem 'awesome_print'
   gem 'pry'
@@ -34,6 +33,10 @@ group :development do
   gem 'hpricot'
   gem 'better_errors'
   gem 'binding_of_caller'
+end
+
+group :development, :test do
+  gem 'sqlite3'
 end
 
 group :assets do
