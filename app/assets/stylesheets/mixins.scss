@@ -31,7 +31,7 @@
 
 @mixin blue_link {
   color: inherit;
-  @include transition(color 0.2s ease-out);
+  @include transition(color 0.15s ease-out);
 
   &:hover {
     color: #04c;
