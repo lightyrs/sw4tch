@@ -10,7 +10,6 @@ if defined?(Bundler)
 end
 
 # TODO: Add share buttons
-# TODO: Add Nib support
 
 module Sw4tch
   class Application < Rails::Application

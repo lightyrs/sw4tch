@@ -1,6 +1,6 @@
 .row-fluid
   .span12
-    .span7
+    .span7.editor-column
       .page-header
         .heading.pull-left
           %h2= @swatch.name
@@ -14,7 +14,7 @@
       = simple_form_for @swatch do |f|
         = render 'editor', f: f
 
-    .span5
+    .span5.swatch-column
       #swatches.show
         = render @swatch
       = render 'actions'
