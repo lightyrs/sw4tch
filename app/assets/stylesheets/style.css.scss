@@ -11,6 +11,10 @@ footer {
   padding-bottom: 30px;
 }
 
+#sidebar {
+  position: relative;
+}
+
 #content {
   margin-top: 20px;
   position: relative;
@@ -184,6 +188,7 @@ footer {
 
   .welcome-text {
     margin-top: 20px;
+    max-width: 365px;
 
     .ampersand {
       font-family: Baskerville, "Goudy Old Style", "Palatino", "Book Antiqua", serif;
@@ -200,10 +205,49 @@ footer {
 
       a {
         color: inherit;
+        @include transition(color 0.2s ease-out);
 
         &:hover {
-          color: #08c;
+          color: #04c;
           text-decoration: none;
+        }
+      }
+    }
+  }
+
+  footer {
+
+    .attribution {
+      line-height: 24px;
+
+      p {
+        line-height: 18px;
+        margin-bottom: 5px;
+      }
+    }
+
+    a {
+      color: inherit;
+
+      &:hover {
+        text-decoration: none;
+        color: #04c;
+        @include transition(color 0.2s ease-out);
+      }
+    }
+
+    .links {
+      margin-left: 0;
+      width: 120px;
+      display: inline-block;
+
+      a {
+        font-size: 16px;
+        cursor: pointer;
+        padding: 0 12px 0 0;
+
+        &:last-child {
+          padding: 0;
         }
       }
     }
@@ -346,4 +390,19 @@ p {
 
 .alert {
   @include transition(all 0.5s)
+}
+
+@media (max-width: 767px) {
+
+  #sidebar {
+
+    footer {
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin: 0;
+      padding: 10px 0;
+      text-align: right;
+    }
+  }
 }
