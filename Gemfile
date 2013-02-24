@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.11'
 
-gem 'sqlite3'
 gem 'pg'
 gem 'thin'
 gem 'foreman'
@@ -19,6 +18,7 @@ gem 'therubyracer'
 gem 'github_api'
 
 group :development do
+  gem 'sqlite3'
   gem 'logging-rails', require: 'logging/rails'
   gem 'awesome_print'
   gem 'pry'
