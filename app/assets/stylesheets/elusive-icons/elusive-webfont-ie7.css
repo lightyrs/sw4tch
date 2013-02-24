@@ -276,7 +276,7 @@ ul.icons {
 .icon-record:before {
   *zoom: expression(this.runtimeStyle['zoom'] = '1',this.innerHTML = '&#xe051'): ;
 }
-.icon-random:before {
+.icon-shuffle:before {
   *zoom: expression(this.runtimeStyle['zoom'] = '1',this.innerHTML = '&#xe052'): ;
 }
 .icon-quotes-alt:before {

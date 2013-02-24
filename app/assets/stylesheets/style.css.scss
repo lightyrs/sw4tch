@@ -113,6 +113,13 @@ footer {
         }
       }
 
+      .name {
+
+        a {
+          max-width: none;
+        }
+      }
+
       .stats {
         margin-top: 5px;
       }
@@ -173,6 +180,24 @@ footer {
     visibility: hidden;
     height: 1px;
     margin-bottom: -15px;
+  }
+
+  .welcome-text {
+    margin-top: 20px;
+
+    .ampersand {
+      font-family: Baskerville, "Goudy Old Style", "Palatino", "Book Antiqua", serif;
+      font-size: 110%;
+    }
+
+    p {
+
+      &.sub-lead {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 10px;
+      }
+    }
   }
 }
 
