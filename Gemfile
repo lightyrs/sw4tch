@@ -18,6 +18,7 @@ gem 'therubyracer'
 gem 'github_api'
 
 group :development do
+  gem 'meta_request'
   gem 'logging-rails', require: 'logging/rails'
   gem 'awesome_print'
   gem 'pry'

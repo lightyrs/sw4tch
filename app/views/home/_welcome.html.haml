@@ -1,0 +1,7 @@
+= render 'home/welcome_text' if current_page?(root_path)
+
+= link_to 'Sign In with GitHub', sign_in_path('github'), class: 'btn btn-primary'
+
+.corner
+  = render 'shared/share_buttons'
+  = render 'shared/attribution' if current_page?(root_path)

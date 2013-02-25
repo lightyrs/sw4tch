@@ -213,6 +213,14 @@ footer {
     }
   }
 
+  .share-buttons {
+    margin-top: 40px;
+
+    .share-button {
+      margin-bottom: 6px;
+    }
+  }
+
   footer {
 
     &.attribution {
@@ -419,7 +427,8 @@ p {
 
   #sidebar {
 
-    footer {
+    footer,
+    .share-buttons {
       display: none;
     }
   }
