@@ -16,6 +16,7 @@ gem 'stylus'
 gem 'execjs'
 gem 'therubyracer'
 gem 'github_api'
+gem 'acts-as-taggable-on', '~> 2.3.1'
 
 group :development do
   gem 'meta_request'
