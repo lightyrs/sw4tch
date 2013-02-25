@@ -379,6 +379,8 @@ form {
   }
 }
 
+.swatches-
+
 
 p {
 
@@ -442,6 +444,23 @@ p {
 
     #editor {
       min-height: 210px;
+    }
+  }
+
+  .swatches-create,
+  .swatches-update {
+
+    #swatches {
+
+      .swatch-container {
+        border: 0 none;
+        width: 256px;
+        height:  256px;
+        @include border-radius(256px);
+        overflow: hidden !important;
+        margin: 20px auto 10px;
+        position: absolute;
+      }
     }
   }
 }

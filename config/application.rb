@@ -10,6 +10,7 @@ if defined?(Bundler)
 end
 
 # TODO: Add tags
+# TODO: Add pagination
 # TODO: Add collections
 
 module Sw4tch
@@ -61,7 +62,7 @@ module Sw4tch
     config.assets.enabled = true
 
     # Version of your assets, change this if you want to expire all your assets
-    config.assets.version = '1.2'
+    config.assets.version = '1.3'
   end
 end
 

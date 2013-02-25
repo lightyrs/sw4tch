@@ -9,6 +9,7 @@
 //= require bootstrap-dropdown
 //= require bootstrap-button
 //= require ./vendor/jquery.shapeshift
+//= require ./vendor/jquery.tagsinput
 //= require ace/ace
 //= require ace/theme-merbivore_soft
 //= require ace/mode-css

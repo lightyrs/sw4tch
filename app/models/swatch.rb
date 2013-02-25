@@ -5,7 +5,7 @@ class Swatch < ActiveRecord::Base
 
   belongs_to :user
 
-  attr_accessible :name, :description, :css, :scss, :stylus
+  attr_accessible :name, :description, :css, :scss, :stylus, :tag_list
 
   validates :name, presence: true
   validates :name, uniqueness: { scope: :user_id }
@@ -15,6 +15,8 @@ class Swatch < ActiveRecord::Base
 
   after_initialize  :assign_markup
   before_validation :assign_latest
+
+  acts_as_taggable
 
   def assign_markup
     %w(css scss stylus).each do |attr|

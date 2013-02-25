@@ -52,6 +52,11 @@ class SwatchesController < ApplicationController
     end
   end
 
+  def search
+    @tags = params[:tags]
+    Swatch.tagged_with([@tags].flatten, any: true)
+  end
+
   def gist
     swatch = Swatch.find_by_id(params[:id])
     gist = Gist.new(
