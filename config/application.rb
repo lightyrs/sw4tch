@@ -9,7 +9,6 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
-# TODO: Add share buttons
 # TODO: Add tags
 # TODO: Add collections
 
