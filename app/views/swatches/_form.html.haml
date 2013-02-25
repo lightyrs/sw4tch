@@ -1,5 +1,5 @@
 = simple_form_for @swatch do |f|
-  %legend= "sw4tch.#{controller.action_name}"
+  %legend= "swatch.#{controller.action_name}"
   = render 'shared/errors', object: f.object
   = f.input  :name
   = render 'editor', f: f
