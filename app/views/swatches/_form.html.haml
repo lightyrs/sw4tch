@@ -4,6 +4,6 @@
   = f.input :name
   = render 'editor', f: f
   = f.input :description
-  = f.input :tag_list
+  = f.input :tag_list, label: 'Tags', wrapper_html: { class: 'tags' }
   .form-actions
     = f.button :submit, class: 'btn btn-primary'
