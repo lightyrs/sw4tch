@@ -64,6 +64,7 @@ class Swatch < ActiveRecord::Base
   end
 
   def import_nib(markup)
+    Stylus.use :nib
     "@import 'nib';#{markup}"
   end
 
