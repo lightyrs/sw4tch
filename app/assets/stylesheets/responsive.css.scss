@@ -1,0 +1,49 @@
+@media (max-width: 767px) {
+
+  .bottom-footer {
+    display: block;
+    padding-bottom: 10px;
+
+    footer.attribution {
+      overflow: hidden;
+      padding: 0;
+
+      p {
+        float: left;
+
+        a {
+          @include blue_link;
+        }
+      }
+
+      .links {
+        float: right;
+
+        a {
+          padding: 0 3px;
+          @include blue_link;
+        }
+      }
+    }
+  }
+
+  #sidebar {
+
+    footer,
+    .share-buttons {
+      display: none;
+    }
+  }
+
+  .swatches-show,
+  .swatches-new,
+  .swatches-create,
+  .swatches-update,
+  .swatches-destroy,
+  .swatches-edit {
+
+    #editor {
+      min-height: 210px;
+    }
+  }
+}

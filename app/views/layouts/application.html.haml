@@ -9,12 +9,7 @@
     = render 'shared/facebook'
     .container-fluid
       .row-fluid
-        #sidebar.span3
-          %h1#sw4tch= link_to 'sw4tch', root_path
-          = render 'shared/flash', flash: flash if flash.present?
-          = render 'shared/session'
-          - if current_user
-            = link_to 'New Swatch', new_swatch_path, class: 'btn btn-block btn-primary btn-large'
+        = render 'layouts/sidebar'
         #content.span9
           .row-fluid
             .span12

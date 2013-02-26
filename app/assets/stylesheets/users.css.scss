@@ -1,0 +1,39 @@
+.user {
+
+  h4, h5 {
+    margin: 0;
+  }
+
+  h4 {
+
+    a {
+      max-width: 167px;
+      display: block;
+      word-wrap: break-word;
+    }
+  }
+
+  h5 {
+    font-weight: normal;
+  }
+
+  p {
+
+    &.bio {
+      clear: both;
+      margin-bottom: 0;
+    }
+  }
+
+  .pull-left {
+
+    &.avatar {
+      margin-right: 15px;
+    }
+  }
+
+  .stats {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}

@@ -34,7 +34,7 @@ class Gist
   end
 
   def swatch_filename
-    "#{@swatch.name.downcase.gsub(/\s/, '_')}.#{@filetype}"
+    "#{@swatch.name.downcase.gsub(/\s/, '_').gsub(/_\z/, '')}.#{@filetype}"
   end
 
   def init_github_client

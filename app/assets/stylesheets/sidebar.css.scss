@@ -1,0 +1,81 @@
+#sidebar {
+
+  a.btn-block {
+    clear: both;
+  }
+
+  .well {
+    padding: 17px;
+    position: relative;
+  }
+
+  p.bio {
+    visibility: hidden;
+    height: 1px;
+    margin-bottom: -15px;
+  }
+
+  .welcome-text {
+    margin-top: 20px;
+    margin-bottom: 25px;
+    max-width: 365px;
+
+    .ampersand {
+      font-family: Baskerville, "Goudy Old Style", "Palatino", "Book Antiqua", serif;
+      font-size: 110%;
+    }
+
+    p {
+
+      &.sub-lead {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 10px;
+      }
+
+      a {
+        @include blue_link;
+      }
+    }
+  }
+
+  .share-buttons {
+    margin-top: 40px;
+
+    .share-button {
+      margin-bottom: 6px;
+    }
+  }
+
+  footer {
+
+    &.attribution {
+      line-height: 24px;
+
+      p {
+        line-height: 18px;
+        margin-bottom: 3px;
+      }
+    }
+
+    a {
+      @include blue_link;
+    }
+
+    .links {
+      margin-left: 0;
+      width: 120px;
+      display: inline-block;
+
+      a {
+        font-size: 16px;
+        cursor: pointer;
+        padding: 0 12px 0 0;
+
+        &:last-child {
+          padding: 0;
+        }
+      }
+    }
+  }
+}

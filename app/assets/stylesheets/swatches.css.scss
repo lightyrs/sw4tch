@@ -1,0 +1,294 @@
+#swatches {
+  position: relative;
+  text-align: center;
+
+  .swatch-container {
+    @include swatch_preview;
+
+    .swatch-link {
+      @include circle_link;
+    }
+  }
+
+  .user-swatch {
+    border: 0 none;
+    width: 256px;
+    height:  256px;
+    @include border-radius(256px);
+    overflow: hidden !important;
+    margin: 20px 20px 10px;
+    position: absolute;
+
+    .user {
+      position: absolute;
+
+      .avatar,
+      .names {
+        float: none;
+        margin: 0;
+      }
+
+      .avatar {
+
+        img {
+          @include border-radius(100px);
+        }
+      }
+
+      .name {
+
+        a {
+          max-width: none;
+        }
+      }
+
+      .stats {
+        margin-top: 5px;
+      }
+
+      p.bio {
+        line-height: 14px;
+        font-size: 12px;
+        width: 70%;
+        margin: 0 auto;
+      }
+    }
+
+    .user-link {
+      @include background(linear-gradient(rgba(#fff, 0) 70%, rgba(#fff, 0.5) 80%, #fff));
+      @include circle_link;
+
+      span {
+        vertical-align: inherit !important;
+        text-align: left !important;
+        padding: 20px 20px !important;
+      }
+    }
+  }
+}
+
+.page-header {
+
+  .btn-toolbar {
+    text-align: right;
+    margin-top: 0;
+    width: 29%;
+    line-height: 30px;
+    float: right;
+
+    .gist-button {
+      text-align: right;
+
+      .dropdown-menu {
+        left: -95%;
+      }
+
+      li {
+        text-align: left;
+        position: relative;
+
+        > a {
+          padding-top: 6px;
+          padding-bottom: 6px;
+        }
+
+        &.public-setting {
+
+          .btn-group {
+            display: block;
+          }
+        }
+
+        .btn-group {
+          display: none;
+          position: absolute;
+          right: 10px;
+          top: 5px;
+        }
+      }
+    }
+
+    .gist-url {
+      display: none;
+      margin-top: 13px;
+      @include border-radius(3px);
+      padding: 2px 4px;
+      background-color: #f7f7f9;
+      border: 1px solid #e1e1e8;
+      white-space: nowrap;
+      font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+      font-size: 12px;
+      line-height: 16px;
+
+      a {
+        color: #d14;
+        font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+#swatch_form {
+
+  form {
+    clear: both;
+
+    label {
+      font-weight: bold;
+    }
+
+    input,
+    textarea,
+    #editor {
+      width: 97%;
+      min-width: 300px;
+    }
+
+    .editor-wrapper {
+      margin-bottom: 20px;
+    }
+
+    small.help-text {
+      font-weight: normal;
+      padding-left: 10px;
+    }
+
+    textarea {
+      height: 60px;
+    }
+
+    #swatch_css {
+      visibility: hidden;
+      position: absolute;
+    }
+
+    #swatch_scss {
+      visibility: hidden;
+      position: absolute;
+    }
+
+    #swatch_stylus {
+      visibility: hidden;
+      position: absolute;
+    }
+
+    #editor {
+      width: 100%;
+      position: relative;
+      min-height: 360px;
+      font-size: 14px;
+    }
+
+    .form-actions {
+      text-align: center;
+      width: auto;
+      margin-top: 40px;
+
+      button {
+        margin: 0 auto;
+      }
+    }
+
+    .alert {
+
+      h4 {
+        margin: 5px 0 10px;
+      }
+
+      ul {
+        margin: 0 0 5px 25px;
+      }
+    }
+
+    .control-group {
+
+      &.tags {
+
+        > .controls {
+          width: 100%;
+          min-width: 300px;
+
+          input {
+            min-width: 0;
+          }
+        }
+
+        #swatch_tag_list_tagsinput {
+          overflow: hidden;
+          background-color: white;
+          border: 1px solid #cccccc;
+          padding: 4px 6px 2px;
+          margin-bottom: 10px;
+          font-size: 14px;
+          line-height: 20px;
+          color: #555555;
+          vertical-align: middle;
+          @include transition(border linear 0.2s, box-shadow linear 0.2s);
+          @include border-radius(4px);
+
+          #swatch_tag_list_tag {
+            width: auto !important;
+          }
+
+          span.tag {
+            height: 27px;
+            line-height: 29px;
+            font-weight: bold;
+            padding: 0 9px 0 8px;
+            font-size: 12px;
+            color: #555;
+            text-decoration: none;
+            text-shadow: 0 1px white;
+            background: #fafafa;
+            border-width: 1px;
+            border-style: solid;
+            border-color: #dadada #d2d2d2 #c5c5c5;
+            @include border-radius(4px);
+            margin-top: 3px;
+            background-image: -webkit-linear-gradient(top, #fcfcfc, #f0f0f0);
+            background-image: -moz-linear-gradient(top, #fcfcfc, #f0f0f0);
+            background-image: -o-linear-gradient(top, #fcfcfc, #f0f0f0);
+            background-image: linear-gradient(to bottom, #fcfcfc, #f0f0f0);
+            @include box-shadow(inset 0 0 0 1px rgba(255, 255, 255, 0.7), 0 1px 2px rgba(0, 0, 0, 0.05));
+          }
+        }
+      }
+    }
+  }
+}
+
+.swatches-show,
+.swatches-new,
+.swatches-create,
+.swatches-update,
+.swatches-destroy,
+.swatches-edit {
+
+  #editor {
+    min-height: 360px;
+  }
+
+  #swatches {
+
+    .swatch-container {
+      margin: 100px auto;
+      position: relative;
+    }
+  }
+}
+
+.swatches-show {
+
+  #swatches {
+    margin-bottom: 25px;
+  }
+}
+
+p {
+
+  &.description {
+    border-left: 20px solid #ddd;
+    padding-left: 15px;
+  }
+}

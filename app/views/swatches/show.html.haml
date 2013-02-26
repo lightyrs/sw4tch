@@ -9,8 +9,9 @@
         - unless current_user == @swatch.user
           .btn-group= link_to "<i class='icon-shuffle'></i> Fork".html_safe, fork_swatch_path(@swatch), class: 'btn'
         = render 'gist_button'
-  = simple_form_for @swatch do |f|
-    = render 'editor', f: f
+  #swatch_form
+    = simple_form_for @swatch do |f|
+      = render 'editor', f: f
 
 .span5
   #swatches.show
