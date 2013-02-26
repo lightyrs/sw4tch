@@ -1,22 +1,20 @@
-.row-fluid
-  .span12
-    .span7.editor-column
-      .page-header
-        .heading.pull-left
-          %h2= @swatch.name
-          %p.byline
-            #{@swatch.created_at.strftime("%b %d, %Y")} <i>by</i> #{link_to @swatch.user.try(:username), user_path(@swatch.user)}
-        - if signed_in?
-          .btn-toolbar
-            - unless current_user == @swatch.user
-              .btn-group= link_to "<i class='icon-shuffle'></i> Fork".html_safe, fork_swatch_path(@swatch), class: 'btn'
-            = render 'gist_button'
-      = simple_form_for @swatch do |f|
-        = render 'editor', f: f
+.span7
+  .page-header
+    .heading.pull-left
+      %h2= @swatch.name
+      %p.byline
+        #{@swatch.created_at.strftime("%b %d, %Y")} <i>by</i> #{link_to @swatch.user.try(:username), user_path(@swatch.user)}
+    - if signed_in?
+      .btn-toolbar
+        - unless current_user == @swatch.user
+          .btn-group= link_to "<i class='icon-shuffle'></i> Fork".html_safe, fork_swatch_path(@swatch), class: 'btn'
+        = render 'gist_button'
+  = simple_form_for @swatch do |f|
+    = render 'editor', f: f
 
-    .span5.swatch-column
-      #swatches.show
-        = render @swatch
-      = render 'actions'
+.span5
+  #swatches.show
+    = render @swatch
+  = render 'actions'
 
-      %p.description= @swatch.description
+  %p.description= @swatch.description

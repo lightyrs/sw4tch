@@ -52,7 +52,7 @@ end
 gem 'haml-rails'
 gem 'sass-rails', '~> 3.2'
 gem 'compass-rails'
-gem 'bootstrap-sass', '~> 2.3.0.0'
+gem 'bootstrap-sass', '~> 2.3.0.1'
 gem 'bourbon'
 gem 'jquery-rails'
 gem 'backbone-on-rails'

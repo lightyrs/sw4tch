@@ -9,11 +9,17 @@ class Sw4tch.Views.SwatchesForm extends Backbone.View
     @tagsField().tagsInput
       height: '28px'
       width: 'auto'
+      minChars: 2
+      maxChars: 28
       defaultText: ''
       onAddTag: @onAddTag
 
   onAddTag: (tagText) =>
-    @tagsField().removeTag(tagText) if @tagCount() >= 4
+    if @tagCount() >= 4
+      @tagsField().removeTag(tagText)
+      @$('small.help-text').css('color', 'red')
+    else
+      @$('small.help-text').css('color', 'inherit')
 
   tagCount: ->
     @tagsList().find('span.tag').length
