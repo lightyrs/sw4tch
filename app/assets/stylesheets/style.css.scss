@@ -11,6 +11,7 @@ footer {
 }
 
 #sidebar {
+  max-width: 305px;
   position: relative;
 }
 
@@ -180,6 +181,7 @@ footer {
 .session {
 
   .well {
+    padding: 17px;
     position: relative;
   }
 
@@ -300,8 +302,7 @@ form {
   input,
   textarea,
   #editor {
-    width: 97%;
-    max-width: 800px;
+    width: 98.7%;
     min-width: 300px;
   }
 
@@ -359,18 +360,11 @@ form {
       > .controls {
         height: 28px;
         width: 100%;
-        max-width: 800px;
         min-width: 300px;
 
         input {
-          width: 97%;
-          max-width: 800px;
           min-width: 0;
         }
-      }
-
-      #swatch_tag_list_tagsinput {
-        width: 98% !important;
       }
 
       #swatch_tag_list_tag {
@@ -382,7 +376,8 @@ form {
 
         span.tag {
           height: 26px;
-          line-height: 23px;
+          line-height: 27px;
+          font-weight: bold;
           padding: 0 9px 0 8px;
           font-size: 12px;
           color: #555;
@@ -418,7 +413,7 @@ form {
   #swatches {
 
     .swatch-container {
-      margin: 20px auto;
+      margin: 100px auto;
       position: relative;
     }
   }

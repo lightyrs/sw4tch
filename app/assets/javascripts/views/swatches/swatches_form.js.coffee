@@ -8,7 +8,7 @@ class Sw4tch.Views.SwatchesForm extends Backbone.View
   attachTagsInput: =>
     @tagsField().tagsInput
       height: '28px'
-      width: '100%'
+      width: 'auto'
       defaultText: ''
       onAddTag: @onAddTag
 
@@ -16,7 +16,13 @@ class Sw4tch.Views.SwatchesForm extends Backbone.View
     @tagsField().removeTag(tagText) if @tagCount() >= 4
 
   tagCount: ->
-    @$('#swatch_tag_list_tagsinput').find('span.tag').length
+    @tagsList().find('span.tag').length
+
+  tags: ->
+    @tagsList().find('span.tag')
+
+  tagsList: ->
+    @$('#swatch_tag_list_tagsinput')
 
   tagsField: ->
     @$('#swatch_tag_list')

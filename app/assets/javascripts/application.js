@@ -8,6 +8,7 @@
 //= require bootstrap-tab
 //= require bootstrap-dropdown
 //= require bootstrap-button
+//= require bootstrap-tooltip
 //= require ./vendor/jquery.shapeshift
 //= require ./vendor/jquery.tagsinput
 //= require ace/ace
