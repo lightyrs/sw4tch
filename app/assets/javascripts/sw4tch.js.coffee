@@ -6,7 +6,7 @@ window.Sw4tch =
   initialize: ->
     new Sw4tch.Routers.App
     Backbone.history.start pushState: true
-    new Sw4tch.Views.BreakpointView
+    new Sw4tch.Views.BreakpointView()
 
 $(document).ready ->
   Sw4tch.initialize()

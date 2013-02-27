@@ -5,7 +5,8 @@ class Sw4tch.Views.BreakpointView extends Backbone.View
 
   initBreakpoint: ->
     @_window().setBreakpoints
-      breakpoints: [767]
+      breakpoints: [100, 767]
+    @_window().on 'enterBreakpoint100', @exitBreakpoint767
     @_window().on 'enterBreakpoint767', @enterBreakpoint767
     @_window().on 'exitBreakpoint767', @exitBreakpoint767
 
