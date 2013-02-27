@@ -11,6 +11,7 @@
 //= require bootstrap-tooltip
 //= require ./vendor/jquery.shapeshift
 //= require ./vendor/jquery.tagsinput
+//= require ./vendor/breakpoints
 //= require ace/ace
 //= require ace/theme-merbivore_soft
 //= require ace/mode-css

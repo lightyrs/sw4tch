@@ -9,7 +9,7 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
-# TODO: Add tags
+# TODO: Add tags display
 # TODO: Add pagination
 # TODO: Add collections
 

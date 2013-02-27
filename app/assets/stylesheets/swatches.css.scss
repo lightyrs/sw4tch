@@ -131,6 +131,17 @@
 
 #swatch_form {
 
+  .editor-column {
+    margin-left: 0;
+  }
+
+  .preview-column {
+
+    .control-group {
+      text-align: left;
+    }
+  }
+
   form {
     clear: both;
 
@@ -142,7 +153,7 @@
     textarea,
     #editor {
       width: 97%;
-      min-width: 300px;
+      min-width: 170px;
     }
 
     .editor-wrapper {
@@ -176,14 +187,13 @@
     #editor {
       width: 100%;
       position: relative;
-      min-height: 360px;
+      min-height: 403px;
       font-size: 14px;
     }
 
     .form-actions {
       text-align: center;
       width: auto;
-      margin-top: 40px;
 
       button {
         margin: 0 auto;
@@ -207,7 +217,7 @@
 
         > .controls {
           width: 100%;
-          min-width: 300px;
+          min-width: 170px;
 
           input {
             min-width: 0;
@@ -266,13 +276,13 @@
 .swatches-edit {
 
   #editor {
-    min-height: 360px;
+    min-height: 403px;
   }
 
   #swatches {
 
     .swatch-container {
-      margin: 100px auto;
+      margin: 20px auto 40px;
       position: relative;
     }
   }

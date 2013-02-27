@@ -16,7 +16,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" scope="PROVIDED" name="ace-rails-ap (v2.0.0, RVM: ruby-1.9.3-p286 [sg]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="actionmailer (v3.2.11, RVM: ruby-1.9.3-p286 [sg]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="actionpack (v3.2.11, RVM: ruby-1.9.3-p286 [sg]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activemodel (v3.2.11, RVM: ruby-1.9.3-p286 [sg]) [gem]" level="application" />
@@ -29,7 +28,6 @@
     <orderEntry type="library" scope="PROVIDED" name="backbone-on-rails (v0.9.10.0, RVM: ruby-1.9.3-p286 [sg]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="better_errors (v0.5.0, RVM: ruby-1.9.3-p286 [sg]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="binding_of_caller (v0.6.8, RVM: ruby-1.9.3-p286 [sg]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="bootstrap-sass (v2.3.0.0, RVM: ruby-1.9.3-p286 [sg]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bourbon (v2.1.1, RVM: ruby-1.9.3-p286 [sg]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="builder (v3.0.4, RVM: ruby-1.9.3-p286 [sg]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bundler (v1.2.3, RVM: ruby-1.9.3-p286 [sg]) [gem]" level="application" />
@@ -39,6 +37,8 @@
     <orderEntry type="library" scope="PROVIDED" name="coffee-script (v2.2.0, RVM: ruby-1.9.3-p286 [sg]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="coffee-script-source (v1.3.3, RVM: ruby-1.9.3-p286 [sg]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="colored (v1.2, RVM: ruby-1.9.3-p286 [sg]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="compass (v0.12.2, RVM: ruby-1.9.3-p286 [sg]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="compass-rails (v1.0.3, RVM: ruby-1.9.3-p286 [sg]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="connection_pool (v0.9.2, RVM: ruby-1.9.3-p286 [sg]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="daemons (v1.1.9, RVM: ruby-1.9.3-p286 [sg]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="eco (v1.0.0, RVM: ruby-1.9.3-p286 [sg]) [gem]" level="application" />
@@ -98,14 +98,12 @@
     <orderEntry type="library" scope="PROVIDED" name="rails_best_practices (v1.10.1, RVM: ruby-1.9.3-p286 [sg]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="railties (v3.2.11, RVM: ruby-1.9.3-p286 [sg]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rake (v10.0.3, RVM: ruby-1.9.3-p286 [sg]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="rdoc (v3.12.1, RVM: ruby-1.9.3-p286 [sg]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="redis (v3.0.1, RVM: ruby-1.9.3-p286 [sg]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="redis-namespace (v1.2.1, RVM: ruby-1.9.3-p286 [sg]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ref (v1.0.2, RVM: ruby-1.9.3-p286 [sg]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rest-client (v1.6.7, RVM: ruby-1.9.3-p286 [sg]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ruby_parser (v2.3.1, RVM: ruby-1.9.3-p286 [sg]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rubyzip (v0.9.9, RVM: ruby-1.9.3-p286 [sg]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="sass (v3.2.1, RVM: ruby-1.9.3-p286 [sg]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sass-rails (v3.2.5@bdfeb7, RVM: ruby-1.9.3-p286 [sg]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="seed_dump (v0.4.1, RVM: ruby-1.9.3-p286 [sg]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sexp_processor (v3.2.0, RVM: ruby-1.9.3-p286 [sg]) [gem]" level="application" />

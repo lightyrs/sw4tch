@@ -1,10 +1,14 @@
 #swatch_form
-  = simple_form_for @swatch do |f|
-    %legend= "swatch.#{controller.action_name}"
-    = render 'shared/errors', object: f.object
-    = f.input :name
-    = render 'editor', f: f
-    = f.input :description
-    = f.input :tag_list, label: 'Tags <small class="help-text">Limit 3</small>'.html_safe, wrapper_html: { class: 'tags' }
-    .form-actions
-      = f.button :submit, class: 'btn-large btn-primary'
+  = simple_form_for @swatch, html: { class: 'row-fluid' } do |f|
+    .span7.editor-column
+      %legend= "swatch.#{controller.action_name}"
+      = render 'shared/errors', object: f.object
+      = f.input :name
+      = render 'editor', f: f
+    .span5.preview-column
+      #swatches.new
+        = render @swatch
+        = f.input :description
+        = f.input :tag_list, label: 'Tags <small class="help-text">Limit 3</small>'.html_safe, wrapper_html: { class: 'tags' }
+      .form-actions
+        = f.button :submit, class: 'btn-large btn-primary'
