@@ -20,3 +20,8 @@
       = render 'actions'
 
       %p.description= @swatch.description
+
+      - if @swatch.tags.any?
+        .tags
+          %strong Tags
+          = render collection: @swatch.tags, partial: 'shared/tag'
