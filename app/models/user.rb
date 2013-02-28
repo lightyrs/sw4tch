@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
 
   has_many :identities, :dependent => :destroy
   has_many :swatches
+  has_many :swatchbooks
 
   delegate :username, to: :identity
 

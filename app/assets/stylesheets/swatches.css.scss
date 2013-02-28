@@ -75,57 +75,59 @@
     width: 29%;
     line-height: 30px;
     float: right;
+  }
+}
 
-    .gist-button {
-      text-align: right;
+.gist-button {
+  text-align: right;
+  position: relative;
+  top: 2px;
 
-      .dropdown-menu {
-        left: -95%;
-      }
+  .dropdown-menu {
+    left: -95%;
+  }
 
-      li {
-        text-align: left;
-        position: relative;
+  li {
+    text-align: left;
+    position: relative;
 
-        > a {
-          padding-top: 6px;
-          padding-bottom: 6px;
-        }
+    > a {
+      padding-top: 6px;
+      padding-bottom: 6px;
+    }
 
-        &.public-setting {
+    &.public-setting {
 
-          .btn-group {
-            display: block;
-          }
-        }
-
-        .btn-group {
-          display: none;
-          position: absolute;
-          right: 10px;
-          top: 5px;
-        }
+      .btn-group {
+        display: block;
       }
     }
 
-    .gist-url {
+    .btn-group {
       display: none;
-      margin-top: 13px;
-      @include border-radius(3px);
-      padding: 2px 4px;
-      background-color: #f7f7f9;
-      border: 1px solid #e1e1e8;
-      white-space: nowrap;
-      font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
-      font-size: 12px;
-      line-height: 16px;
-
-      a {
-        color: #d14;
-        font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
-        font-size: 12px;
-      }
+      position: absolute;
+      right: 10px;
+      top: 5px;
     }
+  }
+}
+
+.gist-url {
+  display: none;
+  margin-top: 13px;
+  @include border-radius(3px);
+  padding: 2px 4px;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+  white-space: nowrap;
+  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+  font-size: 12px;
+  line-height: 16px;
+
+  a {
+    color: #d14;
+    font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+    font-size: 12px;
   }
 }
 
@@ -194,6 +196,16 @@
     .form-actions {
       text-align: center;
       width: auto;
+      padding: 16px 20px 20px;
+
+      .public-actions {
+        margin-bottom: 15px;
+        line-height: 34px;
+      }
+
+      .owner-actions {
+
+      }
 
       button {
         margin: 0 auto;

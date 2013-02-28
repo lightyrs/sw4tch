@@ -1,4 +1,11 @@
-- if current_user == @swatch.user
-  .form-actions
-    = link_to 'Edit', edit_swatch_path(@swatch), class: 'btn pull-left'
-    .pull-right= link_to 'Delete', swatch_path(@swatch), method: :delete, confirm: 'Are you sure?', class: 'btn btn-danger'
+.form-actions
+  - if signed_in?
+    .public-actions
+      - unless current_user == @swatch.user
+        = link_to "<i class='eicon-shuffle'></i> Fork".html_safe, fork_swatch_path(@swatch), class: 'btn'
+      = render 'gist_button'
+      = link_to "<i class='eicon-bookmark'></i> Swatchbook".html_safe, fork_swatch_path(@swatch), class: 'btn'
+  - if current_user == @swatch.user
+    .owner-actions
+      = link_to "<i class='eicon-edit'></i> Edit".html_safe, edit_swatch_path(@swatch), class: 'btn btn-small btn-primary'
+      = link_to "<i class='eicon-trash'></i> Delete".html_safe, swatch_path(@swatch), method: :delete, confirm: 'Are you sure?', class: 'btn btn-small btn-danger'

@@ -22,8 +22,7 @@ class Sw4tch.Routers.App extends Backbone.Router
 
   show: ->
     new Sw4tch.Views.SwatchesEditor()
-    if $('body').hasClass 'swatches-update'
-      new Sw4tch.Views.SwatchesForm()
+    new Sw4tch.Views.SwatchesForm()
 
   edit: ->
     new Sw4tch.Views.SwatchesEditor()

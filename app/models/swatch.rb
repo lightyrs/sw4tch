@@ -5,6 +5,8 @@ class Swatch < ActiveRecord::Base
 
   belongs_to :user
 
+  has_and_belongs_to_many :swatchbooks
+
   attr_accessible :name, :description, :css, :scss, :stylus, :tag_list
 
   validates :name, presence: true

@@ -6,11 +6,6 @@
           %h2= @swatch.name
           %p.byline
             #{@swatch.created_at.strftime("%b %d, %Y")} <i>by</i> #{link_to @swatch.user.try(:username), user_path(@swatch.user)}
-        - if signed_in?
-          .btn-toolbar
-            - unless current_user == @swatch.user
-              .btn-group= link_to "<i class='icon-shuffle'></i> Fork".html_safe, fork_swatch_path(@swatch), class: 'btn'
-            = render 'gist_button'
 
       = render 'editor', f: f
 
@@ -23,5 +18,5 @@
 
       - if @swatch.tags.any?
         .tags
-          %strong Tags
+          %strong <i class='eicon-tag'></i>
           = render collection: @swatch.tags, partial: 'shared/tag'

@@ -2,6 +2,8 @@ Sw4tch::Application.routes.draw do
 
   match '/swatches/:id/gist/:syntax/:is_public', to: 'swatches#gist', as: 'gist'
 
+  resources :swatchbooks
+
   resources :swatches do
 
     member do
