@@ -50,6 +50,8 @@ GEM
     binding_of_caller (0.6.8)
     bootstrap-sass (2.3.0.1)
       sass (~> 3.2)
+    bootstrap-will_paginate (0.0.9)
+      will_paginate
     bourbon (2.1.1)
       sass (>= 3.1)
     builder (3.0.4)
@@ -289,6 +291,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   bootstrap-sass (~> 2.3.0.1)
+  bootstrap-will_paginate
   bourbon
   coffee-rails (~> 3.2.1)
   colored
@@ -327,5 +330,4 @@ DEPENDENCIES
   thin
   uglifier (>= 1.0.3)
   underscore-rails
-  will_paginate
   wirble

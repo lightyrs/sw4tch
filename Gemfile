@@ -17,7 +17,7 @@ gem 'execjs'
 gem 'therubyracer'
 gem 'github_api'
 gem 'acts-as-taggable-on', '~> 2.3.1'
-gem 'will_paginate'
+gem 'bootstrap-will_paginate'
 
 group :development do
   gem 'meta_request'

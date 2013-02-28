@@ -9,7 +9,6 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
-# TODO: Add pagination
 # TODO: Add collections
 
 module Sw4tch

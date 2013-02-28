@@ -3,7 +3,7 @@ class SwatchesController < ApplicationController
   before_filter :assign_user_swatch, only: [ :edit, :update, :destroy ]
 
   def index
-    @swatches = Swatch.order('created_at DESC').limit(36)
+    @swatches = Swatch.order('created_at DESC').paginate(page: params[:page], per_page: 36)
   end
 
   def show
