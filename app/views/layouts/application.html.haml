@@ -6,6 +6,7 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body{ class: body_class }
+    = render 'shared/globals'
     = render 'shared/facebook'
     .container-fluid
       .row-fluid

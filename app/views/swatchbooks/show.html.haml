@@ -1,0 +1,6 @@
+%h3= @swatchbook.name
+
+#swatches.index
+  = render collection: @swatches.order('created_at DESC').limit(36), partial: 'swatches/swatch'
+
+.pagination= will_paginate @swatches

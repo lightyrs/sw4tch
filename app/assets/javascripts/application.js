@@ -9,6 +9,7 @@
 //= require bootstrap-dropdown
 //= require bootstrap-button
 //= require bootstrap-tooltip
+//= require bootstrap-popover
 //= require ./vendor/jquery.shapeshift
 //= require ./vendor/jquery.tagsinput
 //= require ./vendor/breakpoints
