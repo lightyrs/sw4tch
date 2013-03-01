@@ -9,8 +9,8 @@ class Sw4tch.Views.SwatchSwatchbookButton extends Backbone.View
     @onSwatchbookSelect()
 
   onSwatchbookSelect: ->
-    @$('.dropdown-menu li > a').on 'click', (e) =>
-      @addToSwatchbook( @$(e.target).data('swatchbook') )
+    @$('.dropdown-menu li.swatchbook > a').on 'click', (e) =>
+      @addToSwatchbook(@$(e.target).data('swatchbook')) unless @$(e.target).data('has-swatch')
       e.preventDefault()
 
   addToSwatchbook: (swatchbookId)->
@@ -20,11 +20,13 @@ class Sw4tch.Views.SwatchSwatchbookButton extends Backbone.View
       type: 'get'
       success: (data) =>
         @onAddToSwatchbookSuccess(data)
-      error: @onAddToSwatchbookFailure
+      error: =>
+        @onAddToSwatchbookFailure()
       beforeSend: =>
         @$('span.text').text('Adding...')
 
   onAddToSwatchbookSuccess: (data) ->
+    @$('span.text').text('Swatchbook')
 
   onAddToSwatchbookFailure: ->
-    # console.log('failure')
+    @$('span.text').text('Swatchbook')

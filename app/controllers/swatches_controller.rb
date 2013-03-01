@@ -55,10 +55,13 @@ class SwatchesController < ApplicationController
   end
 
   def add_to_swatchbook
-    if @swatch.swatchbooks << Swatchbook.find_by_id(params[:swatchbook_id]) && @swatch.save
-      head :ok
-    else
-      head :unprocessable_entity
+    @swatchbook = Swatchbook.find_by_id(params[:swatchbook_id])
+    unless @swatch.swatchbooks.include? @swatchbook
+      if @swatch.swatchbooks << @swatchbook && @swatch.save
+        head :ok
+      else
+        head :unprocessable_entity
+      end
     end
   end
 

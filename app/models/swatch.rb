@@ -5,7 +5,7 @@ class Swatch < ActiveRecord::Base
 
   belongs_to :user
 
-  has_and_belongs_to_many :swatchbooks
+  has_and_belongs_to_many :swatchbooks, uniq: true
 
   attr_accessible :name, :description, :css, :scss, :stylus, :tag_list
 

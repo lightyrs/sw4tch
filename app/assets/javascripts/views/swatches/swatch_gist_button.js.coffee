@@ -41,4 +41,4 @@ class Sw4tch.Views.SwatchGistButton extends Backbone.View
     @$el.siblings('.gist-url').find('a').text(data).attr('href', data).end().show()
 
   onGistFailure: ->
-    # console.log('failure')
+    @$el.find('span.text').text('Publish Gist')

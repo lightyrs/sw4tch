@@ -7,5 +7,9 @@
     %span.caret
   %ul.dropdown-menu
     = current_user.swatchbooks.find_each do |swatchbook|
-      %li= link_to swatchbook.name, '#', 'data-swatchbook' => swatchbook.id
+      %li.swatchbook
+        - if swatchbook.swatches.include? swatch
+          = link_to "<i class='icon-check'></i> #{swatchbook.name}".html_safe, '#', 'data-has-swatch' => true, 'data-swatchbook' => swatchbook.id
+        - else
+          = link_to swatchbook.name, '#', 'data-has-swatch' => false, 'data-swatchbook' => swatchbook.id
     %li= link_to 'New Swatchbook', new_user_swatchbook_path(current_user)
