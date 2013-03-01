@@ -7,5 +7,5 @@
     %span.caret
   %ul.dropdown-menu
     = current_user.swatchbooks.find_each do |swatchbook|
-      %li= link_to swatchbook.name, '#'
+      %li= link_to swatchbook.name, '#', 'data-swatchbook' => swatchbook.id
     %li= link_to 'New Swatchbook', new_user_swatchbook_path(current_user)

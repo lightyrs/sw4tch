@@ -1,6 +1,8 @@
 Sw4tch::Application.routes.draw do
 
-  match '/swatches/:id/gist/:syntax/:is_public', to: 'swatches#gist', as: 'gist'
+  get '/swatches/:id/gist/:syntax/:is_public', to: 'swatches#gist', as: 'gist'
+  get '/swatches/:id/swatchbook/:swatchbook_id/add', to: 'swatches#add_to_swatchbook', as: 'add_to_swatchbook'
+  get '/swatches/:id/swatchbook/:swatchbook_id/remove', to: 'swatches#remove_from_swatchbook', as: 'remove_from_swatchbook'
 
   resources :swatches do
 
@@ -21,7 +23,7 @@ Sw4tch::Application.routes.draw do
     resources :swatchbooks
   end
 
-  resources :swatchbooks, only: [:index]
+  resources :swatchbooks
 
   match '/auth/:provider/(:callback)', to: 'sessions#create', as: 'sign_in'
   match '/logout', to: 'sessions#destroy', as: 'logout'

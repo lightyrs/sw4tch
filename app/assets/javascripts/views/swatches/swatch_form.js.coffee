@@ -5,6 +5,7 @@ class Sw4tch.Views.SwatchForm extends Backbone.View
   initialize: ->
     @initTags()
     @initEditor()
+    @initActions()
     @attachResize()
 
   initTags: ->
@@ -12,6 +13,9 @@ class Sw4tch.Views.SwatchForm extends Backbone.View
 
   initEditor: ->
     new Sw4tch.Views.SwatchEditor()
+
+  initActions: ->
+    new Sw4tch.Views.SwatchActions()
 
   attachResize: =>
     @_window().on 'resize', @resizeEditor

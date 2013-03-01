@@ -1,6 +1,9 @@
 class SwatchesController < ApplicationController
 
-  before_filter :assign_user_swatch, only: [ :edit, :update, :destroy ]
+  before_filter :assign_user_swatch, only: [ :edit, :update, :destroy,
+                                             :add_to_swatchbook, :remove_from_swatchbook ]
+
+  respond_to :js, only: [:add_to_swatchbook, :remove_from_swatchbook]
 
   def index
     @swatches = Swatch.order('created_at DESC').paginate(page: params[:page], per_page: 36)
@@ -26,15 +29,10 @@ class SwatchesController < ApplicationController
   end
 
   def update
-    respond_to do |format|
-      if @swatch.update_attributes(params[:swatch])
-        puts params[:swatchbook].inspect.red
-        format.html { redirect_to swatch_path(@swatch), notice: 'The swatch was updated.' }
-        format.js { head :ok }
-      else
-        format.html { render :edit }
-        format.js { head :unprocessable_entity }
-      end
+    if @swatch.update_attributes(params[:swatch])
+      redirect_to swatch_path(@swatch), notice: 'The swatch was updated.'
+    else
+      render :edit
     end
   end
 
@@ -54,6 +52,18 @@ class SwatchesController < ApplicationController
     else
       redirect_to swatch_path(@swatch_to_fork), alert: 'There was an error forking the swatch.'
     end
+  end
+
+  def add_to_swatchbook
+    if @swatch.swatchbooks << Swatchbook.find_by_id(params[:swatchbook_id]) && @swatch.save
+      head :ok
+    else
+      head :unprocessable_entity
+    end
+  end
+
+  def remove_from_swatchbook
+
   end
 
   def search

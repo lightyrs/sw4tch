@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130228070236) do
+ActiveRecord::Schema.define(:version => 20130301113216) do
 
   create_table "identities", :force => true do |t|
     t.string   "uid"
@@ -43,6 +43,11 @@ ActiveRecord::Schema.define(:version => 20130228070236) do
   end
 
   add_index "swatchbooks", ["user_id"], :name => "index_swatchbooks_on_user_id"
+
+  create_table "swatchbooks_swatches", :id => false, :force => true do |t|
+    t.integer "swatchbook_id"
+    t.integer "swatch_id"
+  end
 
   create_table "swatches", :force => true do |t|
     t.string   "name"

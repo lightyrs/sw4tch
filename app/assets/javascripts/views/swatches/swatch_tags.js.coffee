@@ -1,12 +1,12 @@
 class Sw4tch.Views.SwatchTags extends Backbone.View
 
-  el: 'form.simple_form'
+  el: '.control-group.tags'
 
   initialize: =>
     @tagsField().tagsInput
       height: '28px'
       width: '97%'
-      minChars: 2
+      minChars: 3
       maxChars: 28
       defaultText: ''
       onAddTag: @onAddTag

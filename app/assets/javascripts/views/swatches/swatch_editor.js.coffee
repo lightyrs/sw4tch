@@ -1,6 +1,6 @@
 class Sw4tch.Views.SwatchEditor extends Backbone.View
 
-  el: '#content'
+  el: 'form.simple_form'
 
   template: JST['swatch_preview']
 
@@ -14,6 +14,7 @@ class Sw4tch.Views.SwatchEditor extends Backbone.View
     @initializeAce()
     @initializeEvents()
     @initializePreview()
+    @initializeActions()
 
   initializeAce: ->
     @editor()
@@ -24,11 +25,13 @@ class Sw4tch.Views.SwatchEditor extends Backbone.View
     @onSessionChange()
     @onTabShow()
     @onTabShown()
-    @onGistSelect()
 
   initializePreview: ->
     @previewBody().setAttribute 'tabindex', 0
     @renderPreview()
+
+  initializeActions: ->
+    new Sw4tch.Views.SwatchActions()
 
   onSessionChange: ->
     @textarea().on 'keyup', (e) =>
@@ -47,44 +50,6 @@ class Sw4tch.Views.SwatchEditor extends Backbone.View
     @$('a[data-toggle="tab"]').on 'shown', (e) =>
       @toggleSyntax(e)
       @compileMarkup(@freshestSyntax, @activeSyntax(), @freshestMarkup, true)
-
-  onGistSelect: ->
-    @onGistSyntaxSelect()
-    @onGistPublicSelect()
-
-  onGistSyntaxSelect: ->
-    @$('.gist-button .dropdown-menu li > a').on 'click', (e) =>
-      @$('.gist-button .dropdown-menu').dropdown('toggle')
-      @$(e.target).text('Public?').end().parents('li').addClass('public-setting')
-      e.preventDefault()
-
-  onGistPublicSelect: ->
-    @$('.dropdown-menu li .btn-group a').on 'click', (e) =>
-      target = @$(e.target)
-      syntax = target.parents('.btn-group').siblings('a').data('syntax')
-      label = target.parents('.btn-group').siblings('a').data('label')
-      isPublic = target.data('public')
-
-      target.parents('li').removeClass('public-setting').find('> a').text(label)
-      @createGist(syntax, isPublic)
-
-  createGist: (syntax, isPublic) ->
-    action = @$('form.simple_form').attr('action')
-    $.ajax
-      url: "#{action}/gist/#{syntax}/#{isPublic}"
-      type: 'get'
-      success: (data) =>
-        @onGistSuccess(data)
-      error: @onGistFailure
-      beforeSend: =>
-        @$('.gist-button span.text').text('Publishing...')
-
-  onGistSuccess: (data) ->
-    @$('.gist-button').find('span.text').text('Publish Gist')
-    @$('.gist-url').find('a').text(data).attr('href', data).end().show()
-
-  onGistFailure: ->
-    # console.log('failure')
 
   updateActiveInput: ->
     @updateInputWith @activeInput(), @sessionMarkup()
