@@ -11,19 +11,15 @@ class Sw4tch.Routers.App extends Backbone.Router
 
   index: ->
     if $('body').hasClass 'swatches-create' or $('body').hasClass 'swatches-update'
-      new Sw4tch.Views.SwatchesEditor()
-      new Sw4tch.Views.SwatchesForm()
+      new Sw4tch.Views.SwatchesShow()
     else
       new Sw4tch.Views.SwatchesIndex()
 
   new: ->
-    new Sw4tch.Views.SwatchesEditor()
-    new Sw4tch.Views.SwatchesForm()
+    new Sw4tch.Views.SwatchesShow()
 
   show: ->
-    new Sw4tch.Views.SwatchesEditor()
-    new Sw4tch.Views.SwatchesForm()
+    new Sw4tch.Views.SwatchesShow()
 
   edit: ->
-    new Sw4tch.Views.SwatchesEditor()
-    new Sw4tch.Views.SwatchesForm()
+    new Sw4tch.Views.SwatchesShow()

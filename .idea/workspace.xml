@@ -1,7 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0c053dec-bfb3-448f-83ce-9721eed9a57a" name="Default" comment="" />
+    <list default="true" id="0c053dec-bfb3-448f-83ce-9721eed9a57a" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/views/swatches/swatch_actions.js.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/views/swatches/swatch_tags.js.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/views/swatches/swatches_show.js.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/swatchbooks/_swatchbook.html.haml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/swatchbooks/index.html.haml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-4a7939bce65b14d9e77d1ad7936766bf.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-4a7939bce65b14d9e77d1ad7936766bf.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-b5e8d75ab83e9b5de323e40105d3a86b.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-b5e8d75ab83e9b5de323e40105d3a86b.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/elusive-icons/Elusive-Icons-444e56d6aa1dc7f3cd7e35b0ce80b50f.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/elusive-icons/Elusive-Icons-85bf543e224b849d7d99c86fe56add20.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/elusive-icons/Elusive-Icons-9a53b209f31031642e6cfaf846440d91.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/elusive-icons/Elusive-Icons-e75d1f32fd543416f9c57915dcb53d7f.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/elusive-icons/Elusive-Icons.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/elusive-icons/Elusive-Icons.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/elusive-icons/Elusive-Icons.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/elusive-icons/Elusive-Icons.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/fontawesome-webfont-0034999be4ec0c70c4a5a19aa28e93d7.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/fontawesome-webfont-02f3550b3ef68ebfa2e3253a5b849d07.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/fontawesome-webfont-6798ad2edee33bddcd837277284ead83.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/fontawesome-webfont-dac74ae8624248e6547d83aa43305631.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/fontawesome-webfont.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/fontawesome-webfont.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/fontawesome-webfont.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/fontawesome-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/glyphicons-halflings-52d428985b76bdda04b823a2396210c8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/glyphicons-halflings-white-067ce29a9778c12cf1b0184aead98aef.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/glyphicons-halflings-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/glyphicons-halflings.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/manifest.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/rails-696c1dd0d08cc4b40b5ef14b725749c4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/rails.png" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/views/swatches/swatches_editor.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/views/swatches/swatch_editor.js.coffee" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/views/swatches/swatches_form.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/views/swatches/swatch_form.js.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/routers/app_router.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/routers/app_router.js.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/swatchbooks_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/swatchbooks_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/swatches_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/swatches_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/swatches/_swatchbook_button.html.haml" afterPath="$PROJECT_DIR$/app/views/swatches/_swatchbook_button.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+    </list>
     <ignored path="sw4tch.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/swatches_controller.rb" changelist="0c053dec-bfb3-448f-83ce-9721eed9a57a" time="1361477644612" ignored="false" />
@@ -40,19 +85,10 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_actions.html.haml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/swatches/_actions.html.haml">
+      <file leaf-file-name="index.html.haml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/swatches/index.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="28" selection-start="230" selection-end="230" vertical-scroll-proportion="-3.3333333">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/style.css.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="0" selection-start="105" selection-end="105" vertical-scroll-proportion="-7.6153846">
+            <state line="0" column="0" selection-start="0" selection-end="114" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
@@ -61,34 +97,61 @@
       <file leaf-file-name="swatches.css.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/swatches.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="5" selection-start="1101" selection-end="1101" vertical-scroll-proportion="-6.1923075">
+            <state line="154" column="12" selection-start="2322" selection-end="2326" vertical-scroll-proportion="-23.884615">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="swatchbook.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/swatchbook.rb">
+      <file leaf-file-name="swatches_show.js.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/swatches/swatches_show.js.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="23" selection-start="62" selection-end="62" vertical-scroll-proportion="0.0">
+            <state line="5" column="10" selection-start="99" selection-end="99" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="20130228070236_create_swatchbooks.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20130228070236_create_swatchbooks.rb">
+      <file leaf-file-name="app_router.js.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/routers/app_router.js.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="28" selection-start="177" selection-end="177" vertical-scroll-proportion="0.0">
+            <state line="7" column="25" selection-start="175" selection-end="175" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <file leaf-file-name="sw4tch.js.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/sw4tch.js.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="21" selection-start="392" selection-end="392" vertical-scroll-proportion="0.0">
+            <state line="6" column="24" selection-start="114" selection-end="114" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="breakpoint_view.js.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/shared/breakpoint_view.js.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="swatch_tags.js.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/swatches/swatch_tags.js.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="24" selection-start="77" selection-end="77" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -103,46 +166,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="swatches_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/swatches_controller.rb">
+      <file leaf-file-name="swatch_form.js.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/swatches/swatch_form.js.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="4" selection-start="311" selection-end="346" vertical-scroll-proportion="0.0">
+            <state line="2" column="1" selection-start="54" selection-end="77" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="new.html.haml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/swatches/new.html.haml">
+      <file leaf-file-name="swatch_actions.js.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/swatches/swatch_actions.js.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="16" vertical-scroll-proportion="-0.0">
+            <state line="0" column="32" selection-start="32" selection-end="32" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_form.html.haml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/swatches/_form.html.haml">
+      <file leaf-file-name="_swatchbook_button.html.haml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/swatches/_swatchbook_button.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="562" vertical-scroll-proportion="-0.0">
+            <state line="10" column="73" selection-start="373" selection-end="373" vertical-scroll-proportion="0.21791768">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_form.html.haml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/swatchbooks/_form.html.haml">
+      <file leaf-file-name="index.html.haml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/swatchbooks/index.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="14" selection-start="138" selection-end="138" vertical-scroll-proportion="0.042519685">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="new.html.haml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/swatchbooks/new.html.haml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="16" selection-end="16" vertical-scroll-proportion="-0.6666667">
+            <state line="3" column="39" selection-start="130" selection-end="130" vertical-scroll-proportion="-2.0">
               <folding />
             </state>
           </provider>
@@ -151,25 +205,7 @@
       <file leaf-file-name="swatchbooks_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/swatchbooks_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="17" selection-start="316" selection-end="316" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="swatches_editor.js.coffee" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/swatches/swatches_editor.js.coffee">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="23" selection-start="1238" selection-end="1238" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_swatchbook_button.html.haml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/swatches/_swatchbook_button.html.haml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="72" selection-start="350" selection-end="350" vertical-scroll-proportion="-5.3333335">
+            <state line="32" column="9" selection-start="807" selection-end="807" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -188,22 +224,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/swatches/show.html.haml" />
-        <option value="$PROJECT_DIR$/app/views/users/show.html.haml" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/views/shared/breakpoint_view.js.coffee" />
-        <option value="$PROJECT_DIR$/app/views/swatches/_gist_button.html.haml" />
-        <option value="$PROJECT_DIR$/app/views/swatches/_actions.html.haml" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/style.css.scss" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/swatches.css.scss" />
-        <option value="$PROJECT_DIR$/db/migrate/20130228070236_create_swatchbooks.rb" />
         <option value="$PROJECT_DIR$/app/models/swatchbook.rb" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/views/swatches/_swatchbook_button.html.haml" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/views/swatches/swatches_editor.js.coffee" />
-        <option value="$PROJECT_DIR$/app/controllers/swatches_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/swatchbooks_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/swatchbooks/new.html.haml" />
         <option value="$PROJECT_DIR$/app/views/swatchbooks/_form.html.haml" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/views/swatchbooks/index.html.haml" />
+        <option value="$PROJECT_DIR$/app/views/swatchbooks/_swatchbook.html.haml" />
+        <option value="$PROJECT_DIR$/app/controllers/swatchbooks_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/swatches_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/swatches/_swatchbook_button.html.haml" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/views/swatches/swatch_actions.js.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/views/swatches/swatch_editor.js.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/views/swatches/swatches_show.js.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/views/swatches/swatch_form.js.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/routers/app_router.js.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/views/swatches/swatch_tags.js.coffee" />
       </list>
     </option>
   </component>
@@ -1136,21 +1172,21 @@
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988167" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988167" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.67011833" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Heroku" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.67011833" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32986626" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988167" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988167" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16865553" sideWeight="0.6701337" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988167" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988167" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Routes" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32986626" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988167" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -1210,53 +1246,79 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/models/swatch.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/swatches/show.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#487#612#0" expanded="false" />
-            <element signature="e#616#699#0" expanded="false" />
-            <element signature="e#703#775#0" expanded="false" />
-            <element signature="e#779#855#0" expanded="false" />
-            <element signature="e#859#922#0" expanded="false" />
-            <element signature="e#926#1094#0" expanded="false" />
-            <element signature="e#1098#1152#0" expanded="false" />
-            <element signature="e#1156#1282#0" expanded="false" />
-            <element signature="e#1286#1340#0" expanded="false" />
-            <element signature="e#1344#1458#0" expanded="false" />
-            <element signature="e#1462#1540#0" expanded="false" />
-            <element signature="e#1544#1615#0" expanded="false" />
-            <element signature="e#1619#2419#0" expanded="false" />
-            <element signature="e#1911#2419#0" expanded="false" />
-            <element signature="e#2194#2415#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/swatchbook.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="23" selection-start="62" selection-end="62" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="12" vertical-scroll-proportion="-0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="21" selection-start="392" selection-end="392" vertical-scroll-proportion="0.0">
+        <state line="23" column="39" selection-start="466" selection-end="466" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20130228070236_create_swatchbooks.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/swatches/_swatch.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="28" selection-start="177" selection-end="177" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="241" vertical-scroll-proportion="-0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/swatches/swatches_form.js.coffee">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/sw4tch.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="24" selection-start="114" selection-end="114" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/swatchbooks/_swatchbook.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="22" selection-start="44" selection-end="44" vertical-scroll-proportion="-0.6666667">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/swatches_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="33" selection-start="168" selection-end="168" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/swatches/swatches_show.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="10" selection-start="99" selection-end="99" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/routers/app_router.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="25" selection-start="175" selection-end="175" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/shared/breakpoint_view.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/swatches/swatch_tags.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="24" selection-start="77" selection-end="77" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1268,72 +1330,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/style.css.scss">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/swatches/swatch_form.js.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="105" selection-end="105" vertical-scroll-proportion="-7.6153846">
+        <state line="2" column="1" selection-start="54" selection-end="77" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/swatches/_actions.html.haml">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/swatches/swatch_actions.js.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="28" selection-start="230" selection-end="230" vertical-scroll-proportion="-3.3333333">
+        <state line="0" column="32" selection-start="32" selection-end="32" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/swatches/swatch_editor.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="28" selection-start="693" selection-end="693" vertical-scroll-proportion="0.75967175">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/swatches/_swatchbook_button.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="72" selection-start="350" selection-end="350" vertical-scroll-proportion="-5.3333335">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/views/swatches/swatches_editor.js.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="23" selection-start="1238" selection-end="1238" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/swatches_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="4" selection-start="311" selection-end="346" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/swatchbooks_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="17" selection-start="316" selection-end="316" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/swatches/new.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="16" vertical-scroll-proportion="-0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/swatchbooks/new.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="16" selection-end="16" vertical-scroll-proportion="-0.6666667">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/swatches/_form.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="562" vertical-scroll-proportion="-0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/swatchbooks/_form.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="14" selection-start="138" selection-end="138" vertical-scroll-proportion="0.042519685">
+        <state line="10" column="73" selection-start="373" selection-end="373" vertical-scroll-proportion="0.21791768">
           <folding />
         </state>
       </provider>

@@ -1,12 +1,8 @@
-class Sw4tch.Views.SwatchesForm extends Backbone.View
+class Sw4tch.Views.SwatchTags extends Backbone.View
 
   el: 'form.simple_form'
 
-  initialize: ->
-    @attachTagsInput()
-    @attachResize()
-
-  attachTagsInput: =>
+  initialize: =>
     @tagsField().tagsInput
       height: '28px'
       width: '97%'
@@ -15,19 +11,12 @@ class Sw4tch.Views.SwatchesForm extends Backbone.View
       defaultText: ''
       onAddTag: @onAddTag
 
-  attachResize: =>
-    @_window().on 'resize', @resizeEditor
-    @resizeEditor()
-
   onAddTag: (tagText) =>
     if @tagCount() >= 4
       @tagsField().removeTag(tagText)
       @$('small.help-text').css('color', 'red')
     else
       @$('small.help-text').css('color', 'inherit')
-
-  resizeEditor: =>
-    @_editor().height( @_window().height() - @_editor().position().top - 50 )
 
   tagCount: ->
     @tagsList().find('span.tag').length
@@ -40,7 +29,3 @@ class Sw4tch.Views.SwatchesForm extends Backbone.View
 
   tagsField: ->
     @$('#swatch_tag_list')
-
-  _editor: -> @$("#editor")
-
-  _window: -> $(window)

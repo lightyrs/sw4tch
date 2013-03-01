@@ -26,10 +26,15 @@ class SwatchesController < ApplicationController
   end
 
   def update
-    if @swatch.update_attributes(params[:swatch])
-      redirect_to swatch_path(@swatch), notice: 'The swatch was updated.'
-    else
-      render :edit
+    respond_to do |format|
+      if @swatch.update_attributes(params[:swatch])
+        puts params[:swatchbook].inspect.red
+        format.html { redirect_to swatch_path(@swatch), notice: 'The swatch was updated.' }
+        format.js { head :ok }
+      else
+        format.html { render :edit }
+        format.js { head :unprocessable_entity }
+      end
     end
   end
 

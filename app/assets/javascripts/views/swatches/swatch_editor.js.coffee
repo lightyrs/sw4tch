@@ -1,4 +1,4 @@
-class Sw4tch.Views.SwatchesEditor extends Backbone.View
+class Sw4tch.Views.SwatchEditor extends Backbone.View
 
   el: '#content'
 

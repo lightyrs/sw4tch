@@ -1,0 +1,1 @@
+class Sw4tch.Views.SwatchActions extends Backbone.View
