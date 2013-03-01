@@ -15,8 +15,7 @@ class SwatchesController < ApplicationController
   end
 
   def create
-    @swatch = current_user.swatches.build(params[:swatch])
-    if @swatch.save
+    if @swatch = current_user.swatches.create(params[:swatch])
       redirect_to swatch_path(@swatch), notice: 'The swatch was created.'
     else
       render :new

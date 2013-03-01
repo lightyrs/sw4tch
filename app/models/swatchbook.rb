@@ -1,6 +1,6 @@
 class Swatchbook < ActiveRecord::Base
 
-  attr_accessible :description
+  attr_accessible :name, :description
 
   belongs_to :user
 

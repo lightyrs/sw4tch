@@ -53,8 +53,8 @@ class Sw4tch.Views.SwatchesEditor extends Backbone.View
     @onGistPublicSelect()
 
   onGistSyntaxSelect: ->
-    @$('.dropdown-menu li > a').on 'click', (e) =>
-      @$('.dropdown-menu').dropdown('toggle')
+    @$('.gist-button .dropdown-menu li > a').on 'click', (e) =>
+      @$('.gist-button .dropdown-menu').dropdown('toggle')
       @$(e.target).text('Public?').end().parents('li').addClass('public-setting')
       e.preventDefault()
 

@@ -78,13 +78,34 @@
   }
 }
 
-.gist-button {
+.gist-button,
+.swatchbook-button {
   text-align: right;
   position: relative;
   top: 2px;
+}
+
+.swatchbook-button {
 
   .dropdown-menu {
-    left: -95%;
+    left: -26px;
+  }
+
+  li {
+    text-align: left;
+    position: relative;
+
+    > a {
+      padding-top: 6px;
+      padding-bottom: 6px;
+    }
+  }
+}
+
+.gist-button {
+
+  .dropdown-menu {
+    left: -80px;
   }
 
   li {
@@ -119,7 +140,7 @@
   padding: 2px 4px;
   background-color: #f7f7f9;
   border: 1px solid #e1e1e8;
-  white-space: nowrap;
+  word-wrap: break-word;
   font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
   font-size: 12px;
   line-height: 16px;

@@ -4,7 +4,8 @@
       - unless current_user == @swatch.user
         = link_to "<i class='eicon-shuffle'></i> Fork".html_safe, fork_swatch_path(@swatch), class: 'btn'
       = render 'gist_button'
-      = link_to "<i class='eicon-bookmark'></i> Swatchbook".html_safe, fork_swatch_path(@swatch), class: 'btn'
+      = render 'swatchbook_button'
+      .gist-url= link_to '', '#'
   - if current_user == @swatch.user
     .owner-actions
       = link_to "<i class='eicon-edit'></i> Edit".html_safe, edit_swatch_path(@swatch), class: 'btn btn-small btn-primary'

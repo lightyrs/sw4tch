@@ -1,0 +1,8 @@
+#swatchbook_form
+  = simple_form_for [current_user, @swatchbook] do |f|
+    %legend= "swatchbook.#{controller.action_name}"
+    .row-fluid
+      = f.input :name
+      = f.input :description
+      .form-actions
+        = f.button :submit, class: 'btn-large btn-primary'

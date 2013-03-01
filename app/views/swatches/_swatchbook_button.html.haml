@@ -1,0 +1,9 @@
+.btn-group.swatchbook-button
+  %a.btn.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+    %i.eicon-bookmark
+    %span.text Swatchbook
+    %span.caret
+  %ul.dropdown-menu
+    = current_user.swatchbooks.find_each do |swatchbook|
+      %li= link_to swatchbook.name, '#'
+    %li= link_to 'New Swatchbook', new_user_swatchbook_path(current_user)
