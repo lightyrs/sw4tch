@@ -17,7 +17,7 @@ class SwatchbooksController < ApplicationController
 
   def create
     if @swatchbook = current_user.swatchbooks.create(params[:swatchbook])
-      head :ok
+      render json: { swatchbookId: @swatchbook.id }, status: :ok
     else
       head :unprocessable_entity
     end

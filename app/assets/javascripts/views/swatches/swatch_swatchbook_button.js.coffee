@@ -20,9 +20,8 @@ class Sw4tch.Views.SwatchSwatchbookButton extends Backbone.View
       return false
 
   addToSwatchbook: (swatchbookId) ->
-    action = @$el.parents('form').attr('action')
     $.ajax
-      url: "#{action}/swatchbook/#{swatchbookId}/add"
+      url: "#{@formAction()}/swatchbook/#{swatchbookId}/add"
       type: 'get'
       success: (data) =>
         @onAddToSwatchbookSuccess(data)
@@ -37,9 +36,9 @@ class Sw4tch.Views.SwatchSwatchbookButton extends Backbone.View
   onAddToSwatchbookFailure: ->
     @$('span.text').text('Swatchbook')
 
-  newSwatchbook: =>
-    $('.dropdown-menu:eq(1)').addClass('active').dropdown('toggle').find('input').focus()
-    @$('.submit-swatchbook').on 'click', (e) =>
+  newSwatchbook: ->
+    $('.dropdown-menu:eq(1)').addClass('active').find('input').focus()
+    @$('.submit-swatchbook').one 'click', (e) =>
       @createSwatchbook()
       e.preventDefault()
 
@@ -56,8 +55,15 @@ class Sw4tch.Views.SwatchSwatchbookButton extends Backbone.View
           @onCreateSwatchbookFailure()
 
   onCreateSwatchbookSuccess: (data) ->
+    console.log data
+    @addToSwatchbook(data.swatchbookId)
     @$('.btn i').show()
 
   onCreateSwatchbookFailure: ->
     console.log 'failure'
 
+  swatchId: ->
+    @formAction().split('/').pop()
+
+  formAction: ->
+    @$el.parents('form').attr('action')

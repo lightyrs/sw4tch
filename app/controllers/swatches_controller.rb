@@ -1,7 +1,10 @@
 class SwatchesController < ApplicationController
 
-  before_filter :assign_user_swatch, only: [ :edit, :update, :destroy,
-                                             :add_to_swatchbook, :remove_from_swatchbook ]
+  before_filter :assign_user_swatch,
+                only: [:edit, :update, :destoy, :add_to_swatchbook, :remove_from_swatchbook]
+
+  before_filter :assign_user_swatchbook,
+                only: [:add_to_swatchbook, :remove_from_swatchbook]
 
   respond_to :js, only: [:add_to_swatchbook, :remove_from_swatchbook]
 
@@ -55,7 +58,6 @@ class SwatchesController < ApplicationController
   end
 
   def add_to_swatchbook
-    @swatchbook = Swatchbook.find_by_id(params[:swatchbook_id])
     unless @swatch.swatchbooks.include? @swatchbook
       if @swatch.swatchbooks << @swatchbook && @swatch.save
         head :ok
@@ -93,6 +95,12 @@ class SwatchesController < ApplicationController
 
   def assign_user_swatch
     @swatch = current_user.swatches.find_by_id(params[:id])
+  rescue NoMethodError
+    redirect_to root_path
+  end
+
+  def assign_user_swatchbook
+    @swatchbook = current_user.swatchbooks.find_by_id(params[:swatchbook_id])
   rescue NoMethodError
     redirect_to root_path
   end
