@@ -3,7 +3,8 @@
     %p= link_to image_tag(user.identity.avatar, alt: user.name), user_path(user)
   .pull-left.names
     %h4.name= link_to user.name, current_user ? dashboard_path : user_path(user)
-    %h5.username= user.identity.username
     .stats
-      %span.badge= pluralize(user.swatches.count, 'swatch').gsub('a', '4')
+      %span.badge.badge-inverse= pluralize(user.swatches.count, 'swatch')
+      %br
+      %span.badge.badge-inverse= pluralize(user.swatchbooks.count, 'swatchbook')
   %p.bio= user.identity.bio
