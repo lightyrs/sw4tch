@@ -60,7 +60,7 @@ class SwatchesController < ApplicationController
   def add_to_swatchbook
     unless @swatch.swatchbooks.include? @swatchbook
       if @swatch.swatchbooks << @swatchbook && @swatch.save
-        head :ok
+        render json: @swatchbook.as_json(only: [:id, :name]), status: :ok
       else
         head :unprocessable_entity
       end

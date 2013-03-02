@@ -12,7 +12,7 @@ class Sw4tch.Views.SwatchSwatchbookButton extends Backbone.View
   onSwatchbookSelect: ->
     @$('li.swatchbook > a').on 'click', (e) =>
       @addToSwatchbook(@$(e.target).data('swatchbook')) unless @$(e.target).data('has-swatch')
-      e.preventDefault()
+      return false
 
   onNewSwatchbookSelect: ->
     @$('.new-swatchbook-link').on 'click', (e) =>
@@ -31,7 +31,9 @@ class Sw4tch.Views.SwatchSwatchbookButton extends Backbone.View
         @$('span.text').text('Adding...')
 
   onAddToSwatchbookSuccess: (data) ->
+    @$("[data-swatchbook='#{data.id}']").find('i').attr('class', 'icon-check')
     @$('span.text').text('Swatchbook')
+    @dropdownMenu().find('input').val('').focus()
 
   onAddToSwatchbookFailure: ->
     @$('span.text').text('Swatchbook')
@@ -66,7 +68,7 @@ class Sw4tch.Views.SwatchSwatchbookButton extends Backbone.View
     @menuItemTemplate(swatchbook).insertBefore(@dropdownMenu().find('.divider'))
 
   menuItemTemplate: (swatchbook) ->
-    $("<li class='swatchbook'><a href='#' data-has-swatch='false' data-swatchbook='#{swatchbook.id}'><i class='icon-check'></i> #{swatchbook.name}</a></li>")
+    $("<li class='swatchbook'><a href='#' data-has-swatch='false' data-swatchbook='#{swatchbook.id}'><i class='icon-check-empty'></i> #{swatchbook.name}</a></li>")
 
   swatchId: ->
     @formAction().split('/').pop()
