@@ -37,10 +37,11 @@ class Sw4tch.Views.SwatchSwatchbookButton extends Backbone.View
     @$('span.text').text('Swatchbook')
 
   newSwatchbook: ->
-    $('.dropdown-menu:eq(1)').addClass('active').find('input').focus()
+    @dropdownMenu().addClass('active').find('input').focus()
     @$('.submit-swatchbook').one 'click', (e) =>
       @createSwatchbook()
       e.preventDefault()
+      e.stopPropagation()
 
   createSwatchbook: ->
     name = @$('#swatchbook_name').val()
@@ -54,16 +55,24 @@ class Sw4tch.Views.SwatchSwatchbookButton extends Backbone.View
         error: =>
           @onCreateSwatchbookFailure()
 
-  onCreateSwatchbookSuccess: (data) ->
-    console.log data
-    @addToSwatchbook(data.swatchbookId)
-    @$('.btn i').show()
+  onCreateSwatchbookSuccess: (swatchbook) ->
+    @appendToMenu(swatchbook)
+    @addToSwatchbook(swatchbook.id)
 
   onCreateSwatchbookFailure: ->
     console.log 'failure'
+
+  appendToMenu: (swatchbook) ->
+    @menuItemTemplate(swatchbook).insertBefore(@dropdownMenu().find('.divider'))
+
+  menuItemTemplate: (swatchbook) ->
+    $("<li class='swatchbook'><a href='#' data-has-swatch='false' data-swatchbook='#{swatchbook.id}'><i class='icon-check'></i> #{swatchbook.name}</a></li>")
 
   swatchId: ->
     @formAction().split('/').pop()
 
   formAction: ->
     @$el.parents('form').attr('action')
+
+  dropdownMenu: ->
+    @$('.dropdown-menu')
