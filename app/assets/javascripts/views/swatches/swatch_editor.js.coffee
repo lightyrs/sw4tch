@@ -14,7 +14,6 @@ class Sw4tch.Views.SwatchEditor extends Backbone.View
     @initializeAce()
     @initializeEvents()
     @initializePreview()
-    @initializeActions()
 
   initializeAce: ->
     @editor()
@@ -29,9 +28,6 @@ class Sw4tch.Views.SwatchEditor extends Backbone.View
   initializePreview: ->
     @previewBody().setAttribute 'tabindex', 0
     @renderPreview()
-
-  initializeActions: ->
-    new Sw4tch.Views.SwatchActions()
 
   onSessionChange: ->
     @textarea().on 'keyup', (e) =>

@@ -28,10 +28,6 @@ class SwatchbooksController < ApplicationController
   end
 
   def update
-    respond_to :json do
-
-    end
-
     respond_to :html do
       if @swatchbook = current_user.swatchbooks.find_by_id(params[:id])
         redirect_to swatchbook_path(@swatchbook), notice: 'The swatchbook was updated.'

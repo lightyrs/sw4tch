@@ -1,6 +1,6 @@
 class Sw4tch.Views.SwatchSwatchbookButton extends Backbone.View
 
-  el: '.btn-group.swatchbook-button'
+  el: '.swatchbook-button'
 
   initialize: ->
     @attachEvents()
@@ -10,12 +10,12 @@ class Sw4tch.Views.SwatchSwatchbookButton extends Backbone.View
     @onNewSwatchbookSelect()
 
   onSwatchbookSelect: ->
-    @$('.dropdown-menu li.swatchbook > a').on 'click', (e) =>
+    @$('li.swatchbook > a').on 'click', (e) =>
       @addToSwatchbook(@$(e.target).data('swatchbook')) unless @$(e.target).data('has-swatch')
       e.preventDefault()
 
   onNewSwatchbookSelect: ->
-    @$('.dropdown-menu li.new-swatchbook > a').on 'click', (e) =>
+    @$('.new-swatchbook-link').on 'click', (e) =>
       @newSwatchbook()
       return false
 
@@ -37,9 +37,9 @@ class Sw4tch.Views.SwatchSwatchbookButton extends Backbone.View
   onAddToSwatchbookFailure: ->
     @$('span.text').text('Swatchbook')
 
-  newSwatchbook: ->
+  newSwatchbook: =>
     $('.dropdown-menu:eq(1)').addClass('active').dropdown('toggle').find('input').focus()
-    @$('.btn').on 'click', (e) =>
+    @$('.submit-swatchbook').on 'click', (e) =>
       @createSwatchbook()
       e.preventDefault()
 
@@ -49,13 +49,14 @@ class Sw4tch.Views.SwatchSwatchbookButton extends Backbone.View
       $.ajax
         url: "/users/#{Sw4tch.Constants.UserId}/swatchbooks"
         type: 'post'
+        data: { 'swatchbook': { 'name': name } }
         success: (data) =>
           @onCreateSwatchbookSuccess(data)
         error: =>
           @onCreateSwatchbookFailure()
 
   onCreateSwatchbookSuccess: (data) ->
-    console.log 'success'
+    @$('.btn i').show()
 
   onCreateSwatchbookFailure: ->
     console.log 'failure'

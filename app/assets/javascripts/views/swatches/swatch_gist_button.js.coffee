@@ -1,6 +1,6 @@
 class Sw4tch.Views.SwatchGistButton extends Backbone.View
 
-  el: '.btn-group.gist-button'
+  el: '.gist-button'
 
   initialize: ->
     @attachEvents()
