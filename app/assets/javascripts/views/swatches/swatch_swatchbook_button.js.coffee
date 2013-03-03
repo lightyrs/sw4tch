@@ -12,8 +12,11 @@ class Sw4tch.Views.SwatchSwatchbookButton extends Backbone.View
     @onSwatchbookSelect()
     @onNewSwatchbookSelect()
 
-  onButtonClick: ->
-    @resetDropdown()
+  onButtonClick: (e) ->
+    if $(e.target).hasClass('dropdown-toggle') or $(e.target).parents('.dropdown-toggle').length
+      @resetDropdown()
+    else
+      e.stopPropagation()
 
   onSwatchbookSelect: ->
     @$('li.swatchbook > a').on 'click', (e) =>
@@ -69,7 +72,7 @@ class Sw4tch.Views.SwatchSwatchbookButton extends Backbone.View
           @resetDropdown()
 
   resetDropdown: ->
-    @dropdownMenu().find('input').blur().parents('li').removeClass('active')
+    @dropdownMenu().find('input').val('').blur().parents('li').removeClass('active')
       .end().end().removeClass('active')
     @$('.submit-swatchbook').unbind('click')
 
@@ -85,6 +88,9 @@ class Sw4tch.Views.SwatchSwatchbookButton extends Backbone.View
 
   menuItemTemplate: (swatchbook) ->
     $("<li class='swatchbook'><span class='ajax-loader'></span><a href='#' data-has-swatch='false' data-swatchbook='#{swatchbook.id}'><i class='icon-check-empty'></i> #{swatchbook.name}</a></li>")
+
+  menuInput: ->
+    @$('#swatchbook_name')
 
   swatchId: ->
     @formAction().split('/').pop()
