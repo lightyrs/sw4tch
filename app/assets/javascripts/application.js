@@ -1,5 +1,6 @@
 //= require ./vendor/jquery-1.8.3.min
 //= require jquery_ujs
+//= require ./vendor/modernizr.custom
 //= require underscore
 //= require backbone
 //= require handlebars
@@ -12,6 +13,7 @@
 //= require bootstrap-popover
 //= require ./vendor/jquery.shapeshift
 //= require ./vendor/jquery.tagsinput
+//= require ./vendor/jquery.flipshow
 //= require ./vendor/breakpoints
 //= require ace/ace
 //= require ace/theme-merbivore_soft

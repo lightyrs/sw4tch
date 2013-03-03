@@ -3,6 +3,7 @@ class Sw4tch.Routers.App extends Backbone.Router
   routes:
     '': 'index'
     'swatches': 'index'
+    'swatchbooks': 'index'
     'dashboard': 'index'
     'users/:id': 'index'
     'swatches/new': 'new'
