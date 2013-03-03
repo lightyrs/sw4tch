@@ -1,8 +1,10 @@
-#swatches {
+#swatches,
+#swatchbooks {
   position: relative;
   text-align: center;
 
-  .swatch-container {
+  .swatch-container,
+  .swatchbook-container {
     @include swatch_preview;
 
     .swatch-link {
