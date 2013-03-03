@@ -5,9 +5,15 @@ class Sw4tch.Views.SwatchSwatchbookButton extends Backbone.View
   initialize: ->
     @attachEvents()
 
+  events: ->
+    'click': @onButtonClick
+
   attachEvents: ->
     @onSwatchbookSelect()
     @onNewSwatchbookSelect()
+
+  onButtonClick: ->
+    @resetDropdown()
 
   onSwatchbookSelect: ->
     @$('li.swatchbook > a').on 'click', (e) =>
@@ -60,8 +66,12 @@ class Sw4tch.Views.SwatchSwatchbookButton extends Backbone.View
           @onCreateSwatchbookFailure()
         beforeSend: =>
         complete: =>
-          @dropdownMenu().find('input').parents('li').removeClass('active').
-            end().blur().end().removeClass('active')
+          @resetDropdown()
+
+  resetDropdown: ->
+    @dropdownMenu().find('input').blur().parents('li').removeClass('active')
+      .end().end().removeClass('active')
+    @$('.submit-swatchbook').unbind('click')
 
   onCreateSwatchbookSuccess: (swatchbook) ->
     @appendToMenu swatchbook
@@ -71,7 +81,7 @@ class Sw4tch.Views.SwatchSwatchbookButton extends Backbone.View
     # console.log 'failure'
 
   appendToMenu: (swatchbook) ->
-    @menuItemTemplate(swatchbook).insertBefore(@dropdownMenu().find('.divider'))
+    @menuItemTemplate(swatchbook).insertAfter(@dropdownMenu().find('.divider'))
 
   menuItemTemplate: (swatchbook) ->
     $("<li class='swatchbook'><span class='ajax-loader'></span><a href='#' data-has-swatch='false' data-swatchbook='#{swatchbook.id}'><i class='icon-check-empty'></i> #{swatchbook.name}</a></li>")

@@ -6,6 +6,11 @@
     %span.text Swatchbook
     %span.caret
   %ul.dropdown-menu
+    %li.new-swatchbook
+      = link_to 'New Swatchbook', '#', class: 'new-swatchbook-link'
+      %input#swatchbook_name{type: 'text', placeholder: 'Swatchbook Name'}
+      = link_to '<i class="icon-ok-circle"></i> OK'.html_safe, '#', class: 'submit-swatchbook btn btn-mini'
+    %li.divider
     = current_user.swatchbooks.find_each do |swatchbook|
       %li.swatchbook
         - if swatchbook.swatches.include? swatch
@@ -14,8 +19,3 @@
         - else
           = render 'shared/loader'
           = link_to "<i class='icon-check-empty'></i> #{swatchbook.name}".html_safe, '#', 'data-has-swatch' => false, 'data-swatchbook' => swatchbook.id
-    %li.divider
-    %li.new-swatchbook
-      = link_to 'New Swatchbook', '#', class: 'new-swatchbook-link'
-      %input#swatchbook_name{type: 'text', placeholder: 'Swatchbook Name'}
-      = link_to '<i class="icon-ok-circle"></i> OK'.html_safe, '#', class: 'submit-swatchbook btn btn-mini'

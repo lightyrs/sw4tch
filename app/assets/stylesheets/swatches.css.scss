@@ -173,6 +173,8 @@
       .dropdown-menu {
         width: 250px;
         left: -116px;
+        max-height: 256px;
+        overflow: auto;
 
         input[type=text] {
           display: none;
