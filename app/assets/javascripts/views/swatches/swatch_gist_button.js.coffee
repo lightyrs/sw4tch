@@ -5,6 +5,9 @@ class Sw4tch.Views.SwatchGistButton extends Backbone.View
   initialize: ->
     @attachEvents()
 
+  events: ->
+    'click': @resetDropdown
+
   attachEvents: ->
     @onGistSyntaxSelect()
     @onGistPublicSelect()
@@ -42,3 +45,7 @@ class Sw4tch.Views.SwatchGistButton extends Backbone.View
 
   onGistFailure: ->
     @$el.find('span.text').text('Publish Gist')
+
+  resetDropdown: (e) ->
+    @$('li').removeClass('public-setting')
+    $(link).text($(link).data('label')) for link in @$('li > a')
