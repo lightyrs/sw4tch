@@ -186,12 +186,6 @@
 
           .new-swatchbook {
 
-            a.new-swatchbook-link {
-              color: white;
-              text-decoration: none;
-              @include background(linear-gradient(bottom, #0088cc, #0077b3));
-            }
-
             input[type=text] {
               display: inline-block;
               min-width: 0;
@@ -224,6 +218,13 @@
         > a {
           padding-top: 6px;
           padding-bottom: 6px;
+        }
+
+        &.active {
+
+          .ajax-loader {
+            display: block;
+          }
         }
 
         &.divider {

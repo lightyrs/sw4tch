@@ -11,32 +11,34 @@ class Sw4tch.Views.SwatchSwatchbookButton extends Backbone.View
 
   onSwatchbookSelect: ->
     @$('li.swatchbook > a').on 'click', (e) =>
-      @addToSwatchbook(@$(e.target).data('swatchbook')) unless @$(e.target).data('has-swatch')
+      @addToSwatchbook(@$(e.target)) unless @$(e.target).data('has-swatch')
       return false
 
   onNewSwatchbookSelect: ->
     @$('.new-swatchbook-link').on 'click', (e) =>
+      @$(e.target).parents('li').addClass('active')
       @newSwatchbook()
       return false
 
-  addToSwatchbook: (swatchbookId) ->
+  addToSwatchbook: (target) ->
     $.ajax
-      url: "#{@formAction()}/swatchbook/#{swatchbookId}/add"
+      url: "#{@formAction()}/swatchbook/#{target.data('swatchbook')}/add"
       type: 'get'
       success: (data) =>
         @onAddToSwatchbookSuccess(data)
       error: =>
         @onAddToSwatchbookFailure()
+      complete: =>
+        target.parents('li').removeClass('active')
       beforeSend: =>
-        @$('span.text').text('Adding...')
+        target.parents('li').addClass('active')
 
   onAddToSwatchbookSuccess: (data) ->
     @$("[data-swatchbook='#{data.id}']").find('i').attr('class', 'icon-check')
-    @$('span.text').text('Swatchbook')
     @dropdownMenu().find('input').val('').focus()
 
   onAddToSwatchbookFailure: ->
-    @$('span.text').text('Swatchbook')
+    # console.log 'failure'
 
   newSwatchbook: ->
     @dropdownMenu().addClass('active').find('input').focus()
@@ -56,19 +58,23 @@ class Sw4tch.Views.SwatchSwatchbookButton extends Backbone.View
           @onCreateSwatchbookSuccess(data)
         error: =>
           @onCreateSwatchbookFailure()
+        beforeSend: =>
+        complete: =>
+          @dropdownMenu().find('input').parents('li').removeClass('active').
+            end().blur().end().removeClass('active')
 
   onCreateSwatchbookSuccess: (swatchbook) ->
-    @appendToMenu(swatchbook)
-    @addToSwatchbook(swatchbook.id)
+    @appendToMenu swatchbook
+    @addToSwatchbook @$("[data-swatchbook='#{swatchbook.id}']")
 
   onCreateSwatchbookFailure: ->
-    console.log 'failure'
+    # console.log 'failure'
 
   appendToMenu: (swatchbook) ->
     @menuItemTemplate(swatchbook).insertBefore(@dropdownMenu().find('.divider'))
 
   menuItemTemplate: (swatchbook) ->
-    $("<li class='swatchbook'><a href='#' data-has-swatch='false' data-swatchbook='#{swatchbook.id}'><i class='icon-check-empty'></i> #{swatchbook.name}</a></li>")
+    $("<li class='swatchbook'><span class='ajax-loader'></span><a href='#' data-has-swatch='false' data-swatchbook='#{swatchbook.id}'><i class='icon-check-empty'></i> #{swatchbook.name}</a></li>")
 
   swatchId: ->
     @formAction().split('/').pop()

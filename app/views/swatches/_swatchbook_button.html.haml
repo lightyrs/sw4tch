@@ -9,8 +9,10 @@
     = current_user.swatchbooks.find_each do |swatchbook|
       %li.swatchbook
         - if swatchbook.swatches.include? swatch
+          = render 'shared/loader'
           = link_to "<i class='icon-check'></i> #{swatchbook.name}".html_safe, '#', 'data-has-swatch' => true, 'data-swatchbook' => swatchbook.id
         - else
+          = render 'shared/loader'
           = link_to "<i class='icon-check-empty'></i> #{swatchbook.name}".html_safe, '#', 'data-has-swatch' => false, 'data-swatchbook' => swatchbook.id
     %li.divider
     %li.new-swatchbook

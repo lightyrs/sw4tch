@@ -8,5 +8,5 @@
       .gist-url= link_to '', '#'
   - if current_user == @swatch.user
     .owner-actions
-      = link_to "<i class='eicon-edit'></i> Edit".html_safe, edit_swatch_path(@swatch), class: 'btn btn-small btn-inverse'
+      = link_to "<i class='eicon-edit'></i> Edit".html_safe, edit_swatch_path(@swatch), class: 'btn btn-small'
       = link_to "<i class='eicon-trash'></i> Delete".html_safe, swatch_path(@swatch), method: :delete, confirm: 'Are you sure?', class: 'btn btn-small btn-danger'
