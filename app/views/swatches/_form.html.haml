@@ -10,5 +10,6 @@
         = render @swatch
         = f.input :description
         = f.input :tag_list, label: 'Tags <small class="help-text">Limit 3</small>'.html_safe, wrapper_html: { class: 'tags' }
-      .form-actions
-        = f.button :submit, class: 'btn-large btn-primary'
+      - unless body_class == 'swatches-show'
+        .form-actions
+          = f.button :submit, class: 'btn-large btn-primary'

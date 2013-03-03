@@ -10,6 +10,7 @@ class CreateSwatchbooks < ActiveRecord::Migration
       t.timestamps
     end
 
+    add_index :swatchbooks, [:user_id, :name], :unique => true
     add_index :swatchbooks, :user_id
   end
 end

@@ -13,7 +13,7 @@ class CreateSwatches < ActiveRecord::Migration
       t.timestamps
     end
 
-    add_index :swatches, [:user_id, :name], :unique => true
+    # add_index :swatches, [:user_id, :name], :unique => true
     add_index :swatches, :user_id
   end
 end

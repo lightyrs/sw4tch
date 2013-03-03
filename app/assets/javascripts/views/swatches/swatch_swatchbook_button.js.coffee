@@ -7,6 +7,7 @@ class Sw4tch.Views.SwatchSwatchbookButton extends Backbone.View
 
   events: ->
     'click': @onButtonClick
+    'keypress input': @overrideSubmit
 
   attachEvents: ->
     @onSwatchbookSelect()
@@ -17,6 +18,11 @@ class Sw4tch.Views.SwatchSwatchbookButton extends Backbone.View
       @resetDropdown()
     else
       e.stopPropagation()
+
+  overrideSubmit: (e) ->
+    if e.keyCode is 13
+      e.preventDefault()
+      @$('.submit-swatchbook').trigger 'click'
 
   onSwatchbookSelect: ->
     @$('li.swatchbook > a').on 'click', (e) =>
