@@ -18,6 +18,7 @@ class Sw4tch.Views.SwatchesIndex extends Backbone.View
       unless @swatchbooksViewExists
         new Sw4tch.Views.SwatchbooksIndex()
         @swatchbooksViewExists = true
+        new Sw4tch.Views.SwatchesIndex({el: '#swatchbooks'})
 
   initializePreview: (frame) ->
     @frame = frame

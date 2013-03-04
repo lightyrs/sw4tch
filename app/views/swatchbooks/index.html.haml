@@ -1,4 +1,4 @@
-#swatchbooks.index.fc-slideshow
-  %ul.fc-slides= render collection: @swatchbooks, partial: 'swatchbooks/swatchbook'
+#swatchbooks.index
+  = render collection: @swatchbooks, partial: 'swatchbooks/swatchbook'
 
 .pagination= will_paginate @swatchbooks

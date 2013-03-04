@@ -1,3 +1,5 @@
-%li.swatchbook-container
-  %h4= swatchbook.name
-  %p.description= swatchbook.description
+.swatchbook-container
+  .swatchbook.fc-slideshow
+    %ul.fc-slides
+      - swatchbook.swatches.first(6).each do |swatch|
+        %li= render 'swatches/swatch', swatch: swatch

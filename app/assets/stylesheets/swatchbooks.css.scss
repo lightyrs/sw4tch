@@ -4,3 +4,18 @@
     height: 145px;
   }
 }
+
+#swatchbooks {
+
+  .fc-slideshow {
+    position: static;
+    @include border-radius(0);
+    margin: 0 auto;
+    @include perspective(0);
+    @include box-shadow(none);
+  }
+
+  .swatch-container {
+    position: static;
+  }
+}
