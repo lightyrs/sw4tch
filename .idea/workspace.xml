@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0c053dec-bfb3-448f-83ce-9721eed9a57a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/views/swatchbooks/swatchbooks_index.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/views/swatchbooks/swatchbooks_index.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/views/swatches/swatches_index.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/views/swatches/swatches_index.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/swatchbooks.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/swatchbooks.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/swatchbooks/_swatchbook.html.haml" afterPath="$PROJECT_DIR$/app/views/swatchbooks/_swatchbook.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/swatchbooks/index.html.haml" afterPath="$PROJECT_DIR$/app/views/swatchbooks/index.html.haml" />
-    </list>
+    <list default="true" id="0c053dec-bfb3-448f-83ce-9721eed9a57a" name="Default" comment="" />
     <ignored path="sw4tch.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="0c053dec-bfb3-448f-83ce-9721eed9a57a" time="1361429740285" ignored="false" />
