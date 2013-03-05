@@ -13,6 +13,25 @@
     margin: 0 auto;
     @include perspective(0);
     @include box-shadow(none);
+
+    [class^="icon-"],
+    [class*=" icon-"] {
+      background-image: none;
+    }
+
+    .icon-arrow-right:before {
+      content: '\e0af';
+      color: rgba(#fff, 0.7);
+      background: rgba(#000, 0.6);
+      font-family: 'Elusive-Icons';
+    }
+
+    .icon-arrow-left:before {
+      content: '\e0d4';
+      color: rgba(#fff, 0.7);
+      background: rgba(#000, 0.6);
+      font-family: 'Elusive-Icons';
+    }
   }
 
   .swatch-container {
