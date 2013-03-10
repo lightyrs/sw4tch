@@ -20,6 +20,10 @@ class Swatch < ActiveRecord::Base
 
   acts_as_taggable
 
+  def to_image
+
+  end
+
   def assign_markup
     %w(css scss stylus).each do |attr|
       instance_eval "self.#{attr} ||= default_#{attr}"

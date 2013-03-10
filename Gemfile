@@ -18,6 +18,7 @@ gem 'therubyracer'
 gem 'github_api'
 gem 'acts-as-taggable-on', '~> 2.3.1'
 gem 'bootstrap-will_paginate'
+gem 'imgkit'
 
 group :development do
   gem 'meta_request'
