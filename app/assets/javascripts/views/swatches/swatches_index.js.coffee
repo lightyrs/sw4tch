@@ -6,19 +6,9 @@ class Sw4tch.Views.SwatchesIndex extends Backbone.View
 
   frame: null
 
-  swatchbooksViewExists: false
-
   initialize: ->
-    @initializeSwatchbooks()
     @initializePreview(frame) for frame in @previewFrames()
     @$el.shapeshift(enableDrag: false)
-
-  initializeSwatchbooks: ->
-    $('a.swatchbooks[data-toggle="tab"]').on 'shown', (e) =>
-      unless @swatchbooksViewExists
-        new Sw4tch.Views.SwatchbooksIndex()
-        @swatchbooksViewExists = true
-        new Sw4tch.Views.SwatchesIndex({el: '#swatchbooks'})
 
   initializePreview: (frame) ->
     @frame = frame

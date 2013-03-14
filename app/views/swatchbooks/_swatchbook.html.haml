@@ -1,5 +1,4 @@
 .swatchbook-container
-  .swatchbook.fc-slideshow
-    %ul.fc-slides
-      - swatchbook.swatches.first(6).each do |swatch|
-        %li= render 'swatches/swatch', swatch: swatch
+  %h3= swatchbook.name
+  - swatchbook.swatches.first(6).each do |swatch|
+    = render 'swatches/swatch', swatch: swatch

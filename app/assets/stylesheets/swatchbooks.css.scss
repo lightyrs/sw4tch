@@ -7,36 +7,23 @@
 
 #swatchbooks {
 
-  .fc-slideshow {
-    width: 256px;
-    height: 256px;
-    position: static;
-    @include border-radius(0);
-    margin: 0 auto;
-    @include perspective(0);
-    @include box-shadow(none);
+  .swatchbook-container {
+    position: relative;
+    overflow: hidden;
 
-    [class^="icon-"],
-    [class*=" icon-"] {
-      background-image: none;
+    > h3 {
+      float: left;
     }
 
-    .icon-arrow-right:before {
-      content: '\e0af';
-      color: rgba(#fff, 0.7);
-      background: rgba(#000, 0.6);
-      font-family: 'Elusive-Icons';
-    }
+    .swatch-container {
+      @include swatch_preview;
+      margin: 0;
+      position: relative;
+      float: left;
 
-    .icon-arrow-left:before {
-      content: '\e0d4';
-      color: rgba(#fff, 0.7);
-      background: rgba(#000, 0.6);
-      font-family: 'Elusive-Icons';
+      .swatch-link {
+        @include circle_link;
+      }
     }
-  }
-
-  .swatch-container {
-    position: static;
   }
 }

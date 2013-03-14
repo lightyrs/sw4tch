@@ -13,10 +13,6 @@
     .pagination= will_paginate @swatches
 
   #swatchbooks.index.tab-pane
-    - unless @user == current_user
-      .user-swatch
-        = render 'users/user', user: @user
-        = link_to '<span><i style="font-size: 216px;" class="eicon-github eicon-white"></i></span>'.html_safe, @user.identity.profile_url, class: 'user-link'
     = render collection: @swatchbooks, partial: 'swatchbooks/swatchbook'
 
     .pagination= will_paginate @swatchbooks

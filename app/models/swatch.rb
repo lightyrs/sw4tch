@@ -1,5 +1,6 @@
 require 'sass/css'
 require 'compass'
+require 'haml'
 
 class Swatch < ActiveRecord::Base
 
@@ -20,8 +21,14 @@ class Swatch < ActiveRecord::Base
 
   acts_as_taggable
 
-  def to_image
+  def to_image(format='png')
+    kit = IMGKit.new(to_html, quality: 100)
+    kit.to_file("#{Rails.root}/public/#{name.parameterize}.#{format}")
+  end
 
+  def to_html
+    view_paths = ActionController::Base.view_paths
+    ActionView::Base.new(view_paths).extend(ApplicationHelper).render(template: "swatches/_preview", locals: { swatch: self })
   end
 
   def assign_markup

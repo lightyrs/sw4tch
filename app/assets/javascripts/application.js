@@ -13,7 +13,6 @@
 //= require bootstrap-popover
 //= require ./vendor/jquery.shapeshift
 //= require ./vendor/jquery.tagsinput
-//= require ./vendor/jquery.flipshow
 //= require ./vendor/breakpoints
 //= require ace/ace
 //= require ace/theme-merbivore_soft
