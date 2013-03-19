@@ -3,7 +3,7 @@ class Sw4tch.Routers.App extends Backbone.Router
   routes:
     '': 'index'
     'swatches': 'index'
-    'swatchbooks': 'index'
+    'swatchbooks(/:id)': 'index'
     'dashboard': 'index'
     'users/:id': 'index'
     'swatches/new': 'new'
@@ -15,6 +15,7 @@ class Sw4tch.Routers.App extends Backbone.Router
       new Sw4tch.Views.SwatchesShow()
     else
       new Sw4tch.Views.SwatchesIndex()
+      @tabs()
 
   new: ->
     new Sw4tch.Views.SwatchesShow()
@@ -24,3 +25,9 @@ class Sw4tch.Routers.App extends Backbone.Router
 
   edit: ->
     new Sw4tch.Views.SwatchesShow()
+
+  tabs: ->
+    $('#swatches_tab').on 'shown', (e) =>
+      new Sw4tch.Views.SwatchesIndex(el: '#swatches')
+    $('#swatchbooks_tab').on 'shown', (e) =>
+      new Sw4tch.Views.SwatchesIndex(el: '#swatchbooks')

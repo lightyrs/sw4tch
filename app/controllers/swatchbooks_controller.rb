@@ -7,7 +7,7 @@ class SwatchbooksController < ApplicationController
   end
 
   def show
-    @swatchbook = current_user.swatchbooks.find_by_id(params[:id])
+    @swatchbook = Swatchbook.find_by_id(params[:id])
     @swatches = @swatchbook.swatches.paginate(page: params[:page], per_page: 36)
   end
 

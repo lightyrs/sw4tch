@@ -6,9 +6,9 @@ class Sw4tch.Views.SwatchesIndex extends Backbone.View
 
   frame: null
 
-  initialize: ->
+  initialize: (options) ->
     @initializePreview(frame) for frame in @previewFrames()
-    @$el.shapeshift(enableDrag: false)
+    @$el.shapeshift(enableDrag: false) unless @options.el is '#swatchbooks'
 
   initializePreview: (frame) ->
     @frame = frame

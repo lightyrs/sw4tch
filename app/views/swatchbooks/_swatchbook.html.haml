@@ -1,4 +1,5 @@
 .swatchbook-container
-  %h3= swatchbook.name
+  .swatch-container
+    = link_to "<span>#{swatchbook.name}</span>".html_safe, swatchbook_path(swatchbook), class: 'swatch-link'
   - swatchbook.swatches.first(6).each do |swatch|
     = render 'swatches/swatch', swatch: swatch

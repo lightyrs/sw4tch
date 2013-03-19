@@ -8,22 +8,50 @@
 #swatchbooks {
 
   .swatchbook-container {
+    overflow: hidden;
     position: relative;
+    max-height: 290px;
     overflow: hidden;
 
     > h3 {
       float: left;
+      position: absolute;
+      background: rgba(255, 255, 255, 0.8);
+      z-index: 100;
+      padding: 10px 20px;
+      max-width: 102px;
+      top: 0;
+      left: 0;
+      text-align: left;
+
+      small {
+        font-size: 12px;
+        display: block;
+
+        span {
+          color: #ccc;
+        }
+      }
+
+      a {
+        @include blue_link;
+      }
+    }
+
+    .swatch-container:first-child {
+      margin-left: 0;
+
+      .swatch-link {
+        background: rgba(0, 0, 0, 0.5);
+        color: rgba(255, 255, 255, 0.6);
+      }
     }
 
     .swatch-container {
       @include swatch_preview;
-      margin: 0;
+      margin: 20px 20px 10px -120px;
       position: relative;
       float: left;
-
-      .swatch-link {
-        @include circle_link;
-      }
     }
   }
 }
