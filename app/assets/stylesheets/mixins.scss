@@ -64,7 +64,7 @@
     color: rgba(255, 255, 255, 0.6);
   }
 
-  span {
+  > span {
     display: table-cell !important;
     vertical-align: middle !important;
     text-align: center !important;

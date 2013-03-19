@@ -17,9 +17,12 @@ Sw4tch::Application.routes.draw do
 
   post '/markup/compile/:from/:to', to: 'markup#compile', as: 'markup_compile'
 
-  match '/dashboard', to: 'users#show', as: 'dashboard'
+  match '/dashboard/(:resource)', to: 'users#show', as: 'dashboard'
 
   resources :users do
+    member do
+      get ':resource', action: 'show'
+    end
     resources :swatchbooks
   end
 

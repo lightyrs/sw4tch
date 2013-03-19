@@ -1,5 +1,8 @@
 .swatchbook-container
-  .swatch-container
-    = link_to "<span>#{swatchbook.name}</span>".html_safe, swatchbook_path(swatchbook), class: 'swatch-link'
-  - swatchbook.swatches.first(6).each do |swatch|
+  .swatchbook-link
+    %h3= link_to swatchbook.name, swatchbook_path(swatchbook)
+    %span.badge.badge-inverse= pluralize(swatchbook.swatches.try(:count), 'swatch')
+    %br
+    %span.badge.badge-inverse= link_to swatchbook.user.try(:name), user_path(swatchbook.user)
+  - swatchbook.swatches.first(12).each do |swatch|
     = render 'swatches/swatch', swatch: swatch

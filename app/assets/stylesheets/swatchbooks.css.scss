@@ -38,20 +38,38 @@
       }
     }
 
-    .swatch-container:first-child {
-      margin-left: 0;
+    .swatchbook-link {
+      float: left;
+      text-align: left;
+      width: 202px;
+      margin-right: 90px;
 
-      .swatch-link {
-        background: rgba(0, 0, 0, 0.5);
-        color: rgba(255, 255, 255, 0.6);
+      h3 {
+        line-height: 26px;
+
+        a {
+          @include blue_link;
+          text-decoration: none;
+        }
+      }
+
+      .badge {
+
+        a {
+          @include blue_link;
+          text-decoration: none;
+          color: #fff;
+        }
       }
     }
 
     .swatch-container {
       @include swatch_preview;
-      margin: 20px 20px 10px -120px;
+      margin: 20px 20px 10px -130px;
       position: relative;
       float: left;
+      top: -64px;
+      @include transform(scale(0.5));
     }
   }
 }
