@@ -1,3 +1,13 @@
+ul.nav.nav-tabs {
+
+  li.active {
+
+    a {
+      font-weight: bold;
+    }
+  }
+}
+
 #swatchbook_form {
 
   textarea {
@@ -49,6 +59,7 @@
 
         a {
           @include blue_link;
+          font-weight: normal;
           text-decoration: none;
         }
       }
@@ -70,6 +81,13 @@
       float: left;
       top: -64px;
       @include transform(scale(0.5));
+    }
+  }
+
+  &.index {
+
+    .swatchbook-container {
+      max-height: 175px;
     }
   }
 }

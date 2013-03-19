@@ -26,7 +26,11 @@ Sw4tch::Application.routes.draw do
     resources :swatchbooks
   end
 
-  resources :swatchbooks
+  resources :swatchbooks do
+    member do
+      get ':resource', action: 'show'
+    end
+  end
 
   match '/auth/:provider/(:callback)', to: 'sessions#create', as: 'sign_in'
   match '/logout', to: 'sessions#destroy', as: 'logout'
