@@ -1,4 +1,14 @@
-#swatches.index
-  = render @swatches
+%ul.nav.nav-tabs
+  %li.active= link_to 'Swatches', '#swatches', class: 'swatches', id: 'swatches_tab', 'data-toggle' => 'tab'
+  %li= link_to 'Swatchbooks', '#swatchbooks', class: 'swatchbooks', id: 'swatchbooks_tab', 'data-toggle' => 'tab'
 
-.pagination= will_paginate @swatches
+.tab-content
+  #swatches.index.tab-pane.active
+    = render collection: @swatches, partial: 'swatches/swatch'
+
+    .pagination= will_paginate @swatches
+
+  #swatchbooks.index.tab-pane
+    = render collection: @swatchbooks, partial: 'swatchbooks/swatchbook'
+
+    .pagination= will_paginate @swatchbooks

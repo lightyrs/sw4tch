@@ -87,6 +87,8 @@ ul.nav.nav-tabs {
   &.index {
 
     .swatchbook-container {
+      height: 175px;
+      min-height: 175px;
       max-height: 175px;
     }
   }
