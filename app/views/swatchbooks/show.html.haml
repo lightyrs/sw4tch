@@ -1,4 +1,8 @@
-%h3= @swatchbook.name
+.page-header
+  .heading.pull-left
+    %h2= @swatchbook.name
+    %p.byline
+      #{@swatchbook.created_at.strftime("%b %d, %Y")} <i>by</i> #{link_to @swatchbook.user.try(:username), user_path(@swatchbook.user)}
 
 #swatches.index
   = render collection: @swatches, partial: 'swatches/swatch'

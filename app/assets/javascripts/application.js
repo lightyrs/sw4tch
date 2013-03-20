@@ -3,6 +3,7 @@
 //= require ./vendor/modernizr.custom
 //= require underscore
 //= require backbone
+//= require ./vendor/backbone.routefilter
 //= require handlebars
 //= require bootstrap-transition
 //= require bootstrap-alert
