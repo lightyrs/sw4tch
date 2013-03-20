@@ -1,7 +1,5 @@
 class SwatchbooksController < ApplicationController
 
-  respond_to :js, only: [:create]
-
   def index
     @swatchbooks = Swatchbook.order('created_at DESC').paginate(page: params[:page], per_page: 10)
   end
@@ -16,10 +14,15 @@ class SwatchbooksController < ApplicationController
   end
 
   def create
-    if @swatchbook = current_user.swatchbooks.create(params[:swatchbook])
-      render json: @swatchbook.as_json(only: [:id, :name]), status: :ok
-    else
-      head :unprocessable_entity
+    respond_to do |format|
+      @swatchbook = current_user.swatchbooks.create(params[:swatchbook])
+      if @swatchbook.valid? && @swatchbook.persisted?
+        format.json { render json: @swatchbook.as_json(only: [:id, :name]), status: :ok }
+        format.html { redirect_to swatchbook_path(@swatchbook.id)}
+      else
+        format.json { head :unprocessable_entity }
+        format.html { render :new }
+      end
     end
   end
 

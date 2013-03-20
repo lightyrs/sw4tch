@@ -16,7 +16,7 @@
 //= require ./vendor/jquery.tagsinput
 //= require ./vendor/breakpoints
 //= require ace/ace
-//= require ace/theme-merbivore_soft
+//= require ace/theme-chrome
 //= require ace/mode-css
 //= require ace/mode-scss
 //= require ace/mode-stylus
