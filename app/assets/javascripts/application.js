@@ -17,9 +17,11 @@
 //= require ./vendor/breakpoints
 //= require ace/ace
 //= require ace/theme-chrome
+//= require ace/theme-textmate
 //= require ace/mode-css
 //= require ace/mode-scss
 //= require ace/mode-stylus
+//= require ace/worker-css
 //= require sw4tch
 //= require_tree ./helpers
 //= require_tree ./templates
