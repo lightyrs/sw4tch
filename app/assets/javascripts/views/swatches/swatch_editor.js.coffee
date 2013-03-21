@@ -63,6 +63,7 @@ class Sw4tch.Views.SwatchEditor extends Backbone.View
     @setSessionMode @activeSyntax()
 
   editor: ->
+
     ace.edit 'editor'
 
   session: ->
@@ -135,7 +136,7 @@ class Sw4tch.Views.SwatchEditor extends Backbone.View
     @previewBody().innerHTML = @previewTemplate data
 
   initAceOptions: ->
-    @editor().setBehavioursEnabled true
+    @editor().setBehavioursEnabled false
     @editor().setTheme 'ace/theme/chrome'
     @setSessionMode('css')
     @session().setTabSize 2
