@@ -63,7 +63,7 @@ class Sw4tch.Views.SwatchEditor extends Backbone.View
     @setSessionMode @activeSyntax()
 
   editor: ->
-    ace.edit @$('#editor')
+    ace.edit @$('#editor')[0]
 
   session: ->
     @editor().getSession()
