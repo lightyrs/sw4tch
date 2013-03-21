@@ -1,0 +1,13 @@
+{
+  "author": "Harris Novick",
+  "name": "sw4tch",
+  "version": "0.0.0",
+  "dependencies": {
+    "nib": "*"
+  },
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  }
+}
