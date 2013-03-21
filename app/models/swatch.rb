@@ -1,6 +1,7 @@
 require 'sass/css'
 require 'compass'
 require 'haml'
+require 'stylus'
 
 class Swatch < ActiveRecord::Base
 

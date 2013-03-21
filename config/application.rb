@@ -9,8 +9,6 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
-# TODO: Add swatchbooks
-
 module Sw4tch
   class Application < Rails::Application
 
