@@ -62,4 +62,6 @@ module Sw4tch
   end
 end
 
+require 'stylus'
+
 HandlebarsAssets::Config.template_namespace = 'JST'
