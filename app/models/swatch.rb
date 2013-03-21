@@ -67,7 +67,6 @@ class Swatch < ActiveRecord::Base
 
   def stylus_to_css(_stylus=nil)
     _stylus ||= stylus
-    _stylus = import_nib(_stylus)
     Stylus.compile("#{_stylus}")
   end
 
@@ -77,11 +76,6 @@ class Swatch < ActiveRecord::Base
 
   def sass_options
     Compass.configuration.to_sass_engine_options.merge(syntax: :scss, line_comments: false)
-  end
-
-  def import_nib(markup)
-    Stylus.use :nib
-    "@import 'nib';#{markup}"
   end
 
   def import_compass(markup)
