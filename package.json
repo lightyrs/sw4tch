@@ -3,11 +3,13 @@
   "name": "sw4tch",
   "version": "0.0.1",
   "dependencies": {
-    "canvas": "0.12.x",
+    "canvas": "git://github.com/elspoono/node-canvas-heroku.git",
     "nib": "*",
     "stylus": "*"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "canvas": "~0.8.1"
+  },
   "optionalDependencies": {},
   "engines": {
     "node": "0.8.x", 
