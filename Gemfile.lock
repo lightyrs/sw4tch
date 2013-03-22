@@ -4,6 +4,12 @@ GIT
   specs:
     ace-rails-ap (2.0.0)
 
+GIT
+  remote: git://github.com/railsjedi/ruby-stylus-nib.git
+  revision: ae6321e74d5576fb489db3999d73b152fcd8bdea
+  specs:
+    stylus-nib (0.2.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -328,6 +334,7 @@ DEPENDENCIES
   simple_form
   sqlite3
   stylus
+  stylus-nib!
   therubyracer
   thin
   uglifier (>= 1.0.3)
