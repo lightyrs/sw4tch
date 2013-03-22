@@ -1,7 +1,7 @@
 {
   "author": "Harris Novick",
   "name": "sw4tch",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "dependencies": {
     "canvas": "git://github.com/elspoono/node-canvas-heroku.git",
     "nib": "*",
