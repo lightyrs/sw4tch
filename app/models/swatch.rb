@@ -67,7 +67,6 @@ class Swatch < ActiveRecord::Base
 
   def stylus_to_css(_stylus=nil)
     _stylus ||= stylus
-    _stylus = import_nib(_stylus)
     Stylus.compile("#{_stylus}")
   end
 
@@ -81,10 +80,6 @@ class Swatch < ActiveRecord::Base
 
   def import_compass(markup)
     "@import 'compass/css3';#{markup}"
-  end
-  
-  def import_nib(markup)
-    "@import 'nib';#{markup}"
   end
 
   def default_css
