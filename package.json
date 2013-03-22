@@ -3,9 +3,9 @@
   "name": "sw4tch",
   "version": "0.0.1",
   "dependencies": {
-    "stylus": "*",
+    "canvas": "0.12.x",
     "nib": "*",
-    "canvas": "*"
+    "stylus": "*"
   },
   "devDependencies": {},
   "optionalDependencies": {},
