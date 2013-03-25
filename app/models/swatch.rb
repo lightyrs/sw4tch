@@ -69,6 +69,7 @@ class Swatch < ActiveRecord::Base
     _stylus ||= stylus
     _stylus = import_nib(_stylus)
     Stylus.use :nib
+    Stylus.compress = false
     Stylus.compile("#{_stylus}")
   end
 
