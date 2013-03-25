@@ -98,14 +98,6 @@ class Swatch < ActiveRecord::Base
       .swatch .specimen {
         display: block;
       }
-
-      .swatch .specimen::before {
-        content: '';
-      }
-
-      .swatch .specimen::after {
-        content: '';
-      }
     eos
   end
 
@@ -116,14 +108,6 @@ class Swatch < ActiveRecord::Base
 
         .specimen {
           display: block;
-
-          &::before {
-            content: '';
-          }
-
-          &::after {
-            content: '';
-          }
         }
       }
     eos
@@ -136,12 +120,6 @@ class Swatch < ActiveRecord::Base
 
         .specimen
           display block
-
-          &:before
-            content ''
-
-          &:after
-            content ''
     eos
   end
 end
