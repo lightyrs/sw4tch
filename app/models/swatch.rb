@@ -77,7 +77,7 @@ class Swatch < ActiveRecord::Base
   end
 
   def sass_options
-    Compass.configuration.to_sass_engine_options.merge(syntax: :scss, line_comments: false)
+    Compass.configuration.to_sass_engine_options.merge(syntax: :scss, style: :expanded, line_comments: false)
   end
 
   def import_compass(markup)
