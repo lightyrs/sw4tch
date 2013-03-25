@@ -84,7 +84,7 @@ class Swatch < ActiveRecord::Base
   def import_compass(markup)
     "@import 'compass/css3';#{markup}"
   end
-  
+
   def import_nib(markup)
     "@import 'nib';#{markup}"
   end
@@ -95,7 +95,7 @@ class Swatch < ActiveRecord::Base
         display: block;
       }
 
-      .swatch .specimen {
+      .swatch .foreground {
         display: block;
       }
     eos
@@ -106,7 +106,7 @@ class Swatch < ActiveRecord::Base
       .swatch {
         display: block;
 
-        .specimen {
+        .foreground {
           display: block;
         }
       }
@@ -118,7 +118,7 @@ class Swatch < ActiveRecord::Base
       .swatch
         display block
 
-        .specimen
+        .foreground
           display block
     eos
   end
