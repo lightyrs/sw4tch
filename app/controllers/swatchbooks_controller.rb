@@ -1,7 +1,7 @@
 class SwatchbooksController < ApplicationController
 
   def index
-    @swatchbooks = Swatchbook.with_swatches.order('created_at DESC').paginate(page: params[:page], per_page: 10)
+    @swatchbooks = Swatchbook.with_swatches.sort_by(&:created_at).paginate(page: params[:page], per_page: 10)
   end
 
   def show
