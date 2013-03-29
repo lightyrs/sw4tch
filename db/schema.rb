@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(:version => 20130301113216) do
     t.datetime "updated_at",  :null => false
   end
 
+  add_index "swatchbooks", ["user_id", "name"], :name => "index_swatchbooks_on_user_id_and_name", :unique => true
   add_index "swatchbooks", ["user_id"], :name => "index_swatchbooks_on_user_id"
 
   create_table "swatchbooks_swatches", :id => false, :force => true do |t|

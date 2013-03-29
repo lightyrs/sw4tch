@@ -8,4 +8,6 @@ class Swatchbook < ActiveRecord::Base
 
   validates :name, presence: true
   validates :name, uniqueness: { scope: :user_id }
+
+  scope :with_swatches, lambda { includes(:swatches).where("swatches.id IS NOT ?", nil) }
 end
